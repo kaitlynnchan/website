@@ -10,33 +10,67 @@ Sorrell Brown
 Sage
 #9B9D83 */
 
+:root{
+    --primary-color: #FFFFFF;
+    --secondary-color: #D1D2CA;
+    --accent-color: #9B9D83;
+    --dark-accent: #464533;
+}
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+h2{
+    text-transform: capitalize;
+    font-weight: normal;
+    font-size: x-large;
+}
+h2{
+    color: var(--secondary-color);
+}
+p{
+    color: var(--secondary-color);
+    padding: 0;
+    margin: 0;
+}
+h4{
+    /* padding: 0;
+    margin: 0; */
+    font-size: larger;
+}
+
+h1{
+    font-weight: normal;
+    font-size: xxx-large;
+}
+
 body {
     /* padding: 20px; */
-    background-color: #9B9D83;
+    background-color: var(--accent-color);
 
     margin: 0;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     height: 100vh;
-    /* width: 100vw;
-    height: 100vh; */
 }
 
 .home {
-    background-image: url("images/0028_7A.jpg");
-    /* background-repeat: no-repeat; */
+    background-image: url("assets/imgs/0028_7A.jpg");
     background-size: cover;
-    /* width: 100%;
-    height: 100%; */
     background-position: center;
-    /* position: relative; */
+    position: relative;
 
-    flex-grow: 1;
-    margin: 20px;
-
-    
     display: flex;
+    flex-direction: column;
     text-align: center;
+}
+
+.border-full-page{
+    flex-grow: 1;
+    margin: 60px;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
 }
 
 .home>.overlay {
@@ -45,16 +79,46 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: #000000;
+    background-color: black;
     opacity: 45%;
-    z-index: 1;
-    margin: inherit;
+    z-index: 0;
 }
 
-.title {
+.home .inner {
     margin: auto;
-    color: #FFFFFF;
+    color: var(--primary-color);
     z-index: 2;
+}
+
+.fa-circle{
+    color: var(--dark-accent);
+}
+.icon{
+    color: var(--primary-color); 
+}
+.fa-circle.selected{
+    color: var(--primary-color);
+}
+.icon.selected{
+    color: var(--dark-accent); 
+}
+
+.contact-info{
+    display: flex;
+    /* margin-bottom: 10px !important; */
+}
+.contact-info .icons{
+    margin: auto;
+}
+
+
+.side-links{
+    margin: auto;
+    color: black;
+    text-align: center;
+}
+.side-links .vertical-text{
+    writing-mode: vertical-lr;
 }
 
 /* .photo-corner {
