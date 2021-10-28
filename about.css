@@ -1,0 +1,8 @@
+#about-page{
+    background-color: var(--accent-color);
+    min-height: 100vh;
+    top: 0;
+    position: absolute;
+    display: none;
+    width: 100%;
+}
