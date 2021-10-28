@@ -12,6 +12,8 @@
         
         <!-- animate.style -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <!-- hover.css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css"/>
 
         <!-- fonts -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -25,9 +27,9 @@
 		<link rel="stylesheet" type="text/css" href="index.css">
 	</head>
     <body>
-        <section class="whole-home-page">
+        <section id="home-page" class="home">
             <div class="overlay"></div>
-            <section id="home-page" class="home" style="order:2;">
+            <section class="body" style="order:2;">
                 <div class="inner">
                     <h1>Kaitlynn Chan</h1>
                     <h4>Third Year Computer Science Student at Simon Fraser University</h4>
@@ -37,15 +39,15 @@
     
                 <div class="inner contact-info">
                     <div class="icons fa-lg">
-                        <a class="fa-stack">
+                        <a class="fa-stack" href="">
                             <i class="fa fa-circle fa-stack-2x"></i>
                             <i class="fab fa-github fa-stack-1x icon"></i>
                         </a>
-                        <a class="fa-stack">
+                        <a class="fa-stack" href="">
                             <i class="fa fa-circle fa-stack-2x"></i>
                             <i class="fab fa-linkedin-in fa-stack-1x icon"></i>
                         </a>
-                        <a class="fa-stack">
+                        <a class="fa-stack" href="">
                             <i class="fa fa-circle fa-stack-2x"></i>
                             <i class="far fa-file fa-stack-1x icon"></i>
                         </a>
@@ -58,7 +60,7 @@
             </section>
     
             <section class="side-links pull-left animate__animated animate__slideInLeft" style="order:1;">
-                <a>
+                <a class="hvr-forward">
                     <div class="overlay rounded-corners"></div>
                     <h4 class="vertical-text">About Me</h4>
                     <!-- <i class="bi bi-arrow-left"></i> -->
@@ -66,7 +68,7 @@
             </section>
     
             <section class="side-links pull-right animate__animated animate__slideInRight" style="order:3;">
-                <a>
+                <a class="hvr-backward">
                     <div class="overlay rounded-corners"></div>
                     <h4 class="vertical-text" style="transform: rotate(180deg);">Projects</h4>
                     <!-- <i class="bi bi-arrow-right"></i> -->

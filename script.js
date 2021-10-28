@@ -9,17 +9,6 @@ $(document).ready(function(){
     });
 
     // side links hover animations
-    // $(".side-links a").hover(
-    //     function(){
-    //         $(this).parent().children(".overlay").css("visibility", "visible");
-    //         console.log("side links visible");
-    //     },
-    //     function(){
-    //         $(this).parent().children(".overlay").css("visibility", "hidden");
-    //         console.log("side links hidden");
-    //     }
-    // );
-
     // $(".side-links.pull-right").on("animationend", function(){
     //     console.log("animation end");
     //     $(this).removeClass("animate__animated animate__slideInRight");
@@ -41,7 +30,7 @@ $(document).ready(function(){
         console.log("clicked");
     });
     
-    $(".whole-home-page").on("animationend", function(){
+    $("#home-page").on("animationend", function(){
         console.log("animation end");
         if($(this).hasClass("animate__slideOutLeft")){
             $(this).parent().children(".animate__slideOutLeft").removeClass("animate__animated animate__slideOutLeft");
