@@ -1,0 +1,131 @@
+:root{
+    --primary-color: #FFFFFF;
+    --secondary-color: #D1D2CA;
+    --accent-color: #9B9D83;
+    --dark-accent: #464533;
+    --brown-color: #C7A47E;
+}
+
+*{
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+}
+h4{
+    color: var(--secondary-color);
+}
+p{
+    color: var(--secondary-color);
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: inherit;
+}
+body {
+    background-color: var(--accent-color);
+    background-image: url("assets/imgs/0028_7A.jpg");
+    background-size: cover;
+    background-position: center;
+    overflow:hidden;
+}
+
+/** Home page layout **/
+.home{
+    /* background-color: var(--accent-color);
+    background-image: url("assets/imgs/0028_7A.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative; */
+    position: relative;
+
+    margin: 0;
+    display: flex;
+    height: 100vh;
+}
+.home .body {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    flex-grow: 1;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    opacity: 45%;
+    z-index: -1;
+}
+
+/** Home elements **/
+.home .body .inner {
+    margin: auto;
+    color: var(--primary-color);
+}
+
+.contact-info .fa-circle, .contact-info .icon.selected{
+    color: var(--dark-accent);
+}
+.contact-info .icon, .contact-info .fa-circle.selected{
+    color: var(--primary-color); 
+}
+.contact-info{
+    display: flex;
+}
+.contact-info .icons{
+    margin: auto;
+}
+/* .contact-info .text{
+    margin-left: 10px;
+    text-align: left;
+} */
+
+/** Side Links **/
+.side-links{
+    position: relative;
+    color: black;
+    margin: auto;
+    text-align: center;
+    /* text-transform: uppercase; */
+    /* padding-top: 20px;
+    padding-bottom: 20px; */
+}
+.side-links .overlay{
+    opacity: 80%;
+    background-color: var(--accent-color);
+    /* visibility: hidden; */
+}
+.side-links .vertical-text{
+    writing-mode: vertical-lr;
+    color: inherit;
+    margin: 20px 10px;
+}
+.side-links a{
+    cursor: pointer;
+    color: inherit;
+}
+.side-links a:hover{
+    color: inherit;
+}
+.pull-right .rounded-corners{
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    right: -10px;
+}
+.pull-left .rounded-corners{
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    left: -10px;
+}
+
+/** Page Animations **/
+/* .right-to-center {
+    animation: d .5s ease both;
+}
+.center-to-right {
+    animation: e .5s ease both;
+} */
