@@ -79,10 +79,10 @@ body {
 .contact-info .icons{
     margin: auto;
 }
-.contact-info .text{
+/* .contact-info .text{
     margin-left: 10px;
     text-align: left;
-}
+} */
 
 /** Side Links **/
 .side-links{
