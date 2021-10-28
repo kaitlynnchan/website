@@ -28,7 +28,9 @@ body {
     background-image: url("assets/imgs/0028_7A.jpg");
     background-size: cover;
     background-position: center;
-    overflow:hidden;
+    overflow: hidden;
+    position: relative;
+    min-height: 100%;
 }
 
 /** Home page layout **/
