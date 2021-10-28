@@ -22,7 +22,7 @@
 		<link rel="stylesheet" type="text/css" href="index.css">
 	</head>
     <body>
-        <section id="home-page" class="home border-full-page" style="order:2;">
+        <section id="home-page" class="home" style="order:2;">
             <div class="overlay"></div>
             <div class="inner">
                 <h1>Kaitlynn Chan</h1>
@@ -53,15 +53,21 @@
             </div>
         </section>
 
-        <div class="side-links" style="order:1;">
-            <h4 class="vertical-text">About Me</h4>
-            <i class="bi bi-arrow-left"></i>
-        </div>
+        <section class="side-links" style="order:1;">
+            <div class="overlay"></div>
+            <a class="links">
+                <h4 class="vertical-text">About Me</h4>
+                <i class="bi bi-arrow-left"></i>
+            </a>
+        </section>
 
-        <div class="side-links" style="order:3;">
-            <h4 class="vertical-text" style="transform: rotate(180deg);">Projects</h4>
-            <i class="bi bi-arrow-right"></i>
-        </div>
+        <section class="side-links" style="order:3;">
+            <div class="overlay"></div>
+            <a class="links">
+                <h4 class="vertical-text" style="transform: rotate(180deg);">Projects</h4>
+                <i class="bi bi-arrow-right"></i>
+            </a>
+        </section>
 
         <!-- <div id="footer">
             <p>Kaitlynn Chan</p>

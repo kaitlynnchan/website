@@ -8,4 +8,15 @@ $(document).ready(function(){
         console.log("hover");
     });
 
+    $(".side-links a").hover(
+        function(){
+            $(this).parent().children(".overlay").css("visibility", "visible");
+            console.log("side links visible");
+        },
+        function(){
+            $(this).parent().children(".overlay").css("visibility", "hidden");
+            console.log("side links hidden");
+        }
+    );
+
 });
