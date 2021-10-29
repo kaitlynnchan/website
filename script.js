@@ -19,29 +19,63 @@ $(document).ready(function(){
     // });
 
     // side links click animation
-    $(".side-links a").on("click", function(){
-        if($(this).parent().hasClass("pull-left")){
-            $(this).parent().parent().addClass("animate__animated animate__slideOutRight");
+    $(".home .side-links a").on("click", function(){
+        const $sideLinks = $(this).parent();
+        if($sideLinks.hasClass("pull-left")){
+            // open about page
+            $sideLinks.parent().addClass("animate__animated animate__slideOutRight");
+            $sideLinks.parent().parent().children(".about").css("display", "flex");
+            $sideLinks.parent().parent().children(".about").addClass("animate__animated animate__slideInLeft");
             console.log("pull-left");
-        } else if($(this).parent().hasClass("pull-right")){
-            $(this).parent().parent().addClass("animate__animated animate__slideOutLeft");
+        } else if($sideLinks.hasClass("pull-right")){
+            // open projects page
+            $sideLinks.parent().addClass("animate__animated animate__slideOutLeft");
             console.log("pull-right");
         }
         console.log("clicked");
     });
-    
-    $("#home-page").on("animationend", function(){
+
+    // back button animation
+    $(".side-links.back a").on("click", function(){
+        const $sideLinks = $(this).parent();
+        if($sideLinks.hasClass("pull-left")){
+            $sideLinks.parent().addClass("animate__animated animate__slideOutRight");
+            $sideLinks.parent().parent().children(".home").css("display", "flex");
+            $sideLinks.parent().parent().children(".home").addClass("animate__animated animate__slideInLeft");
+            console.log("pull-left");
+        } else if($sideLinks.hasClass("pull-right")){
+            $sideLinks.parent().addClass("animate__animated animate__slideOutLeft");
+            $sideLinks.parent().parent().children(".home").css("display", "flex");
+            $sideLinks.parent().parent().children(".home").addClass("animate__animated animate__slideInRight");
+            console.log("pull-right");
+        }
+        console.log("clicked");
+    });
+
+
+    // animation end
+    function removeAnimations(){
         console.log("animation end");
         if($(this).hasClass("animate__slideOutLeft")){
-            $(this).parent().children(".animate__slideOutLeft").removeClass("animate__animated animate__slideOutLeft");
-            $(this).css("visibility", "hidden");
+            $(this).removeClass("animate__animated animate__slideOutLeft");
+            $(this).css("display", "none");
             console.log("yup to out left");
         } else if($(this).hasClass("animate__slideOutRight")){
-            $(this).parent().children(".animate__slideOutRight").removeClass("animate__animated animate__slideOutRight");
-            $(this).css("visibility", "hidden");
+            $(this).removeClass("animate__animated animate__slideOutRight");
+            $(this).css("display", "none");
             console.log("yes to out right");
+        } else if($(this).hasClass("animate__slideInLeft")){
+            $(this).removeClass("animate__animated animate__slideInLeft");
+            console.log("yes to in left");
+        } else if($(this).hasClass("animate__slideInRight")){
+            $(this).removeClass("animate__animated animate__slideInRight");
+            console.log("yes to in right");
         } else {
             console.log("nope");
         }
-    });
+    }
+    $("#home-page").on("animationend", removeAnimations);
+    $("#about-page").on("animationend", removeAnimations);
+    $(".side-links").on("animationend", removeAnimations);
+
 });
