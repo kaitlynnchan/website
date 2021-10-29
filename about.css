@@ -1,7 +1,7 @@
 #about-page{
     background-color: var(--accent-color);
     overflow-y: visible;
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     /* padding: 20px; */
 
@@ -15,16 +15,23 @@
 }
 #about-page .body .text{
     background-color: var(--dark-accent);
-    width: 65%;
+    width: 75%;
     margin-right: 20px;
     float: right;
     padding: 50px;
+    position: relative;
+    min-height: 80%;
+    margin: auto;
+    margin-right: 7%;
 }
 #about-page .body .title{
     background-color: var(--secondary-color);
     text-align: right;
     padding: 5px 20px;
     width: min-content;
+    position: absolute;
+    top: 20%;
+    left: -15%;
 }
 
 
@@ -32,8 +39,16 @@
 #about-page .contact-info .row{
     margin: auto;
 }
+#about-page .contact-info{
+    margin: 20px;
+}
+
+
 #about-page .side-links{
     margin: 0;
+}
+#about-page .side-links.back{
+    margin-top: 20px;
 }
 #about-page .side-links .overlay{
     /* opacity: 80%; */
@@ -46,6 +61,6 @@
 .side-links.pull-left a{
     float: left;
 }
-.side-links .back{
+.side-links.back h4{
     margin: 10px;
 }

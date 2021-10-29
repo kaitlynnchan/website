@@ -55,7 +55,7 @@ body {
     display: flex;
     overflow: hidden;
 
-    display: none;
+    /* display: none; */
 }
 .home .body {
     display: flex;
