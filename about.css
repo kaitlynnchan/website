@@ -1,13 +1,16 @@
 #about-page{
     background-color: var(--accent-color);
     overflow-y: visible;
-    /* display: flex; */
     flex-direction: column;
     /* padding: 20px; */
+    /* display: flex; */
 }
 
-#about-page .body{
+/* #about-page .body{
     margin: auto;
+} */
+#about-page .body .inner{
+    margin: 20px auto;
 }
 #about-page .body .text{
     background-color: var(--dark-accent);
@@ -22,6 +25,7 @@
 }
 #about-page .body .title{
     background-color: var(--secondary-color);
+    color: black;
     text-align: right;
     padding: 5px 20px;
     width: min-content;
@@ -31,24 +35,24 @@
 }
 
 
-
-#about-page .contact-info .row{
+/** Contact Info **/
+/* #about-page .contact-info .row{
     margin: auto;
 }
 #about-page .contact-info{
     margin: 20px;
-}
+} */
 
 
 /** side buttons **/
-.side-links.back{
-    margin: 0;
-    margin-top: 20px;
-}
-#about-page .side-links .overlay{
+.side-links.back .overlay{
     /* opacity: 80%; */
     background-color: var(--dark-accent);
     /* visibility: hidden; */
+}
+.side-links.back{
+    margin: 0;
+    margin-top: 20px;
 }
 .side-links.back h4{
     margin: 10px;

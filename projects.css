@@ -5,12 +5,15 @@
     /* padding: 20px; */
 }
 
+#projects-page .body .inner{
+    margin: 20px auto;
+}
 
-#projects-page .body{
+/* #projects-page .body{
     margin: auto;
-}
+} */
 
-#projects-page .side-links .overlay{
-    /* opacity: 80%; */
+/** Side Button **/
+/* #projects-page .side-links .overlay{
     background-color: var(--dark-accent);
-}
+} */

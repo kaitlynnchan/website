@@ -1,25 +1,20 @@
-/** Home page layout **/
 .home{
-    /* background-color: var(--accent-color);
+    /* background-color: var(--accent-color); */
     background-image: url("assets/imgs/0028_7A.jpg");
     background-size: cover;
     background-position: center;
-    position: relative; */
     position: relative;
+    height: 100vh;
 
     display: flex;
     overflow: hidden;
 
     /* display: none; */
 }
-.home .body {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-}
 
-/** Home elements **/
-.home .body .inner {
-    margin: auto;
-    color: var(--primary-color);
+#home-page > .overlay{
+    z-index: 0;
+}
+#home-page > section{
+    z-index: 2;
 }
