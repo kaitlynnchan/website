@@ -1,5 +1,51 @@
 #about-page{
     background-color: var(--accent-color);
     overflow-y: visible;
-    /* display: flex; */
+    display: flex;
+    flex-direction: column;
+    /* padding: 20px; */
+
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: inherit;
+}
+
+#about-page .body{
+    margin: auto;
+}
+#about-page .body .text{
+    background-color: var(--dark-accent);
+    width: 65%;
+    margin-right: 20px;
+    float: right;
+    padding: 50px;
+}
+#about-page .body .title{
+    background-color: var(--secondary-color);
+    text-align: right;
+    padding: 5px 20px;
+    width: min-content;
+}
+
+
+
+#about-page .contact-info .row{
+    margin: auto;
+}
+#about-page .side-links{
+    margin: 0;
+}
+#about-page .side-links .overlay{
+    /* opacity: 80%; */
+    background-color: var(--dark-accent);
+    /* visibility: hidden; */
+}
+.side-links.pull-right a{
+    float: right;
+}
+.side-links.pull-left a{
+    float: left;
+}
+.side-links .back{
+    margin: 10px;
 }
