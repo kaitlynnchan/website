@@ -1,0 +1,14 @@
+#projects-page{
+    background-color: var(--accent-color);
+    overflow-y: visible;
+    flex-direction: column;
+    /* padding: 20px; */
+
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: inherit;
+}
+
+#projects-page .body{
+    margin: auto;
+}

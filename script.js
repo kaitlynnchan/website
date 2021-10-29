@@ -30,6 +30,8 @@ $(document).ready(function(){
         } else if($sideLinks.hasClass("pull-right")){
             // open projects page
             $sideLinks.parent().addClass("animate__animated animate__slideOutLeft");
+            $sideLinks.parent().parent().children(".projects").css("display", "flex");
+            $sideLinks.parent().parent().children(".projects").addClass("animate__animated animate__slideInRight");
             console.log("pull-right");
         }
         console.log("clicked");
@@ -76,6 +78,7 @@ $(document).ready(function(){
     }
     $("#home-page").on("animationend", removeAnimations);
     $("#about-page").on("animationend", removeAnimations);
+    $("#projects-page").on("animationend", removeAnimations);
     $(".side-links").on("animationend", removeAnimations);
 
 });
