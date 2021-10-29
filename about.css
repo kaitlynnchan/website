@@ -4,10 +4,6 @@
     /* display: flex; */
     flex-direction: column;
     /* padding: 20px; */
-
-    overflow-y: auto;
-    overflow-x: hidden;
-    height: inherit;
 }
 
 #about-page .body{
@@ -44,22 +40,15 @@
 }
 
 
-#about-page .side-links{
+/** side buttons **/
+.side-links.back{
     margin: 0;
-}
-#about-page .side-links.back{
     margin-top: 20px;
 }
 #about-page .side-links .overlay{
     /* opacity: 80%; */
     background-color: var(--dark-accent);
     /* visibility: hidden; */
-}
-.side-links.pull-right a{
-    float: right;
-}
-.side-links.pull-left a{
-    float: left;
 }
 .side-links.back h4{
     margin: 10px;

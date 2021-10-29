@@ -3,12 +3,14 @@
     overflow-y: visible;
     flex-direction: column;
     /* padding: 20px; */
-
-    overflow-y: auto;
-    overflow-x: hidden;
-    height: inherit;
 }
+
 
 #projects-page .body{
     margin: auto;
+}
+
+#projects-page .side-links .overlay{
+    /* opacity: 80%; */
+    background-color: var(--dark-accent);
 }

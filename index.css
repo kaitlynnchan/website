@@ -32,7 +32,7 @@ body {
     position: relative;
     height: 100vh;
 }
-
+/** Wrapper Class Pages **/
 .wrapper{
     margin: 0;
     top: 0;
@@ -43,25 +43,12 @@ body {
     text-align: center;
 }
 
-/** Home page layout **/
-.home{
-    /* background-color: var(--accent-color);
-    background-image: url("assets/imgs/0028_7A.jpg");
-    background-size: cover;
-    background-position: center;
-    position: relative; */
-    position: relative;
-
-    display: flex;
-    overflow: hidden;
-
-    /* display: none; */
+.scrollable{
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: inherit;
 }
-.home .body {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-}
+
 .overlay {
     position: absolute;
     top: 0;
@@ -71,12 +58,6 @@ body {
     background-color: black;
     opacity: 45%;
     z-index: -1;
-}
-
-/** Home elements **/
-.home .body .inner {
-    margin: auto;
-    color: var(--primary-color);
 }
 
 /** Contact Info **/
@@ -124,6 +105,12 @@ body {
 }
 .side-links a:hover{
     color: inherit;
+}
+.side-links.pull-right a{
+    float: right;
+}
+.side-links.pull-left a{
+    float: left;
 }
 .pull-right .rounded-corners{
     border-top-left-radius: 15px;
