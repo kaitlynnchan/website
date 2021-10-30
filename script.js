@@ -9,36 +9,36 @@ $(document).ready(function(){
     });
 
 
-    // side links click animation
-    $("#home-page .side-links a").on("click", function(){
+    // side button click animation
+    $("#home-page .side-btn a").on("click", function(){
         $("body").css("overflow", "hidden");
-        const $sideLinks = $(this).parent();
-        if($sideLinks.hasClass("pull-left")){
+        const $sideBtn = $(this).parent();
+        if($sideBtn.hasClass("pull-left")){
             // open about page
-            $sideLinks.parent().addClass("animate__animated animate__slideOutRight");
+            $sideBtn.parent().addClass("animate__animated animate__slideOutRight");
             $("#about-page").css("display", "flex");
             $("#about-page").addClass("animate__animated animate__slideInLeft");
-        } else if($sideLinks.hasClass("pull-right")){
+        } else if($sideBtn.hasClass("pull-right")){
             // open projects page
-            $sideLinks.parent().addClass("animate__animated animate__slideOutLeft");
+            $sideBtn.parent().addClass("animate__animated animate__slideOutLeft");
             $("#projects-page").css("display", "flex");
             $("#projects-page").addClass("animate__animated animate__slideInRight");
         }
-        console.log("Clicked side link");
+        console.log("Clicked side button");
     });
 
     // back button animation
-    $(".side-links.back a").on("click", function(){
+    $(".side-btn.back a").on("click", function(){
         $("body").css("overflow", "hidden");
-        const $sideLinks = $(this).parent();
-        if($sideLinks.hasClass("pull-left")){
+        const $sideBtn = $(this).parent();
+        if($sideBtn.hasClass("pull-left")){
             // moving right
-            $sideLinks.parent().addClass("animate__animated animate__slideOutRight");
+            $sideBtn.parent().addClass("animate__animated animate__slideOutRight");
             $("#home-page").css("display", "flex");
             $("#home-page").addClass("animate__animated animate__slideInLeft");
-        } else if($sideLinks.hasClass("pull-right")){
+        } else if($sideBtn.hasClass("pull-right")){
             // moving left
-            $sideLinks.parent().addClass("animate__animated animate__slideOutLeft");
+            $sideBtn.parent().addClass("animate__animated animate__slideOutLeft");
             $("#home-page").css("display", "flex");
             $("#home-page").addClass("animate__animated animate__slideInRight");
         }
@@ -72,6 +72,6 @@ $(document).ready(function(){
     $("#home-page").on("animationend", removeAnimations);
     $("#about-page").on("animationend", removeAnimations);
     $("#projects-page").on("animationend", removeAnimations);
-    $(".side-links").on("animationend", removeAnimations);
+    $(".side-btn").on("animationend", removeAnimations);
 
 });

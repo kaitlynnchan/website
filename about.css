@@ -6,9 +6,6 @@
     /* display: flex; */
 }
 
-/* #about-page .body{
-    margin: auto;
-} */
 #about-page .body .inner{
     margin: 20px auto;
 }
@@ -34,26 +31,16 @@
     left: -15%;
 }
 
-
-/** Contact Info **/
-/* #about-page .contact-info .row{
-    margin: auto;
-}
-#about-page .contact-info{
-    margin: 20px;
-} */
-
-
-/** side buttons **/
-.side-links.back .overlay{
+/** Side button **/
+.side-btn.back .overlay{
     /* opacity: 80%; */
     background-color: var(--dark-accent);
     /* visibility: hidden; */
 }
-.side-links.back{
+.side-btn.back{
     margin: 0;
     margin-top: 20px;
 }
-.side-links.back h4{
+.side-btn.back h4{
     margin: 10px;
 }
