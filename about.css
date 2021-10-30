@@ -1,16 +1,20 @@
 #about-page{
-    background-color: var(--accent-color);
+    /* background-color: var(--secondary-color); */
     overflow-y: visible;
     flex-direction: column;
     /* padding: 20px; */
     /* display: flex; */
 }
 
+#about-page > .overlay{
+    background-color: var(--light-accent-color);
+}
+
 #about-page .body .inner{
     margin: 20px auto;
 }
 #about-page .body .text{
-    background-color: var(--dark-accent);
+    background-color: var(--dark-accent-color);
     width: 75%;
     margin-right: 20px;
     float: right;
@@ -21,8 +25,8 @@
     margin-right: 7%;
 }
 #about-page .body .title{
-    background-color: var(--secondary-color);
-    color: black;
+    background-color: var(--accent-color);
+    color: var(--dark-primary-color);
     text-align: right;
     padding: 5px 20px;
     width: min-content;
@@ -31,10 +35,14 @@
     left: -15%;
 }
 
+#about-page .contact-info p{
+    color: var(--dark-primary-color);
+}
+
 /** Side button **/
 .side-btn.back .overlay{
     /* opacity: 80%; */
-    background-color: var(--dark-accent);
+    background-color: var(--accent-color);
     /* visibility: hidden; */
 }
 .side-btn.back{
@@ -43,4 +51,5 @@
 }
 .side-btn.back h4{
     margin: 10px;
+    /* color: black; */
 }

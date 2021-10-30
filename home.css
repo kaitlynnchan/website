@@ -1,8 +1,8 @@
 .home{
     /* background-color: var(--accent-color); */
-    background-image: url("assets/imgs/0028_7A.jpg");
+    /* background-image: url("assets/imgs/0028_7A.jpg");
     background-size: cover;
-    background-position: center;
+    background-position: center; */
     position: relative;
     height: 100vh;
 
@@ -17,4 +17,8 @@
 }
 #home-page > section{
     z-index: 2;
+}
+
+#home-page .inner h4{
+    color: var(--secondary-color);
 }

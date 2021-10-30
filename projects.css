@@ -1,5 +1,5 @@
 #projects-page{
-    background-color: var(--accent-color);
+    /* background-color: var(--light-accent-color); */
     overflow-y: visible;
     flex-direction: column;
     /* padding: 20px; */

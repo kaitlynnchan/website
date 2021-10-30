@@ -1,9 +1,26 @@
 :root{
-    --primary-color: #FFFFFF;
-    --secondary-color: #D1D2CA;
-    --accent-color: #9B9D83;
-    --dark-accent: #464533;
-    --brown-color: #C7A47E;
+    /** 
+     *  text colour: primary, secondary, dark
+     *  background colour: accent
+     **/
+    --primary-color: var(--pale-orange-color);
+    --secondary-color: var(--light-orange-color);
+    --dark-primary-color: black;
+    --light-accent-color: var(--light-aqua-color);
+    --accent-color: var(--aqua-color);
+    --dark-accent-color: var(--dark-aqua-color);
+    --pale-orange-color: #FEE5AD;
+    --light-orange-color: #FACA66;
+    /* --dark-orange-color: #C36A2D; */
+    --dark-orange-color: #432a03;
+    --light-grey-color: #D1D2CA;
+    --pale-brown-color: #C7A47E;
+    --pale-green-color: #9B9D83;
+    --dark-green-color: #464533;
+    --light-aqua-color: #5a8971;
+    --aqua-color: #346751;
+    --dark-aqua-color: #2b5543;
+    --gold-color: #FFC745;
 }
 
 *{
@@ -11,7 +28,7 @@
     font-weight: normal;
 }
 h4{
-    color: var(--secondary-color);
+    color: var(--primary-color);
 }
 p{
     color: var(--secondary-color);
@@ -23,11 +40,12 @@ a, a:hover{
     text-decoration: none;
 }
 body {
-    background-color: var(--accent-color);
-    /* background-image: url("assets/imgs/0028_7A.jpg");
+    background-color: var(--light-accent-color);
+    background-image: url("assets/imgs/0028_7A.jpg");
     background-size: cover;
     background-position: center;
-    position: relative; */
+    min-height: 100vh;
+    height: 100%;
 }
 
 /** Wrapper Class Pages **/
@@ -69,7 +87,7 @@ body {
 
 /** Contact Info **/
 .contact-info .fa-circle, .contact-info .icon.selected{
-    color: var(--dark-accent);
+    color: var(--dark-accent-color);
 }
 .contact-info .icon, .contact-info .fa-circle.selected{
     color: var(--primary-color); 
@@ -84,13 +102,13 @@ body {
 /** Side Button **/
 .side-btn{
     position: relative;
-    color: black;
+    color: var(--dark-primary-color);
     margin: auto;
     /* text-transform: uppercase; */
 }
 .side-btn .overlay{
-    opacity: 80%;
-    background-color: var(--accent-color);
+    opacity: 100%;
+    background-color: var(--light-accent-color);
     /* visibility: hidden; */
 }
 .side-btn .vertical-text{
