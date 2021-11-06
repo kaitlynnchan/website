@@ -1,48 +1,59 @@
 #about-page{
-    /* background-color: var(--secondary-color); */
+    /* background-color: var(--secondary-accent-color); */
+    /* background-image: url("assets/imgs/blue-orange-background1.jpg");
+    background-image: url("assets/imgs/orange-blue-background5.jpg");
+    background-image: url("assets/imgs/orange-blue-background6.png"); */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
     overflow-y: visible;
     flex-direction: column;
     /* padding: 20px; */
     /* display: flex; */
 }
 
-#about-page > .overlay{
-    background-color: var(--light-accent-color);
-}
+/* #about-page > .overlay{
+    background-color: var(--tertiary-accent-color);
+} */
 
 #about-page .body .inner{
     margin: 20px auto;
 }
 #about-page .body .text{
-    background-color: var(--dark-accent-color);
+    background-color: var(--primary-accent-color);
     width: 75%;
     margin-right: 20px;
     float: right;
-    padding: 50px;
+    padding: 100px;
     position: relative;
     min-height: 80%;
     margin: auto;
     margin-right: 7%;
+    box-shadow: 7px 7px 4px rgb(0 0 0 / 25%);
 }
 #about-page .body .title{
-    background-color: var(--accent-color);
-    color: var(--dark-primary-color);
+    background-color: var(--tertiary-accent-color);
     text-align: right;
     padding: 5px 20px;
     width: min-content;
     position: absolute;
     top: 20%;
     left: -15%;
+    box-shadow: -7px 7px 4px rgb(0 0 0 / 25%);
+}
+#about-page .body .title h1{
+    color: var(--secondary-dark-text-color);
 }
 
 #about-page .contact-info p{
-    color: var(--dark-primary-color);
+    color: var(--secondary-dark-text-color);
 }
 
 /** Side button **/
 .side-btn.back .overlay{
     /* opacity: 80%; */
-    background-color: var(--accent-color);
+    background-color: var(--tertiary-accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     /* visibility: hidden; */
 }
 .side-btn.back{
@@ -51,5 +62,6 @@
 }
 .side-btn.back h4{
     margin: 10px;
+    color: var(--secondary-dark-text-color);
     /* color: black; */
 }

@@ -1,16 +1,24 @@
 :root{
     /** 
-     *  text colour: primary, secondary, dark
+     *  text colour: text
      *  background colour: accent
      **/
-    --primary-color: var(--pale-orange-color);
-    --secondary-color: var(--light-orange-color);
-    --dark-primary-color: black;
-    --light-accent-color: var(--light-aqua-color);
+    --primary-text-color: var(--pale-orange-color);
+    --secondary-text-color: var(--light-orange-color);
+    --primary-dark-text-color: #19386F;
+    --secondary-dark-text-color: #53382D;
+    --primary-accent-color: var(--light-blue-color);
+    --secondary-accent-color: var(--light-purple-color);
+    --tertiary-accent-color: var(--grey-orange-color);
+    /* --primary-dark-color:; */
+    /* dark #252525 */
+    /* --light-accent-color: var(--light-aqua-color);
     --accent-color: var(--aqua-color);
-    --dark-accent-color: var(--dark-aqua-color);
+    --dark-accent-color: var(--dark-aqua-color); */
+
     --pale-orange-color: #FEE5AD;
     --light-orange-color: #FACA66;
+    --grey-orange-color: #E4AE73;
     /* --dark-orange-color: #C36A2D; */
     --dark-orange-color: #432a03;
     --light-grey-color: #D1D2CA;
@@ -18,20 +26,24 @@
     --pale-green-color: #9B9D83;
     --dark-green-color: #464533;
     --light-aqua-color: #5a8971;
+    /* #82ad9b #476b5c #4a6b64 3d5651 */
     --aqua-color: #346751;
     --dark-aqua-color: #2b5543;
     --gold-color: #FFC745;
+    --light-blue-color: #afc6ce;
+    --light-purple-color: #c8ccd5;
 }
+
 
 *{
     font-family: 'Roboto', sans-serif;
     font-weight: normal;
 }
-h4{
-    color: var(--primary-color);
+h3{
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
 }
 p{
-    color: var(--secondary-color);
+    color: var(--primary-text-color);
     margin: 0;
 }
 a, a:hover{
@@ -40,12 +52,12 @@ a, a:hover{
     text-decoration: none;
 }
 body {
-    background-color: var(--light-accent-color);
-    background-image: url("assets/imgs/0028_7A.jpg");
+    /* background-color: var(--secondary-accent-color); */
+    background-image: url("assets/imgs/orange-blue-background2.jpg");
     background-size: cover;
     background-position: center;
     min-height: 100vh;
-    height: 100%;
+    /* height: 100%; */
 }
 
 /** Wrapper Class Pages **/
@@ -82,15 +94,15 @@ body {
 }
 .body .inner {
     margin: auto;
-    color: var(--primary-color);
+    color: var(--primary-dark-text-color);
 }
 
 /** Contact Info **/
 .contact-info .fa-circle, .contact-info .icon.selected{
-    color: var(--dark-accent-color);
+    color: var(--secondary-dark-text-color);
 }
 .contact-info .icon, .contact-info .fa-circle.selected{
-    color: var(--primary-color); 
+    color: var(--primary-text-color); 
 }
 .contact-info{
     display: flex;
@@ -102,13 +114,13 @@ body {
 /** Side Button **/
 .side-btn{
     position: relative;
-    color: var(--dark-primary-color);
+    color: var(--primary-dark-text-color);
     margin: auto;
     /* text-transform: uppercase; */
 }
 .side-btn .overlay{
     opacity: 100%;
-    background-color: var(--light-accent-color);
+    background-color: var(--secondary-accent-color);
     /* visibility: hidden; */
 }
 .side-btn .vertical-text{
