@@ -4,12 +4,14 @@
         {
             "name":"Reel Deal",
             "description":"",
-            "img":"./assets/imgs/playing.jpg"
+            "img":"./assets/imgs/playing.jpg",
+            "link":"https://github.com/kaitlynnchan/ReelDeal"
         },
         {
             "name":"Find It",
             "description":"",
-            "img":"./assets/imgs/playing.jpg"
+            "img":"./assets/imgs/playing.jpg",
+            "link":"https://google.com"
         },
         {
             "name":"Filomator",
