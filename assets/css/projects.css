@@ -23,6 +23,8 @@
     border: unset;
     margin-bottom: 20px;
     flex-grow: 1;
+    position: relative;
+    overflow: hidden;
 }
 
 #projects-page .project-items [class*='col-']{
@@ -31,4 +33,28 @@
 }
 .img-thumbnail p{
     font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+#projects-page .project-items .link{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#projects-page .project-items .link .corner-triangle{
+    width: 125px;
+    height: 125px;
+    transform: rotate(45deg);
+    background-color: var(--dark-brown);
+    top: -62px;
+    left: -62px;
+    position: absolute;
+}
+
+#projects-page .project-items .link .icon{
+    color: var(--pale-orange);
+    margin: 10px;
+}
+#projects-page .project-items .link a{
+    display: block;
 }
