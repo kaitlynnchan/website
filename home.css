@@ -1,5 +1,5 @@
 .home{
-    background-image: url("assets/imgs/orange_background0.jpg");
+    background-image: url("assets/imgs/orange_background0_2.png");
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -18,7 +18,7 @@
 } */
 
 #home-page .box{
-    width: 60%;
+    width: 65%;
 }
 
 #home-page .inner h3{
