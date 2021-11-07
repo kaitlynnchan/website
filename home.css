@@ -1,0 +1,26 @@
+.home{
+    background-image: url("assets/imgs/orange_background0.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+
+    position: relative;
+    display: flex;
+    overflow: hidden;
+
+    /* display: none; */
+}
+/* #home-page > .overlay{
+    z-index: 0;
+}
+#home-page > section{
+    z-index: 2;
+} */
+
+#home-page .box{
+    width: 60%;
+}
+
+#home-page .inner h3{
+    color: var(--blue);
+}
