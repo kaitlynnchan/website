@@ -1,0 +1,32 @@
+#projects-page{
+    background-image: url("../imgs/orange_background3_2.png");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+
+    overflow-y: visible;
+    flex-direction: column;
+    /* padding: 20px; */
+}
+
+#projects-page .body .inner{
+    margin: 20px auto;
+}
+
+#projects-page .project-items{
+    /* margin: 20px; */
+    width: 80%;
+}
+
+#projects-page .project-items .row .img-thumbnail{
+    padding: 15px;
+    border: unset;
+    margin-bottom: 20px;
+}
+
+#projects-page .project-items [class*='col-']{
+    display: flex;
+}
+.img-thumbnail p{
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+}
