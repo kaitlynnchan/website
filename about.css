@@ -37,6 +37,7 @@
 .side-btn.back{
     margin-top: 20px;
 }
-.side-btn.back h4{
-    margin: 10px;
+.side-btn.back a{
+    width: 75px;
+    height: 75px;
 }
