@@ -1,19 +1,5 @@
 :root{
-    /** 
-     *  text colour: text
-     *  background colour: accent
-     *  h1: dark-blue
-     **/
-    --primary-text-color: var(--pale-orange);
-    /* --secondary-text-color: var(--light-orange); */
-    --primary-dark-text-color: var(--dark-blue); /** h1, */
-    --secondary-dark-text-color: var(--dark-brown);
-    --primary-accent-color: var(--light-blue);
-    --secondary-accent-color: var(--light-purple);
-    --tertiary-accent-color: var(--light-purple);
-
     --pale-orange: #FEE5AD;
-    /* --light-orange: #FACA66; */
     --light-blue: #afc6ce;
     --light-purple: #c8ccd5;
     --blue: #445B85;
@@ -30,7 +16,6 @@ h3{
     font-family: Georgia, Cambria, "Times New Roman", Times, serif;
 }
 p{
-    /* color: var(--primary-text-color); */
     margin: 0;
 }
 a, a:hover{
@@ -39,7 +24,7 @@ a, a:hover{
     text-decoration: none;
 }
 body {
-    background-color: var(--secondary-accent-color);
+    background-color: var(--light-purple);
     /* background-image: url("assets/imgs/orange-background11.png");
     background-size: cover;
     background-position: center; */
@@ -81,10 +66,10 @@ body {
 }
 .body .inner {
     margin: auto;
-    color: var(--primary-dark-text-color);
+    color: var(--dark-blue);
 }
 .body .box{
-    background-color: var(--primary-accent-color);
+    background-color: var(--light-blue);
     /* width: 60%; */
     padding: 10%;
     box-shadow: 7px 7px 4px rgb(0 0 0 / 25%);
@@ -92,10 +77,10 @@ body {
 
 /** Contact Info **/
 .contact-info .fa-circle, .contact-info .icon.selected, .contact-info p{
-    color: var(--secondary-dark-text-color);
+    color: var(--dark-brown);
 }
 .contact-info .icon, .contact-info .fa-circle.selected{
-    color: var(--primary-text-color); 
+    color: var(--pale-orange); 
 }
 .contact-info{
     display: flex;
@@ -103,21 +88,16 @@ body {
 .contact-info .icons{
     margin: auto;
 }
-/* .contact-info p{
-    color: var(--secondary-dark-text-color);
-} */
 
 /** Side Button **/
 .side-btn{
     position: relative;
-    color: var(--primary-dark-text-color);
+    color: var(--dark-blue);
     margin: auto 0;
-    /* text-transform: uppercase; */
 }
 .side-btn .overlay{
     opacity: 100%;
-    background-color: var(--secondary-accent-color);
-    /* visibility: hidden; */
+    background-color: var(--light-purple);
 }
 .side-btn .vertical-text{
     writing-mode: vertical-lr;
