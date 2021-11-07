@@ -25,17 +25,17 @@ $(document).ready(function(){
         var info = 
             '<div class="row">' +
                 '<div class="icons fa-lg col-sm-6 col-xs-12">' +
-                    '<a class="fa-stack" href="">' +
-                        '<i class="fa fa-circle fa-stack-2x"></i>' +
-                        '<i class="fab fa-github fa-stack-1x icon"></i>' +
+                    '<a class="fa-stack hvr-icon-fade" href="">' +
+                        '<i class="fa fa-circle fa-stack-2x hvr-icon"></i>' +
+                        '<i class="fab fa-github fa-stack-1x hvr-icon icon"></i>' +
                     '</a>' +
-                    '<a class="fa-stack" href="">' +
-                        '<i class="fa fa-circle fa-stack-2x"></i>' +
-                        '<i class="fab fa-linkedin-in fa-stack-1x icon"></i>' +
+                    '<a class="fa-stack hvr-icon-fade" href="">' +
+                        '<i class="fa fa-circle fa-stack-2x hvr-icon"></i>' +
+                        '<i class="fab fa-linkedin-in fa-stack-1x hvr-icon icon"></i>' +
                     '</a>' +
-                    '<a class="fa-stack" href="">' +
-                        '<i class="fa fa-circle fa-stack-2x"></i>' +
-                        '<i class="far fa-file fa-stack-1x icon"></i>' +
+                    '<a class="fa-stack hvr-icon-fade" href="">' +
+                        '<i class="fa fa-circle fa-stack-2x hvr-icon"></i>' +
+                        '<i class="far fa-file fa-stack-1x hvr-icon icon"></i>' +
                     '</a>' +
                 '</div>' +
                 '<div class="col-sm-6 col-xs-12">' +
