@@ -6,14 +6,36 @@ $(document).ready(function(){
         console.log(data);
         $.each(data.projects, function(key, value){
             console.log(value.name + ", " + value.description + ", " + value.img);
+            if(value.link){
+                console.log(value.link);
+                if(value.link.includes("github")){
+                    var linkIcon = "fab fa-github";
+                } else{
+                    linkIcon = "fas fa-link";
+                }
+                console.log(linkIcon);
+                var linkItem = 
+                    '<div class="link">' +
+                        '<a class="hvr-icon-grow" href="' + value.link + '">' +
+                            '<div class="corner-triangle"></div>' +
+                            '<i class="' + linkIcon + ' fa-2x icon hvr-icon"></i>' +
+                        '</a>' +
+                    '</div>';
+                // $("#projects-page .projects-items .img-thumbnail").append(linkItem);
+            } else{
+                linkItem = "";
+            }
+
+
             var projectItem = 
-                "<div class='col-sm-6 col-xs-12'>" +
+                "<div class='col-xxl-4 col-md-6 col-sm-12 col-xs-12'>" +
                     "<div class='img-thumbnail box'>" +
                         "<img class='img-fluid' src='" + value.img + "'>" +
                         "<div class='caption'>" +
                             "<h2>" + value.name + "</h2>" +
                             "<p>" + value.description + "</p>" +
                         "</div>" +
+                        linkItem +
                     "</div>" +
                 "</div>";
             $("#projects-page .project-items .row").append(projectItem);
