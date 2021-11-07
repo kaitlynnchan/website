@@ -2,36 +2,23 @@
     /** 
      *  text colour: text
      *  background colour: accent
+     *  h1: dark-blue
      **/
-    --primary-text-color: var(--pale-orange-color);
-    --secondary-text-color: var(--light-orange-color);
-    --primary-dark-text-color: #19386F;
-    --secondary-dark-text-color: #53382D;
-    --primary-accent-color: var(--light-blue-color);
-    --secondary-accent-color: var(--light-purple-color);
-    --tertiary-accent-color: var(--light-purple-color);
-    /* --primary-dark-color:; */
-    /* dark #252525 */
-    /* --light-accent-color: var(--light-aqua-color);
-    --accent-color: var(--aqua-color);
-    --dark-accent-color: var(--dark-aqua-color); */
+    --primary-text-color: var(--pale-orange);
+    /* --secondary-text-color: var(--light-orange); */
+    --primary-dark-text-color: var(--dark-blue); /** h1, */
+    --secondary-dark-text-color: var(--dark-brown);
+    --primary-accent-color: var(--light-blue);
+    --secondary-accent-color: var(--light-purple);
+    --tertiary-accent-color: var(--light-purple);
 
-    --pale-orange-color: #FEE5AD;
-    --light-orange-color: #FACA66;
-    --grey-orange-color: #E4AE73;
-    /* --dark-orange-color: #C36A2D; */
-    --dark-orange-color: #432a03;
-    --light-grey-color: #D1D2CA;
-    --pale-brown-color: #C7A47E;
-    --pale-green-color: #9B9D83;
-    --dark-green-color: #464533;
-    --light-aqua-color: #5a8971;
-    /* #82ad9b #476b5c #4a6b64 3d5651 */
-    --aqua-color: #346751;
-    --dark-aqua-color: #2b5543;
-    --gold-color: #FFC745;
-    --light-blue-color: #afc6ce;
-    --light-purple-color: #c8ccd5;
+    --pale-orange: #FEE5AD;
+    /* --light-orange: #FACA66; */
+    --light-blue: #afc6ce;
+    --light-purple: #c8ccd5;
+    --blue: #445B85;
+    --dark-blue: #19386F;
+    --dark-brown: #53382D;
 }
 
 
@@ -96,9 +83,15 @@ body {
     margin: auto;
     color: var(--primary-dark-text-color);
 }
+.body .box{
+    background-color: var(--primary-accent-color);
+    /* width: 60%; */
+    padding: 10%;
+    box-shadow: 7px 7px 4px rgb(0 0 0 / 25%);
+}
 
 /** Contact Info **/
-.contact-info .fa-circle, .contact-info .icon.selected{
+.contact-info .fa-circle, .contact-info .icon.selected, .contact-info p{
     color: var(--secondary-dark-text-color);
 }
 .contact-info .icon, .contact-info .fa-circle.selected{
@@ -110,15 +103,15 @@ body {
 .contact-info .icons{
     margin: auto;
 }
-.contact-info p{
+/* .contact-info p{
     color: var(--secondary-dark-text-color);
-}
+} */
 
 /** Side Button **/
 .side-btn{
     position: relative;
     color: var(--primary-dark-text-color);
-    margin: auto;
+    margin: auto 0;
     /* text-transform: uppercase; */
 }
 .side-btn .overlay{

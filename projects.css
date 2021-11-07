@@ -1,9 +1,9 @@
 #projects-page{
-    /* background-color: var(--tertiary-accent-color); */
-    background-image: url("assets/imgs/orange-background12-2.png");
+    background-image: url("assets/imgs/orange_background3_2.png");
     background-size: cover;
     background-position: center;
     height: 100vh;
+
     overflow-y: visible;
     flex-direction: column;
     /* padding: 20px; */
@@ -12,7 +12,7 @@
 #projects-page .body .inner{
     margin: 20px auto;
 }
-
+/* 
 #projects-page .contact-info p{
     color: var(--secondary-dark-text-color);
-}
+} */

@@ -1,32 +1,34 @@
 .home{
-    /* background-color: var(--tertiary-accent-color); */
-    background-image: url("assets/imgs/orange-background8.jpg");
+    background-image: url("assets/imgs/orange_background0.jpg");
     background-size: cover;
     background-position: center;
-    position: relative;
     height: 100vh;
 
+    position: relative;
     display: flex;
     overflow: hidden;
 
     /* display: none; */
 }
-#home-page > .overlay{
+/* #home-page > .overlay{
     z-index: 0;
 }
 #home-page > section{
     z-index: 2;
-}
+} */
 
-#home-page .inner.heading{
+/* #home-page .inner.heading{
     background-color: var(--primary-accent-color);
     width: 60%;
     padding: 10%;
     box-shadow: 7px 7px 4px rgb(0 0 0 / 25%);
+} */
+#home-page .box{
+    width: 60%;
 }
-.body .inner h1{
+/* .body .inner h1{
     color: #19386F;
-}
+} */
 #home-page .inner h3{
-    color: #445B85;
+    color: var(--blue);
 }
