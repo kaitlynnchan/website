@@ -9,7 +9,7 @@
     --secondary-dark-text-color: #53382D;
     --primary-accent-color: var(--light-blue-color);
     --secondary-accent-color: var(--light-purple-color);
-    --tertiary-accent-color: var(--grey-orange-color);
+    --tertiary-accent-color: var(--light-purple-color);
     /* --primary-dark-color:; */
     /* dark #252525 */
     /* --light-accent-color: var(--light-aqua-color);
@@ -43,7 +43,7 @@ h3{
     font-family: Georgia, Cambria, "Times New Roman", Times, serif;
 }
 p{
-    color: var(--primary-text-color);
+    /* color: var(--primary-text-color); */
     margin: 0;
 }
 a, a:hover{
@@ -52,10 +52,10 @@ a, a:hover{
     text-decoration: none;
 }
 body {
-    /* background-color: var(--secondary-accent-color); */
-    background-image: url("assets/imgs/orange-blue-background2.jpg");
+    background-color: var(--secondary-accent-color);
+    /* background-image: url("assets/imgs/orange-background11.png");
     background-size: cover;
-    background-position: center;
+    background-position: center; */
     min-height: 100vh;
     /* height: 100%; */
 }
@@ -109,6 +109,9 @@ body {
 }
 .contact-info .icons{
     margin: auto;
+}
+.contact-info p{
+    color: var(--secondary-dark-text-color);
 }
 
 /** Side Button **/

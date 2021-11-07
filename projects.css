@@ -1,5 +1,9 @@
 #projects-page{
     /* background-color: var(--tertiary-accent-color); */
+    background-image: url("assets/imgs/orange-background12-2.png");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
     overflow-y: visible;
     flex-direction: column;
     /* padding: 20px; */
