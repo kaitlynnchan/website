@@ -22,10 +22,12 @@
     padding: 15px;
     border: unset;
     margin-bottom: 20px;
+    flex-grow: 1;
 }
 
 #projects-page .project-items [class*='col-']{
     display: flex;
+    flex-direction: column;
 }
 .img-thumbnail p{
     font-family: Georgia, Cambria, "Times New Roman", Times, serif;
