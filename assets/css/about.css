@@ -19,6 +19,9 @@
     margin: auto;
     margin-right: 7%;
 }
+#about-page .body .text h4{
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+}
 #about-page .body .title{
     background-color: var(--light-purple);
     text-align: right;
