@@ -31,14 +31,14 @@
             "img":""
         },
         {
-            "name":"All the Places You Can Go",
-            "description":"An Android app that gets information about destination spots and displays them to users.",
-            "img":"./assets/imgs/ohtheplaces.jpg"
-        },
-        {
             "name":"Lets Talk",
             "description":"This chatbox program allows users to communicate through UPD on different terminals. The program utilizes threading to run efficiently.",
             "img":"./assets/imgs/letstalk-example3.jpg"
+        },
+        {
+            "name":"All the Places You Can Go",
+            "description":"An Android app that gets information about destination spots and displays them to users.",
+            "img":"./assets/imgs/ohtheplaces.jpg"
         }
     ]
 }
