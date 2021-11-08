@@ -16,7 +16,7 @@ $(document).ready(function(){
                 console.log(linkIcon);
                 var linkItem = 
                     '<div class="link">' +
-                        '<a class="hvr-icon-grow" href="' + value.link + '">' +
+                        '<a class="hvr-icon-grow" href="' + value.link + '" target="_blank">' +
                             '<div class="corner-triangle"></div>' +
                             '<i class="' + linkIcon + ' fa-2x icon hvr-icon"></i>' +
                         '</a>' +
@@ -25,7 +25,6 @@ $(document).ready(function(){
             } else{
                 linkItem = "";
             }
-
 
             var projectItem = 
                 "<div class='col-xxl-4 col-md-6 col-sm-12 col-xs-12'>" +
@@ -47,15 +46,15 @@ $(document).ready(function(){
         var info = 
             '<div class="row">' +
                 '<div class="icons fa-lg col-sm-6 col-xs-12">' +
-                    '<a class="fa-stack hvr-icon-fade" href="">' +
+                    '<a class="fa-stack hvr-icon-fade" href="https://github.com/kaitlynnchan" target="_blank">' +
                         '<i class="fa fa-circle fa-stack-2x hvr-icon"></i>' +
                         '<i class="fab fa-github fa-stack-1x hvr-icon icon"></i>' +
                     '</a>' +
-                    '<a class="fa-stack hvr-icon-fade" href="">' +
+                    '<a class="fa-stack hvr-icon-fade" href="https://www.linkedin.com/in/kaitlynn-chan-3b2935162/" target="_blank">' +
                         '<i class="fa fa-circle fa-stack-2x hvr-icon"></i>' +
                         '<i class="fab fa-linkedin-in fa-stack-1x hvr-icon icon"></i>' +
                     '</a>' +
-                    '<a class="fa-stack hvr-icon-fade" href="">' +
+                    '<a class="fa-stack hvr-icon-fade" href="https://drive.google.com/file/d/1dVZpZjitifl5yxZfuI8XwDE3nqnQJ9UU/view?usp=sharing" target="_blank">' +
                         '<i class="fa fa-circle fa-stack-2x hvr-icon"></i>' +
                         '<i class="far fa-file fa-stack-1x hvr-icon icon"></i>' +
                     '</a>' +
