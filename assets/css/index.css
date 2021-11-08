@@ -12,9 +12,9 @@
     font-family: 'Roboto', sans-serif;
     font-weight: normal;
 }
-h3{
+/* h3{
     font-family: Georgia, Cambria, "Times New Roman", Times, serif;
-}
+} */
 p{
     margin: 0;
 }
@@ -77,10 +77,10 @@ body {
 
 /** Contact Info **/
 .contact-info .fa-circle, .contact-info .icon.selected, .contact-info p{
-    color: var(--dark-brown);
+    color: var(--dark-brown) !important;
 }
 .contact-info .icon, .contact-info .fa-circle.selected{
-    color: var(--pale-orange); 
+    color: var(--pale-orange) !important; 
 }
 .contact-info{
     display: flex;

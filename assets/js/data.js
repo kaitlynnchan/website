@@ -45,7 +45,7 @@ $(document).ready(function(){
     $(".contact-info").each(function(){
         var info = 
             '<div class="row">' +
-                '<div class="icons fa-lg col-sm-6 col-xs-12">' +
+                '<div class="icons fa-lg">' +
                     '<a class="fa-stack hvr-icon-fade" href="https://github.com/kaitlynnchan" target="_blank">' +
                         '<i class="fa fa-circle fa-stack-2x hvr-icon"></i>' +
                         '<i class="fab fa-github fa-stack-1x hvr-icon icon"></i>' +
@@ -59,10 +59,10 @@ $(document).ready(function(){
                         '<i class="far fa-file fa-stack-1x hvr-icon icon"></i>' +
                     '</a>' +
                 '</div>' +
-                '<div class="col-sm-6 col-xs-12">' +
-                    '<p>aaaaaaaaaaaaa@aaa.ca</p>' +
-                    '<p>(000) 000-0000</p>' +
-                '</div>' +
+                // '<div class="col-sm-6 col-xs-12">' +
+                //     '<p>kaitlynn_chan@sfu.ca</p>' +
+                //     '<p>(604) 000-0000</p>' +
+                // '</div>' +
             '</div>';
         $(this).append(info);
     });

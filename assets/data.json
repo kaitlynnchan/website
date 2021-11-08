@@ -9,20 +9,20 @@
         },
         {
             "name":"Find It",
-            "description":"A play on the game spot it, users have to match images on the cards and compete for a better high score. This Android game algorithmically creates cards and shuffles them where exactly 1 image matches with another card. Users are also able to import images from Flickr using the Flickr API or from their photo gallery.",
+            "description":"A play on the game spot it, users match images on the cards and compete for a better high score. This Android game algorithmically creates cards and shuffles them where exactly 1 image matches with another card. Users are also able to import images from Flickr using the Flickr API or from their photo gallery.",
             "img":"./assets/imgs/findit-playing.jpg",
             "link":"https://github.com/kaitlynnchan/FindIt"
         },
         {
             "name":"Filomator",
-            "description":"A file management desktop application that monitors folders for incoming files and moves them to their destination. Users input where they want files to go and what files to monitor and when.",
+            "description":"A file management desktop application that monitors folders for incoming files and moves them to their destination. Users input where they want files to go, what files to monitor and when.",
             "img":"./assets/imgs/filomator-ui.jpg",
             "link":"https://github.com/kaitlynnchan/Filomator"
         },        
         {
             "name":"CShell",
             "description":"A command line interpreter that forks processes to allow multiple commands to be run efficiently and independently. Users can run a script of commands.",
-            "img":"./assets/imgs/cshell-ex2.jpg",
+            "img":"./assets/imgs/cshell-ex3.jpg",
             "link":"https://github.com/kaitlynnchan/cshell"
         },
         {
@@ -33,7 +33,7 @@
         {
             "name":"Lets Talk",
             "description":"This chatbox program allows users to communicate through UPD on different terminals. The program utilizes threading to run efficiently.",
-            "img":"./assets/imgs/letstalk-example3.jpg"
+            "img":"./assets/imgs/letstalk-example_2.jpg"
         },
         {
             "name":"All the Places You Can Go",

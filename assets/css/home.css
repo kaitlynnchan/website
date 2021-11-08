@@ -21,6 +21,7 @@
     width: 65%;
 }
 
-#home-page .inner h3{
+#home-page .inner h4{
     color: var(--blue);
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
 }
