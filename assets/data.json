@@ -22,7 +22,7 @@
         {
             "name":"CShell",
             "description":"A command line interpreter that forks processes to allow multiple commands to be run efficiently and independently. Users can run a script of commands.",
-            "img":"./assets/imgs/cshell-ex3.jpg",
+            "img":"./assets/imgs/cshell-ex2.jpg",
             "link":"https://github.com/kaitlynnchan/cshell"
         },
         {
@@ -36,7 +36,12 @@
             "img":"./assets/imgs/letstalk-example_2.jpg"
         },
         {
-            "name":"All the Places You Can Go",
+            "name":"Tokimon Manager",
+            "description":"This server-client program allows users to manage their Tokimons through JavaFX UI. The data is stored on the client side in a JSON file and is communicated through an HTTP request using Spring Boot.",
+            "img":"./assets/imgs/tokimonmanagerclient-create.jpg"
+        },
+        {
+            "name":"Oh the Places You'll Go",
             "description":"An Android app that gets information about destination spots and displays them to users.",
             "img":"./assets/imgs/ohtheplaces.jpg"
         }
