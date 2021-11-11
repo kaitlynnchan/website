@@ -38,7 +38,7 @@
         {
             "name":"Tokimon Manager",
             "description":"This server-client program allows users to manage their Tokimons through JavaFX UI. The data is stored on the client side in a JSON file and is communicated through an HTTP request using Spring Boot.",
-            "img":"./assets/imgs/tokimonmanagerclient-create.jpg"
+            "img":"./assets/imgs/tokimonmanager2.png"
         },
         {
             "name":"Oh the Places You'll Go",
