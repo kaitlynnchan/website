@@ -28,7 +28,7 @@
             "name":"CShell",
             "description":"A command line interpreter that forks processes to allow multiple commands to be run efficiently and independently. Users can run a script of commands.",
             "img":"./assets/imgs/cshell-ex2.jpg",
-            "link":"https://github.com/kaitlynnchan/cshell"
+            "link":"https://replit.com/@kaitlynnchan/cshell"
         },
         {
             "name":"Lets Talk",
