@@ -2,6 +2,17 @@
     "aboutMe":"I am a undergraduate student at SFU interested in computer science as well as business. I am passionate about learning and passionate about helping others to learn. I work well with others, and I have been successful in influencing my peers to take action and learn more about the technology field. I want to continue to inspire others to pursue a career in computer science.",
     "projects":[
         {
+            "name":"Filomator",
+            "description":"A file management desktop application that monitors folders for incoming files and moves them to their destination. Users input where they want files to go, what files to monitor and when.",
+            "img":"./assets/imgs/filomator-ui.jpg",
+            "link":"https://github.com/kaitlynnchan/Filomator"
+        },
+        {
+            "name":"Recipe Extractor",
+            "description":"This Chome extension pulls recipe information from a site and displays it to users.",
+            "img":"./assets/imgs/recipe-extractor.jpg"
+        },
+        {
             "name":"Reel Deal",
             "description":"An immersive Android game where users search for the fishes implemented in Java. Users can choose how difficult they want to play and compete to improve their high scores.",
             "img":"./assets/imgs/reeldeal-playing.jpg",
@@ -12,23 +23,12 @@
             "description":"A play on the game spot it, users match images on the cards and compete for a better high score. This Android game algorithmically creates cards and shuffles them where exactly 1 image matches with another card. Users are also able to import images from Flickr using the Flickr API or from their photo gallery.",
             "img":"./assets/imgs/findit-playing.jpg",
             "link":"https://github.com/kaitlynnchan/FindIt"
-        },
-        {
-            "name":"Filomator",
-            "description":"A file management desktop application that monitors folders for incoming files and moves them to their destination. Users input where they want files to go, what files to monitor and when.",
-            "img":"./assets/imgs/filomator-ui.jpg",
-            "link":"https://github.com/kaitlynnchan/Filomator"
         },        
         {
             "name":"CShell",
             "description":"A command line interpreter that forks processes to allow multiple commands to be run efficiently and independently. Users can run a script of commands.",
             "img":"./assets/imgs/cshell-ex2.jpg",
-            "link":"https://github.com/kaitlynnchan/cshell"
-        },
-        {
-            "name":"Recipe Extractor",
-            "description":"This Chome extension pulls recipe information from a site and displays it to users.",
-            "img":""
+            "link":"https://replit.com/@kaitlynnchan/cshell"
         },
         {
             "name":"Lets Talk",
