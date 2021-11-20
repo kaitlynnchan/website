@@ -21,7 +21,16 @@
     width: 65%;
 }
 
-#home-page .inner h4{
+#home-page .inner.box h4{
     color: var(--blue);
     font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+#home-page .inner.top{
+    display: flex;
+    margin: auto 0;
+}
+
+#home-page .side-btn.top{
+    flex-grow: 1;
 }
