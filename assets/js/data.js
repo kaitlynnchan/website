@@ -54,7 +54,7 @@ $(document).ready(function(){
                         '<i class="fa fa-circle fa-stack-2x hvr-icon"></i>' +
                         '<i class="fab fa-linkedin-in fa-stack-1x hvr-icon icon"></i>' +
                     '</a>' +
-                    '<a class="fa-stack hvr-icon-fade" href="https://drive.google.com/file/d/1dVZpZjitifl5yxZfuI8XwDE3nqnQJ9UU/view?usp=sharing" target="_blank">' +
+                    '<a class="fa-stack hvr-icon-fade" href="https://drive.google.com/file/d/17RjmRSGnLhdQHUXH6xpLUb0Wcsnh-Ek7/view?usp=sharing" target="_blank">' +
                         '<i class="fa fa-circle fa-stack-2x hvr-icon"></i>' +
                         '<i class="far fa-file fa-stack-1x hvr-icon icon"></i>' +
                     '</a>' +
