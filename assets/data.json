@@ -10,7 +10,8 @@
         {
             "name":"Recipe Extractor",
             "description":"This Chome extension pulls recipe information from a site and displays it to users.",
-            "img":"./assets/imgs/recipe-extractor.jpg"
+            "img":"./assets/imgs/recipe-extractor.jpg",
+            "link":"https://github.com/kaitlynnchan/recipe-extractor"
         },
         {
             "name":"Reel Deal",
