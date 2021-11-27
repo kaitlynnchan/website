@@ -1,11 +1,19 @@
 
-// detect whether on mobile or not
-if(window.matchMedia("only screen and (max-width: 760px)").matches){
-    console.log("on mobile mode");
-
-    // changed location of side buttons to be mobile responsive
-    $("#home-page .inner.top").append($("#home-page .side-btn"));
-    $("#home-page .side-btn").addClass("top");
-} else{
-    console.log("not on mobile");
+// detect size of screen
+function checkSize(){
+    if(window.matchMedia("only screen and (max-width: 1000px)").matches){    
+        // changed location of side buttons
+        $("#home-page .side-btn").insertBefore($("#home-page .body .contact-info"));
+        $("#home-page .side-btn").addClass("center");
+    } else{
+        $("#home-page").append($("#home-page .side-btn"));
+        $("#home-page .side-btn").removeClass("center");
+    }
 }
+
+checkSize();
+
+$(window).resize(function(){
+    console.log("resized");
+    checkSize();
+})

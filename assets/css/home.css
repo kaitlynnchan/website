@@ -21,9 +21,14 @@
     width: 65%;
 }
 
+#home-page .inner.box h1{
+    font-family: "brandon";
+    font-size: 3.75rem;
+}
+
 #home-page .inner.box h4{
     color: var(--blue);
-    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+    /* font-family: Georgia, Cambria, "Times New Roman", Times, serif; */
 }
 
 #home-page .inner.top{
@@ -33,4 +38,14 @@
 
 #home-page .side-btn.top{
     flex-grow: 1;
+}
+
+#home-page .side-btn.center{
+    display: flex;
+    margin: 10px 0;
+}
+
+#home-page .side-btn.center a{
+    width: 65%;
+    margin: auto;
 }

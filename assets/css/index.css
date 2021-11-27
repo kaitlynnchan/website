@@ -1,16 +1,31 @@
 :root{
+    --pale: #FFEAD0;
+    /* FFE7C2 */
     --pale-orange: #FEE5AD;
-    --light-blue: #afc6ce;
-    --light-purple: #c8ccd5;
-    --blue: #445B85;
-    --dark-blue: #19386F;
-    --dark-brown: #53382D;
+    --brown: #A88245;
+    --dark-brown: #47351A;
+    --light-blue: #84CED1;
+    --blue: #2A6366;
+    /* #003638 */
+    --dark-blue: #10292B;
+    --light-purple: #B3AFDC;
+    --purple: #3F3975;
+    --dark-purple: #0F0941;
 }
 
+@font-face {
+    font-family: 'brandon';
+    src: url('../font/brandon-med.otf');
+}
+@font-face {
+    font-family: 'brandon-bold';
+    src: url('../font/brandon-bold.otf');
+}
 
 *{
-    font-family: 'Roboto', sans-serif;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
     font-weight: normal;
+    border-radius: 7px;
 }
 /* h3{
     font-family: Georgia, Cambria, "Times New Roman", Times, serif;
@@ -92,7 +107,7 @@ body {
 /** Side Button **/
 .side-btn{
     position: relative;
-    color: var(--dark-blue);
+    color: var(--dark-purple);
 }
 .side-btn a{
     display: flex;
@@ -127,4 +142,15 @@ body {
 
 .rounded-corners{
     border-radius: 50%;
+}
+
+
+.top-btn span{
+    font-family: 'brandon-bold';
+    font-size: 3.75rem;
+    color: var(--dark-brown);
+}
+.top-btn span.selected{
+    /* color: #cb8a28; */
+    color: var(--brown) !important;
 }
