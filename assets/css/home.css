@@ -34,3 +34,13 @@
 #home-page .side-btn.top{
     flex-grow: 1;
 }
+
+#home-page .side-btn.center{
+    display: flex;
+    margin: 10px 0;
+}
+
+#home-page .side-btn.center a{
+    width: 65%;
+    margin: auto;
+}
