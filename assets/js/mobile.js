@@ -4,7 +4,6 @@ function checkSize(){
     if(window.matchMedia("only screen and (max-width: 1000px)").matches){    
         // changed location of side buttons
         $("#home-page .side-btn").insertBefore($("#home-page .body .contact-info"));
-        // $("#home-page .side-btn").css("order", "");
         $("#home-page .side-btn").addClass("center");
     } else{
         $("#home-page").append($("#home-page .side-btn"));

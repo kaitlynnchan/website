@@ -31,9 +31,9 @@
     display: flex;
     flex-direction: column;
 }
-.img-thumbnail p{
+/* .img-thumbnail p{
     font-family: Georgia, Cambria, "Times New Roman", Times, serif;
-}
+} */
 
 .img-thumbnail img{
     max-width: 100%;
