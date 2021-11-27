@@ -5,9 +5,13 @@ function checkSize(){
         // changed location of side buttons
         $("#home-page .side-btn").insertBefore($("#home-page .body .contact-info"));
         $("#home-page .side-btn").addClass("center");
+        $("#home-page .inner.box h1").css("font-size", "2.75rem")
+        $("#home-page .body .inner.top").css("display", "none");
     } else{
         $("#home-page").append($("#home-page .side-btn"));
         $("#home-page .side-btn").removeClass("center");
+        $("#home-page .inner.box h1").css("font-size", "3.75rem")
+        $("#home-page .body .inner.top").css("display", "flex");
     }
 }
 
