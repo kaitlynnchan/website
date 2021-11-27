@@ -2,6 +2,7 @@
     --pale: #FFEAD0;
     /* FFE7C2 */
     --pale-orange: #FEE5AD;
+    --brown: #A88245;
     --dark-brown: #47351A;
     --light-blue: #84CED1;
     --blue: #2A6366;
@@ -149,7 +150,7 @@ body {
     font-size: 3.75rem;
     color: var(--dark-brown);
 }
-.top-btn span:hover{
+.top-btn span.selected{
     /* color: #cb8a28; */
-    color: #A88245;
+    color: var(--brown) !important;
 }

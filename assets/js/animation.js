@@ -8,6 +8,11 @@ $(document).ready(function(){
         console.log("Icon hover");
     });
 
+    // top-btn animation
+    $(".top-btn a").hover(function(){
+        $(this).children("span").toggleClass("selected");
+    });
+
 
     // side button click animation
     $("#home-page .side-btn a").on("click", function(){
