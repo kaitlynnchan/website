@@ -88,4 +88,21 @@ $(document).ready(function(){
     $("#projects-page").on("animationend", removeAnimations);
     $(".side-btn").on("animationend", removeAnimations);
 
+    $(".nav-hamburger").on("click", function(){
+        if($(".nav-btns").hasClass("dropped")){
+            $(".nav-btns").removeClass("dropped");
+            $(".nav-btns").addClass("collapsed");
+        } else{
+            $(".nav-btns").addClass("dropped");
+        } 
+        console.log("Clicked nav hamburger");
+    });
 });
+
+
+
+// .open-menu ul li a:hover
+// {
+//   border-bottom: 5px solid #000;
+//   transition: 0.2s all;
+// }
