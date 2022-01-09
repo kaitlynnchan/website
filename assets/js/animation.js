@@ -9,39 +9,6 @@ $(document).ready(function(){
         console.log("Icon hover");
     });
 
-    // clicking page buttons animation
-    function clickBtn(btnContainer, pageName){
-        if(isAnimationDone){
-            $("body").css("overflow", "hidden");
-            if(btnContainer.hasClass("pull-left")){
-                // moving right
-                btnContainer.parents(".page").addClass("animate__animated animate__slideOutRight");
-                $(pageName).css("display", "flex");
-                $(pageName).addClass("animate__animated animate__slideInLeft");
-            } else if(btnContainer.hasClass("pull-right")){
-                // moving left
-                btnContainer.parents(".page").addClass("animate__animated animate__slideOutLeft");
-                $(pageName).css("display", "flex");
-                $(pageName).addClass("animate__animated animate__slideInRight");
-            }
-            isAnimationDone = false;
-        }
-    }
-
-    // side navigation
-    $(".side-nav a").on("click", function(){
-        const $sideNav = $(this).parents("section");
-        var linkName = $(this).attr("id");
-        if(linkName == "about"){
-            // open about page
-            clickBtn($sideNav, "#about-page");
-        } else if(linkName == "projects"){
-            // open projects page
-            clickBtn($sideNav, "#projects-page");
-        }
-        console.log("Clicked side navigation");
-    });
-
     // animation end
     function removeAnimations(){
         console.log("Animation end on '" + $(this).attr("class") + "'");
@@ -75,54 +42,61 @@ $(document).ready(function(){
     /** 
      * Navigation Buttons
      */
-    // open and collapse top navigation menu
-    function toggleNavMenu(){
+    // clicking page buttons animation
+    function clickBtn(btnContainer, pageName){
+        if(isAnimationDone){
+            $("body").css("overflow", "hidden");
+            if(btnContainer.hasClass("pull-left")){
+                // moving right
+                btnContainer.parents(".page").addClass("animate__animated animate__slideOutRight");
+                $(pageName).css("display", "flex");
+                $(pageName).addClass("animate__animated animate__slideInLeft");
+            } else if(btnContainer.hasClass("pull-right")){
+                // moving left
+                btnContainer.parents(".page").addClass("animate__animated animate__slideOutLeft");
+                $(pageName).css("display", "flex");
+                $(pageName).addClass("animate__animated animate__slideInRight");
+            }
+            isAnimationDone = false;
+        }
+    }
+
+    // side navigation
+    $(".side-nav a").on("click", function(){
+        const $sideNav = $(this).parents("section");
+        var linkName = $(this).attr("id");
+        clickBtn($sideNav, "#" + linkName + "-page");
+        console.log("Clicked side navigation");
+    });
+
+    // top navigation menu
+    $(".top-nav .nav-menu a").on("click", function(){
+        const $btn = $(this).parents("section");
+        var linkName = $(this).attr("id");        
+        clickBtn($btn, "#" + linkName + "-page");
+
+        // trigger event handler for navigation hamburger
+        $(this).parents("section").find(".nav-hamburger")
+            .trigger("click")
+            .trigger("mouseleave");
+        console.log("Clicked top nav menu");
+    });
+
+    // open and close top navigation menu
+    $(".nav-hamburger").on("click", function(){
         var pageName = $(this).parents(".page").attr("id");
         $(this).parents("section").find(".nav-menu").toggleClass("expanded");
         $(this).parents("section").find(".nav-menu").toggleClass("collapsed");
-        if(pageName == 'about-page'){
-            $(this).parents("section").find(".nav-menu").find("#about").addClass("page-open");
-            $(this).parents("section").find(".nav-menu").find("#projects").removeClass("page-open");
-        } else if(pageName == "projects-page"){
-            $(this).parents("section").find(".nav-menu").find("#projects").addClass("page-open");
-            $(this).parents("section").find(".nav-menu").find("#about").removeClass("page-open");
-        }
+
+        // make link to current page unclickable
+        $(this).parents("section").find(".nav-menu ul li a").each(function(){
+            var iD = $(this).attr("id");
+            if(pageName.includes(iD)){
+                console.log(true);
+                $(this).addClass("unclickable");
+            }
+        });
         console.log("Icon hover out");
-    }
-    $(".nav-hamburger").on("click", toggleNavMenu);
-
-    // click navigation buttons
-    $(".nav-menu a").on("click", function(){
-        var linkName = $(this).attr("id");
-        const $btn = $(this).parents("section");
-        if(linkName == 'home'){
-            clickBtn($btn, "#home-page");
-            $(this).parents("section").find(".nav-hamburger")
-                .trigger("click")
-                .trigger("mouseleave");
-        } else if(linkName == "about"){
-            clickBtn($btn, "#about-page");
-            $(this).parents("section").find(".nav-hamburger")
-                .trigger("click")
-                .trigger("mouseleave");
-        } else if(linkName == "projects"){
-            clickBtn($btn, "#projects-page");
-            $(this).parents("section").find(".nav-hamburger")
-                .trigger("click")
-                .trigger("mouseleave");
-        }
-        console.log("Clicked nav buttons");
-    });
-
-    // click heading top navigation button
-    $(".top-nav.heading a").on("click", function(){
-        const $btn = $(this).parents(".header").find(".top-nav").first();
-        clickBtn($btn, "#home-page");
-    });
-
-    // heading top navigation button hover animation
-    $(".heading a").hover(function(){
-        $(this).children("h1").toggleClass("selected");
     });
 
     // navigation hamburger hover animation
@@ -143,12 +117,15 @@ $(document).ready(function(){
         }
     );
 
-    // $.ajax({
-    //     url: "https://github.com/kaitlynnchan/website",
-    //     type: "GET",
-    //     success: function() {
-    //         console.log("reaching");
-    //         // End of function for Ajax
-    //     }
-    // });
+    // top navigation heading
+    $(".top-nav.heading a").on("click", function(){
+        const $topNavBtn = $(this).parents(".header").find(".top-nav").first();
+        clickBtn($topNavBtn, "#home-page");
+    });
+
+    // top navigation heading hover animation
+    $(".heading a").hover(function(){
+        $(this).children("h1").toggleClass("selected");
+    });
+
 });
