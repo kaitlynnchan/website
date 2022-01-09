@@ -52,13 +52,13 @@
 }
 
 /** Side button **/
-.side-btn.back .overlay{
+/* .side-nav.back .overlay{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.side-btn.back{
+.side-nav.back{
     margin-top: 20px;
-}
-/* .side-btn.back a{
+} */
+/* .side-nav.back a{
     width: 75px;
     height: 75px;
 } */
@@ -95,22 +95,22 @@ a.nav-hamburger .fa-bars, a.nav-hamburger .fa-circle.selected{
 }
 
 /** Navigation buttons **/
-.nav-menu{
+.top-nav{
     position: relative;
 }
 
-.nav-menu.pull-right > a{
+.top-nav.pull-right > a{
     float: right;
 }
-.nav-menu.pull-left > a{
+.top-nav.pull-left > a{
     float: left;
 }
 
-.nav-menu .fa-circle{
+.top-nav .fa-circle{
     color: var(--light-purple);
 }
 
-.nav-btns{
+.nav-menu{
     position: absolute;
     top: 49px;
     background-color: var(--light-purple);
@@ -119,60 +119,60 @@ a.nav-hamburger .fa-bars, a.nav-hamburger .fa-circle.selected{
     box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
     z-index: 2;
 }
-.nav-menu.pull-right .nav-btns{
-    right: 17px;
+.top-nav.pull-right .nav-menu{
+    right: 0;
     text-align: end;
 }
-.nav-menu.pull-left .nav-btns{
+.top-nav.pull-left .nav-menu{
     text-align: start;
 }
 
-.nav-btns.dropped{
+.nav-menu.expanded{
     opacity: 1;
     transform: none;
     transition: opacity 251ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, transform 167ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
     transform-origin: 0px 0px;
 }
-.nav-btns.collapsed{
+.nav-menu.collapsed{
     opacity: 0;
     transform: none;
     transition: opacity 251ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, transform 167ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
     transform-origin: 0px 0px;
 }
 
-.nav-btns ul{
+.nav-menu ul{
     list-style: none;
     padding: 0;
     margin: 0;
 }
-.nav-btns ul li{
+.nav-menu ul li{
     padding: 3px 0;
 }
-.nav-btns ul li span{
+.nav-menu ul li span{
     font-size: large;
     font-weight: 500;
 }
-.nav-btns ul li a:hover{
+.nav-menu ul li a:hover{
     border-bottom: 2px solid #000;
     transition: 0.2s all;
     border-radius: 0;
 }
 
-.nav-btns.horizontal ul li{
+.nav-menu.horizontal ul li{
     display: inline-block;
     padding: 3px 10px;
 }
-.nav-btns.horizontal{
+.nav-menu.horizontal{
     top: -5px;
     padding: 10px;
 }
-.nav-menu.pull-left .nav-btns.horizontal{
+.top-nav.pull-left .nav-menu.horizontal{
     left: 55px;
 }
-.nav-menu.pull-right .nav-btns.horizontal{
+.top-nav.pull-right .nav-menu.horizontal{
     right: 55px;
 }
 
-.nav-btns ul li a.page-open{
+.nav-menu ul li a.page-open{
     pointer-events: none;
 }

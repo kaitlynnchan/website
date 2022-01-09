@@ -36,16 +36,24 @@
     margin: auto 0;
 }
 
-#home-page .side-btn.top{
+#home-page .side-nav.top{
     flex-grow: 1;
 }
 
-#home-page .side-btn.center{
+#home-page .side-nav.center{
     display: flex;
     margin: 10px 0;
 }
 
-#home-page .side-btn.center a{
+#home-page .side-nav.center a{
     width: 65%;
     margin: auto;
+}
+
+#home-page .side-nav.center .inner.box h1{
+    font-size: 2.75rem;
+}
+
+#home-page .side-nav.center .inner.top{
+    display: none;
 }

@@ -9,18 +9,18 @@ $(document).ready(function(){
         console.log("Icon hover");
     });
 
-    // clicking page buttons
-    function clickBtn(btn, pageName){
+    // clicking page buttons animation
+    function clickBtn(btnContainer, pageName){
         if(isAnimationDone){
             $("body").css("overflow", "hidden");
-            if(btn.hasClass("pull-left")){
+            if(btnContainer.hasClass("pull-left")){
                 // moving right
-                btn.parents(".page").addClass("animate__animated animate__slideOutRight");
+                btnContainer.parents(".page").addClass("animate__animated animate__slideOutRight");
                 $(pageName).css("display", "flex");
                 $(pageName).addClass("animate__animated animate__slideInLeft");
-            } else if(btn.hasClass("pull-right")){
+            } else if(btnContainer.hasClass("pull-right")){
                 // moving left
-                btn.parents(".page").addClass("animate__animated animate__slideOutLeft");
+                btnContainer.parents(".page").addClass("animate__animated animate__slideOutLeft");
                 $(pageName).css("display", "flex");
                 $(pageName).addClass("animate__animated animate__slideInRight");
             }
@@ -28,17 +28,18 @@ $(document).ready(function(){
         }
     }
 
-    // side button click animation
-    $("#home-page .side-btn a").on("click", function(){
-        const $sideBtn = $(this).parents("section");
-        if($sideBtn.hasClass("pull-left")){
+    // side navigation
+    $(".side-nav a").on("click", function(){
+        const $sideNav = $(this).parents("section");
+        var linkName = $(this).attr("id");
+        if(linkName == "about"){
             // open about page
-            clickBtn($sideBtn, "#about-page");
-        } else if($sideBtn.hasClass("pull-right")){
+            clickBtn($sideNav, "#about-page");
+        } else if(linkName == "projects"){
             // open projects page
-            clickBtn($sideBtn, "#projects-page");
+            clickBtn($sideNav, "#projects-page");
         }
-        console.log("Clicked side button");
+        console.log("Clicked side navigation");
     });
 
     // animation end
@@ -60,7 +61,7 @@ $(document).ready(function(){
         else if($(this).hasClass("animate__slideInRight")){
             $(this).removeClass("animate__animated animate__slideInRight");
         } 
-        else {
+        else{
             console.log("No animations removed");
         }
         isAnimationDone = true;
@@ -68,71 +69,77 @@ $(document).ready(function(){
     $("#home-page").on("animationend", removeAnimations);
     $("#about-page").on("animationend", removeAnimations);
     $("#projects-page").on("animationend", removeAnimations);
-    $(".side-btn").on("animationend", removeAnimations);
+    $(".side-nav").on("animationend", removeAnimations);
 
 
     /** 
      * Navigation Buttons
      */
-    // open and collapse navigation menu
-    function toggleNav(){
+    // open and collapse top navigation menu
+    function toggleNavMenu(){
         var pageName = $(this).parents(".page").attr("id");
-        $(this).parent().find(".nav-btns").toggleClass("dropped");
-        $(this).parent().find(".nav-btns").toggleClass("collapsed");
+        $(this).parents("section").find(".nav-menu").toggleClass("expanded");
+        $(this).parents("section").find(".nav-menu").toggleClass("collapsed");
         if(pageName == 'about-page'){
-            $(this).parent().find(".nav-btns").find("#about").addClass("page-open");
-            $(this).parent().find(".nav-btns").find("#projects").removeClass("page-open");
+            $(this).parents("section").find(".nav-menu").find("#about").addClass("page-open");
+            $(this).parents("section").find(".nav-menu").find("#projects").removeClass("page-open");
         } else if(pageName == "projects-page"){
-            $(this).parent().find(".nav-btns").find("#projects").addClass("page-open");
-            $(this).parent().find(".nav-btns").find("#about").removeClass("page-open");
+            $(this).parents("section").find(".nav-menu").find("#projects").addClass("page-open");
+            $(this).parents("section").find(".nav-menu").find("#about").removeClass("page-open");
         }
-        $(this).trigger("mouseleave");
         console.log("Icon hover out");
     }
-    $(".nav-hamburger").on("click", toggleNav);
+    $(".nav-hamburger").on("click", toggleNavMenu);
 
     // click navigation buttons
-    $(".nav-btns a").on("click", function(){
+    $(".nav-menu a").on("click", function(){
         var linkName = $(this).attr("id");
         const $btn = $(this).parents("section");
         if(linkName == 'home'){
             clickBtn($btn, "#home-page");
-            $(this).parents("section").find(".nav-hamburger").trigger("click");
+            $(this).parents("section").find(".nav-hamburger")
+                .trigger("click")
+                .trigger("mouseleave");
         } else if(linkName == "about"){
             clickBtn($btn, "#about-page");
-            $(this).parents("section").find(".nav-hamburger").trigger("click");
+            $(this).parents("section").find(".nav-hamburger")
+                .trigger("click")
+                .trigger("mouseleave");
         } else if(linkName == "projects"){
             clickBtn($btn, "#projects-page");
-            $(this).parents("section").find(".nav-hamburger").trigger("click");
+            $(this).parents("section").find(".nav-hamburger")
+                .trigger("click")
+                .trigger("mouseleave");
         }
         console.log("Clicked nav buttons");
     });
 
-    // click heading button
-    $(".header .heading a").on("click", function(){
-        const $btn = $(this).parents(".header").find(".nav-menu");
+    // click heading top navigation button
+    $(".top-nav.heading a").on("click", function(){
+        const $btn = $(this).parents(".header").find(".top-nav").first();
         clickBtn($btn, "#home-page");
     });
 
-    // heading button animation
+    // heading top navigation button hover animation
     $(".heading a").hover(function(){
         $(this).children("h1").toggleClass("selected");
     });
 
+    // navigation hamburger hover animation
     $("a.nav-hamburger").hover(
         function(){
             // hover over
             $(this).children(".fa-circle").addClass("selected");
             $(this).children(".fa-bars").addClass("selected");
-            console.log("Icon hover over");
+            console.log("Hamburger hover over");
         },
         function(){
             // hover out
-            if($(this).parent().find(".nav-btns").hasClass("collapsed")){
+            if($(this).parents("section").find(".nav-menu").hasClass("collapsed")){
                 $(this).children(".fa-circle").removeClass("selected");
                 $(this).children(".fa-bars").removeClass("selected");
             }
-            console.log("Icon hover out");
+            console.log("Hamburger hover out");
         }
     );
 

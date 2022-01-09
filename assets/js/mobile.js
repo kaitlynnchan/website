@@ -1,34 +1,35 @@
 
 // detect size of screen
 function checkSize(){
+    // change when screen size is less than 1000px
     if(window.matchMedia("only screen and (max-width: 1000px)").matches){
-        // screen size is less than 1000px
         // changed location of side buttons
-        $("#home-page .side-btn").insertBefore($("#home-page .body .contact-info"));
-        $("#home-page .side-btn").addClass("center");
-        $("#home-page .inner.box h1").css("font-size", "2.75rem")
+        $("#home-page .side-nav").insertBefore($("#home-page .body .contact-info"));
+        $("#home-page .side-nav").addClass("center");
+        $("#home-page .inner.box h1").css("font-size", "2.75rem");
         $("#home-page .body .inner.top").css("display", "none");
 
-        // change navigation buttons location
-        $(".nav-menu .nav-btns").removeClass("horizontal");
+        // change navigation buttons layout
+        $(".top-nav .nav-menu").removeClass("horizontal");
     } else{
-        $("#home-page").append($("#home-page .side-btn"));
-        $("#home-page .side-btn").removeClass("center");
+        $("#home-page").append($("#home-page .side-nav"));
+        $("#home-page .side-nav").removeClass("center");
         $("#home-page .inner.box h1").css("font-size", "3.75rem");
         $("#home-page .body .inner.top").css("display", "flex");
         
-        // change navigation buttons location
-        $(".nav-menu .nav-btns").addClass("horizontal");
+        // undo navigation buttons layout
+        $(".top-nav .nav-menu").addClass("horizontal");
     }
 
+    // change when screen size is less than 750px
     if(window.matchMedia("only screen and (max-width: 750px)").matches){
-        // screen size is less than 1000px
-        // changed location of side buttons
+        // change location of about title
         $("#about-page .title").insertBefore($("#about-page .body .inner").first());
         $("#about-page .title").addClass("inner center");
         $("#about-page .inner .text").addClass("center");
 
     } else{
+        // remove changes
         $("#about-page .body .inner").first().append($("#about-page .title"));
         $("#about-page .title").removeClass("inner center");
         $("#about-page .inner .text").removeClass("center");
