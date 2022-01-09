@@ -50,17 +50,17 @@
 
 /** Navigation buttons **/
 .nav-btns{
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     position: absolute;
-    white-space: nowrap;
+    /* white-space: nowrap; */
     top: 49px;
     right: 17px;
     background-color: var(--light-purple);
     padding: 10px 20px;
     text-align: end;
     box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
-    opacity: 0;
+    /* opacity: 0; */
 }
 
 .nav-menu a{
@@ -79,7 +79,7 @@
     transition: opacity 251ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, transform 167ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
     transform-origin: 0px 0px;
 }
-.collasped{
+.collapsed{
 
     opacity: 0;
     transform: none;
@@ -97,10 +97,32 @@
     margin: 20px 0 auto 20px;
 }
 
-.nav-menu.pull-right a{
+.nav-menu.pull-right > a{
     float: right;
 }
-.nav-menu.pull-left a{
+.nav-menu.pull-left > a{
     float: left;
 }
 
+.nav-btns a:hover{
+    border-bottom: 2px solid #000;
+    transition: 0.2s all;
+    border-radius: 0;
+}
+.nav-btns ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.nav-btns ul li{
+    padding: 3px 0;
+}
+
+.nav-btns.horizontal ul li{
+    display: inline-block;
+    padding: 3px 10px;
+}
+
+.nav-btns ul li a.page-open{
+    pointer-events: none;
+}

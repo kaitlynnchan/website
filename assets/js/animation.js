@@ -88,21 +88,65 @@ $(document).ready(function(){
     $("#projects-page").on("animationend", removeAnimations);
     $(".side-btn").on("animationend", removeAnimations);
 
-    $(".nav-hamburger").on("click", function(){
-        if($(".nav-btns").hasClass("dropped")){
-            $(".nav-btns").removeClass("dropped");
-            $(".nav-btns").addClass("collapsed");
-        } else{
-            $(".nav-btns").addClass("dropped");
-        } 
-        console.log("Clicked nav hamburger");
-    });
+
+    function toggleNav(){
+        $(".nav-btns").toggleClass("dropped");
+        $(".nav-btns").toggleClass("collapsed");
+    }
+    $(".nav-hamburger").on("click", toggleNav);
+
+
+    function clickBtn(btn, pageName){
+        $("body").css("overflow", "hidden");
+        const $btn = $(btn).parents("section");
+        if($btn.hasClass("pull-left")){
+            // moving right
+            $btn.parents(".page").addClass("animate__animated animate__slideOutRight");
+            $(pageName).css("display", "flex");
+            $(pageName).addClass("animate__animated animate__slideInLeft");
+        } else if($btn.hasClass("pull-right")){
+            // moving left
+            $btn.parents(".page").addClass("animate__animated animate__slideOutLeft");
+            $(pageName).css("display", "flex");
+            $(pageName).addClass("animate__animated animate__slideInRight");
+        }
+    }
+    function clickNavBtn(){
+        if(isAnimationDone){
+            var pageName = $(this).parents(".page").attr("id");
+            // if(pageName == 'about-page'){
+            //     $(this).parents(".nav-btns").find("#about").removeClass("page-open");
+            // } else if(pageName == "projects-page"){
+            //     $(this).parents(".nav-btns").find("#projects").removeClass("page-open");
+            // }
+
+            var linkName = $(this).attr("id");
+            if(linkName == 'home'){
+                clickBtn(this, "#home-page");
+                toggleNav();
+                isAnimationDone = false;
+            } else if(linkName == "about" && pageName != "about-page"){
+                clickBtn(this, "#about-page");
+                toggleNav();
+                isAnimationDone = false;
+                // $(this).addClass("page-open");
+            } else if(linkName == "projects" && pageName != "projects-page"){
+                clickBtn(this, "#projects-page");
+                toggleNav();
+                isAnimationDone = false;
+                // $(this).addClass("page-open");
+            }
+        }
+        console.log("Clicked back button");
+    }
+    $(".nav-btns a").on("click", clickNavBtn);
+
+    // $.ajax({
+    //     url: "https://github.com/kaitlynnchan/website",
+    //     type: "GET",
+    //     success: function() {
+    //         console.log("reaching");
+    //         // End of function for Ajax
+    //     }
+    // });
 });
-
-
-
-// .open-menu ul li a:hover
-// {
-//   border-bottom: 5px solid #000;
-//   transition: 0.2s all;
-// }
