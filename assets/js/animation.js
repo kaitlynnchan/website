@@ -9,56 +9,6 @@ $(document).ready(function(){
         console.log("Icon hover");
     });
 
-    // top-btn animation
-    $(".top-btn a").hover(function(){
-        $(this).children("span").toggleClass("selected");
-    });
-
-
-    // side button click animation
-    $("#home-page .side-btn a").on("click", function(){
-        if(isAnimationDone){
-            $("body").css("overflow", "hidden");
-            const $sideBtn = $(this).parents("section");
-            if($sideBtn.hasClass("pull-left")){
-                // open about page
-                $sideBtn.parents(".page").addClass("animate__animated animate__slideOutRight");
-                $("#about-page").css("display", "flex");
-                $("#about-page").addClass("animate__animated animate__slideInLeft");
-            } else if($sideBtn.hasClass("pull-right")){
-                // open projects page
-                $sideBtn.parents(".page").addClass("animate__animated animate__slideOutLeft");
-                $("#projects-page").css("display", "flex");
-                $("#projects-page").addClass("animate__animated animate__slideInRight");
-            }
-            isAnimationDone = false;
-        }
-        console.log("Clicked side button");
-    });
-
-    // back button animation
-    function clickBackBtn(){
-        if(isAnimationDone){
-            $("body").css("overflow", "hidden");
-            const $btn = $(this).parents("section");
-            if($btn.hasClass("pull-left")){
-                // moving right
-                $btn.parents(".page").addClass("animate__animated animate__slideOutRight");
-                $("#home-page").css("display", "flex");
-                $("#home-page").addClass("animate__animated animate__slideInLeft");
-            } else if($btn.hasClass("pull-right")){
-                // moving left
-                $btn.parents(".page").addClass("animate__animated animate__slideOutLeft");
-                $("#home-page").css("display", "flex");
-                $("#home-page").addClass("animate__animated animate__slideInRight");
-            }
-            isAnimationDone = false;
-        }
-        console.log("Clicked back button");
-    }
-    $(".side-btn.back a").on("click", clickBackBtn);
-    $(".top-btn.back a").on("click", clickBackBtn);
-
     // animation end
     function removeAnimations(){
         console.log("Animation end on '" + $(this).attr("class") + "'");
@@ -78,7 +28,7 @@ $(document).ready(function(){
         else if($(this).hasClass("animate__slideInRight")){
             $(this).removeClass("animate__animated animate__slideInRight");
         } 
-        else {
+        else{
             console.log("No animations removed");
         }
         isAnimationDone = true;
@@ -86,6 +36,101 @@ $(document).ready(function(){
     $("#home-page").on("animationend", removeAnimations);
     $("#about-page").on("animationend", removeAnimations);
     $("#projects-page").on("animationend", removeAnimations);
-    $(".side-btn").on("animationend", removeAnimations);
+    $(".side-nav").on("animationend", removeAnimations);
+
+
+    /** 
+     * Navigation Buttons
+     */
+    // clicking page buttons animation
+    function clickBtn(btnContainer, pageName){
+        if(isAnimationDone){
+            $("body").css("overflow", "hidden");
+            if(btnContainer.hasClass("pull-left")){
+                // moving right
+                btnContainer.parents(".page").addClass("animate__animated animate__slideOutRight");
+                $(pageName).css("display", "flex");
+                $(pageName).addClass("animate__animated animate__slideInLeft");
+            } else if(btnContainer.hasClass("pull-right")){
+                // moving left
+                btnContainer.parents(".page").addClass("animate__animated animate__slideOutLeft");
+                $(pageName).css("display", "flex");
+                $(pageName).addClass("animate__animated animate__slideInRight");
+            }
+            isAnimationDone = false;
+        }
+    }
+
+    // returns string to page identifier
+    function convertToPageID(pageName){
+        return "#" + pageName + "-page";
+    }
+
+    // side navigation
+    $(".side-nav a").on("click", function(){
+        const $sideNav = $(this).parents("section");
+        var linkName = $(this).attr("id");
+        clickBtn($sideNav, convertToPageID(linkName));
+        console.log("Clicked side navigation");
+    });
+
+    // top navigation menu
+    $(".top-nav .nav-menu a").on("click", function(){
+        const $btn = $(this).parents("section");
+        var linkName = $(this).attr("id");        
+        clickBtn($btn, convertToPageID(linkName));
+
+        // trigger event handler for navigation hamburger
+        $(this).parents("section").find(".nav-hamburger")
+            .trigger("click")
+            .trigger("mouseleave");
+        console.log("Clicked top nav menu");
+    });
+
+    // open and close top navigation menu
+    $(".nav-hamburger").on("click", function(){
+        var pageName = $(this).parents(".page").attr("id");
+        $(this).parents("section").find(".nav-menu").toggleClass("expanded");
+        $(this).parents("section").find(".nav-menu").toggleClass("collapsed");
+
+        // make link to current page unclickable
+        $(this).parents("section").find(".nav-menu ul li a").each(function(){
+            var iD = $(this).attr("id");
+            if(pageName.includes(iD)){
+                console.log(true);
+                $(this).addClass("unclickable");
+            }
+        });
+        console.log("Icon hover out");
+    });
+
+    // navigation hamburger hover animation
+    $("a.nav-hamburger").hover(
+        function(){
+            // hover over
+            $(this).children(".fa-circle").addClass("selected");
+            $(this).children(".fa-bars").addClass("selected");
+            console.log("Hamburger hover over");
+        },
+        function(){
+            // hover out
+            if($(this).parents("section").find(".nav-menu").hasClass("collapsed")){
+                $(this).children(".fa-circle").removeClass("selected");
+                $(this).children(".fa-bars").removeClass("selected");
+            }
+            console.log("Hamburger hover out");
+        }
+    );
+
+    // top navigation heading
+    $(".top-nav.heading a").on("click", function(){
+        const $topNavBtn = $(this).parents(".header").find(".top-nav").first();
+        clickBtn($topNavBtn, convertToPageID("home"));
+    });
+
+    // top navigation heading hover animation
+    $(".heading a").hover(function(){
+        $(this).children("h1").toggleClass("selected");
+    });
 
 });
