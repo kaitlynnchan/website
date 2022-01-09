@@ -92,6 +92,14 @@ $(document).ready(function(){
     function toggleNav(){
         $(".nav-btns").toggleClass("dropped");
         $(".nav-btns").toggleClass("collapsed");
+        var pageName = $(this).parents(".page").attr("id");
+        if(pageName == 'about-page'){
+            $(".nav-btns").find("#about").addClass("page-open");
+            $(".nav-btns").find("#projects").removeClass("page-open");
+        } else if(pageName == "projects-page"){
+            $(".nav-btns").find("#projects").addClass("page-open");
+            $(".nav-btns").find("#about").removeClass("page-open");
+        }
     }
     $(".nav-hamburger").on("click", toggleNav);
 
