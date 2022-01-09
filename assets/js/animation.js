@@ -61,11 +61,16 @@ $(document).ready(function(){
         }
     }
 
+    // returns string to page identifier
+    function convertToPageID(pageName){
+        return "#" + pageName + "-page";
+    }
+
     // side navigation
     $(".side-nav a").on("click", function(){
         const $sideNav = $(this).parents("section");
         var linkName = $(this).attr("id");
-        clickBtn($sideNav, "#" + linkName + "-page");
+        clickBtn($sideNav, convertToPageID(linkName));
         console.log("Clicked side navigation");
     });
 
@@ -73,7 +78,7 @@ $(document).ready(function(){
     $(".top-nav .nav-menu a").on("click", function(){
         const $btn = $(this).parents("section");
         var linkName = $(this).attr("id");        
-        clickBtn($btn, "#" + linkName + "-page");
+        clickBtn($btn, convertToPageID(linkName));
 
         // trigger event handler for navigation hamburger
         $(this).parents("section").find(".nav-hamburger")
@@ -120,7 +125,7 @@ $(document).ready(function(){
     // top navigation heading
     $(".top-nav.heading a").on("click", function(){
         const $topNavBtn = $(this).parents(".header").find(".top-nav").first();
-        clickBtn($topNavBtn, "#home-page");
+        clickBtn($topNavBtn, convertToPageID("home"));
     });
 
     // top navigation heading hover animation
