@@ -9,10 +9,10 @@ $(document).ready(function(){
         console.log("Icon hover");
     });
 
-    // top-btn animation
-    $(".top-btn a").hover(function(){
-        $(this).children("span").toggleClass("selected");
-    });
+    // // top-btn animation
+    // $(".top-btn a").hover(function(){
+    //     $(this).children("span").toggleClass("selected");
+    // });
 
 
     // side button click animation
@@ -37,27 +37,27 @@ $(document).ready(function(){
     });
 
     // back button animation
-    function clickBackBtn(){
-        if(isAnimationDone){
-            $("body").css("overflow", "hidden");
-            const $btn = $(this).parents("section");
-            if($btn.hasClass("pull-left")){
-                // moving right
-                $btn.parents(".page").addClass("animate__animated animate__slideOutRight");
-                $("#home-page").css("display", "flex");
-                $("#home-page").addClass("animate__animated animate__slideInLeft");
-            } else if($btn.hasClass("pull-right")){
-                // moving left
-                $btn.parents(".page").addClass("animate__animated animate__slideOutLeft");
-                $("#home-page").css("display", "flex");
-                $("#home-page").addClass("animate__animated animate__slideInRight");
-            }
-            isAnimationDone = false;
-        }
-        console.log("Clicked back button");
-    }
-    $(".side-btn.back a").on("click", clickBackBtn);
-    $(".top-btn.back a").on("click", clickBackBtn);
+    // function clickBackBtn(){
+    //     if(isAnimationDone){
+    //         $("body").css("overflow", "hidden");
+    //         const $btn = $(this).parents("section");
+    //         if($btn.hasClass("pull-left")){
+    //             // moving right
+    //             $btn.parents(".page").addClass("animate__animated animate__slideOutRight");
+    //             $("#home-page").css("display", "flex");
+    //             $("#home-page").addClass("animate__animated animate__slideInLeft");
+    //         } else if($btn.hasClass("pull-right")){
+    //             // moving left
+    //             $btn.parents(".page").addClass("animate__animated animate__slideOutLeft");
+    //             $("#home-page").css("display", "flex");
+    //             $("#home-page").addClass("animate__animated animate__slideInRight");
+    //         }
+    //         isAnimationDone = false;
+    //     }
+    //     console.log("Clicked back button");
+    // }
+    // $(".side-btn.back a").on("click", clickBackBtn);
+    // $(".top-btn.back a").on("click", clickBackBtn);
 
     // animation end
     function removeAnimations(){
@@ -90,9 +90,9 @@ $(document).ready(function(){
 
 
     function toggleNav(){
-        $(".nav-btns").toggleClass("dropped");
-        $(".nav-btns").toggleClass("collapsed");
         var pageName = $(this).parents(".page").attr("id");
+        $(this).parent().find(".nav-btns").toggleClass("dropped");
+        $(this).parent().find(".nav-btns").toggleClass("collapsed");
         if(pageName == 'about-page'){
             $(".nav-btns").find("#about").addClass("page-open");
             $(".nav-btns").find("#projects").removeClass("page-open");
@@ -105,49 +105,50 @@ $(document).ready(function(){
 
 
     function clickBtn(btn, pageName){
-        $("body").css("overflow", "hidden");
-        const $btn = $(btn).parents("section");
-        if($btn.hasClass("pull-left")){
-            // moving right
-            $btn.parents(".page").addClass("animate__animated animate__slideOutRight");
-            $(pageName).css("display", "flex");
-            $(pageName).addClass("animate__animated animate__slideInLeft");
-        } else if($btn.hasClass("pull-right")){
-            // moving left
-            $btn.parents(".page").addClass("animate__animated animate__slideOutLeft");
-            $(pageName).css("display", "flex");
-            $(pageName).addClass("animate__animated animate__slideInRight");
+        if(isAnimationDone){
+            $("body").css("overflow", "hidden");
+            // const $btn = $(btn).parents("section");
+            if(btn.hasClass("pull-left")){
+                // moving right
+                btn.parents(".page").addClass("animate__animated animate__slideOutRight");
+                $(pageName).css("display", "flex");
+                $(pageName).addClass("animate__animated animate__slideInLeft");
+            } else if(btn.hasClass("pull-right")){
+                // moving left
+                btn.parents(".page").addClass("animate__animated animate__slideOutLeft");
+                $(pageName).css("display", "flex");
+                $(pageName).addClass("animate__animated animate__slideInRight");
+            }
+            isAnimationDone = false;
         }
     }
     function clickNavBtn(){
-        if(isAnimationDone){
-            var pageName = $(this).parents(".page").attr("id");
-            // if(pageName == 'about-page'){
-            //     $(this).parents(".nav-btns").find("#about").removeClass("page-open");
-            // } else if(pageName == "projects-page"){
-            //     $(this).parents(".nav-btns").find("#projects").removeClass("page-open");
-            // }
-
-            var linkName = $(this).attr("id");
-            if(linkName == 'home'){
-                clickBtn(this, "#home-page");
-                toggleNav();
-                isAnimationDone = false;
-            } else if(linkName == "about" && pageName != "about-page"){
-                clickBtn(this, "#about-page");
-                toggleNav();
-                isAnimationDone = false;
-                // $(this).addClass("page-open");
-            } else if(linkName == "projects" && pageName != "projects-page"){
-                clickBtn(this, "#projects-page");
-                toggleNav();
-                isAnimationDone = false;
-                // $(this).addClass("page-open");
-            }
+        var linkName = $(this).attr("id");
+        if(linkName == 'home'){
+            const $btn = $(this).parents("section");
+            clickBtn($btn, "#home-page");
+            toggleNav();
+        } else if(linkName == "about"){
+            const $btn = $(this).parents("section");
+            clickBtn($btn, "#about-page");
+            toggleNav();
+        } else if(linkName == "projects"){
+            const $btn = $(this).parents("section");
+            clickBtn($btn, "#projects-page");
+            toggleNav();
         }
         console.log("Clicked back button");
     }
     $(".nav-btns a").on("click", clickNavBtn);
+    $(".header .heading a").on("click", function(){
+        const $btn = $(this).parents(".header").find(".nav-menu");
+        clickBtn($btn, "#home-page");
+    });
+
+    // top-btn animation
+    $(".heading a").hover(function(){
+        $(this).children("h1").toggleClass("selected");
+    });
 
     // $.ajax({
     //     url: "https://github.com/kaitlynnchan/website",
