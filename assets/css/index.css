@@ -142,15 +142,17 @@ body {
 }
 .header .heading h1{
     font-family: 'brandon-bold';
+    color: var(--dark-brown);
+}
+.header .heading.absolute h1{
     position: absolute;
     left: 50%;
     transform: translate(-50%);
-    color: var(--dark-brown);
 }
 .header .heading h1.selected{
     color: var(--brown) !important;
 }
-.header .hvr-icon-fade{
+.header .hvr-icon-fade.absolute{
     display: block;
 }
 
@@ -173,6 +175,16 @@ a.nav-hamburger .fa-bars, a.nav-hamburger .fa-circle.selected{
 }
 .top-nav .fa-circle{
     color: var(--light-purple);
+}
+.top-nav.fixed{
+    position: fixed;
+    z-index: 2;
+}
+.top-nav.fixed .nav-menu{
+    width: max-content;
+}
+.top-nav.fixed.pull-right{
+    right: 20px;
 }
 
 .nav-menu{

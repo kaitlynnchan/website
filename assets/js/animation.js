@@ -123,8 +123,8 @@ $(document).ready(function(){
     );
 
     // top navigation heading
-    $(".top-nav.heading a").on("click", function(){
-        const $topNavBtn = $(this).parents(".header").find(".top-nav").first();
+    $(".heading a").on("click", function(){
+        const $topNavBtn = $(this).parents(".header").find(".top-nav");
         clickBtn($topNavBtn, convertToPageID("home"));
     });
 
