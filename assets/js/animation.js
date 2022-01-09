@@ -122,6 +122,19 @@ $(document).ready(function(){
         }
     );
 
+    // hide nav-menu when collapsed after/before transitions
+    $(".nav-menu").on("transitionend", function(){
+        if($(this).hasClass("collapsed")){
+            $(this).addClass("hide");
+        }
+    });
+    $(".nav-menu").on("transitionstart", function(){
+        if($(this).hasClass("expanded")){
+            $(this).removeClass("hide");
+        }
+    });
+
+
     // top navigation heading
     $(".heading a").on("click", function(){
         const $topNavBtn = $(this).parents(".header").find(".top-nav");
