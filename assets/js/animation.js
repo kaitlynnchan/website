@@ -77,15 +77,17 @@ $(document).ready(function(){
     // open and collapse navigation menu
     function toggleNav(){
         var pageName = $(this).parents(".page").attr("id");
-        $(".nav-btns").toggleClass("dropped");
-        $(".nav-btns").toggleClass("collapsed");
+        $(this).parent().find(".nav-btns").toggleClass("dropped");
+        $(this).parent().find(".nav-btns").toggleClass("collapsed");
         if(pageName == 'about-page'){
-            $(".nav-btns").find("#about").addClass("page-open");
-            $(".nav-btns").find("#projects").removeClass("page-open");
+            $(this).parent().find(".nav-btns").find("#about").addClass("page-open");
+            $(this).parent().find(".nav-btns").find("#projects").removeClass("page-open");
         } else if(pageName == "projects-page"){
-            $(".nav-btns").find("#projects").addClass("page-open");
-            $(".nav-btns").find("#about").removeClass("page-open");
+            $(this).parent().find(".nav-btns").find("#projects").addClass("page-open");
+            $(this).parent().find(".nav-btns").find("#about").removeClass("page-open");
         }
+        $(this).trigger("mouseleave");
+        console.log("Icon hover out");
     }
     $(".nav-hamburger").on("click", toggleNav);
 
@@ -95,15 +97,15 @@ $(document).ready(function(){
         const $btn = $(this).parents("section");
         if(linkName == 'home'){
             clickBtn($btn, "#home-page");
-            toggleNav();
+            $(this).parents("section").find(".nav-hamburger").trigger("click");
         } else if(linkName == "about"){
             clickBtn($btn, "#about-page");
-            toggleNav();
+            $(this).parents("section").find(".nav-hamburger").trigger("click");
         } else if(linkName == "projects"){
             clickBtn($btn, "#projects-page");
-            toggleNav();
+            $(this).parents("section").find(".nav-hamburger").trigger("click");
         }
-        console.log("Clicked back button");
+        console.log("Clicked nav buttons");
     });
 
     // click heading button
@@ -119,12 +121,14 @@ $(document).ready(function(){
 
     $("a.nav-hamburger").hover(
         function(){
+            // hover over
             $(this).children(".fa-circle").addClass("selected");
             $(this).children(".fa-bars").addClass("selected");
             console.log("Icon hover over");
         },
         function(){
-            if($(".nav-btns").hasClass("collapsed")){
+            // hover out
+            if($(this).parent().find(".nav-btns").hasClass("collapsed")){
                 $(this).children(".fa-circle").removeClass("selected");
                 $(this).children(".fa-bars").removeClass("selected");
             }
