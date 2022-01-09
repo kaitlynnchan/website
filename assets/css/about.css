@@ -20,6 +20,9 @@
     margin-right: 7%;
     text-align: start;
 }
+#about-page .body .text h4{
+    font-weight: normal;
+}
 /* #about-page .body .text h4{
     font-family: Georgia, Cambria, "Times New Roman", Times, serif;
 } */
@@ -27,12 +30,25 @@
     background-color: var(--light-purple);
     color: var(--dark-purple);
     text-align: right;
+    font-weight: normal;
     padding: 10px 20px 10px 30px;
     width: min-content;
     position: fixed;
     top: 20%;
     margin-left: 7%;
     box-shadow: -7px 7px 4px rgb(0 0 0 / 25%);
+}
+#about-page .title.center{
+    text-align: center;
+    top: auto;
+    margin-left: auto;
+    position: relative;
+    width: 75%;
+    padding: 10px 20px;
+}
+#about-page .inner .text.center{
+    float: unset;
+    margin-right: auto;
 }
 
 /** Side button **/
@@ -131,6 +147,10 @@ a.nav-hamburger .fa-bars, a.nav-hamburger .fa-circle.selected{
 }
 .nav-btns ul li{
     padding: 3px 0;
+}
+.nav-btns ul li span{
+    font-size: large;
+    font-weight: 500;
 }
 .nav-btns ul li a:hover{
     border-bottom: 2px solid #000;
