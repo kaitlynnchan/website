@@ -4,7 +4,7 @@
         {
             "name":"Filomator",
             "description":"A file management desktop application that monitors folders for incoming files and moves them to their destination. Users input where they want files to go, what files to monitor and when.",
-            "img":"./assets/imgs/filomator-ui.jpg",
+            "img":"./assets/imgs/new-task-page.jpg",
             "link":"https://github.com/kaitlynnchan/Filomator"
         },
         {
