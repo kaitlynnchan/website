@@ -48,9 +48,10 @@ $(document).ready(function(){
             $("body").css("overflow", "hidden");
             if(btnContainer.hasClass("pull-left")){
                 // moving right
-                btnContainer.parents(".page").addClass("animate__animated animate__slideOutRight");
-                $(pageName).css("display", "flex");
-                $(pageName).addClass("animate__animated animate__slideInLeft");
+                // btnContainer.parents(".page").addClass("animate__animated animate__slideOutRight");
+                // $(pageName).css("display", "flex");
+                // $(pageName).addClass("animate__animated animate__slideInLeft");
+                $(pageName).addClass("slideInRight");
             } else if(btnContainer.hasClass("pull-right")){
                 // moving left
                 btnContainer.parents(".page").addClass("animate__animated animate__slideOutLeft");
@@ -67,12 +68,12 @@ $(document).ready(function(){
     }
 
     // side navigation
-    $(".side-nav a").on("click", function(){
-        const $sideNav = $(this).parents("section");
-        var linkName = $(this).attr("id");
-        clickBtn($sideNav, convertToPageID(linkName));
-        console.log("Clicked side navigation");
-    });
+    // $(".side-nav a").on("click", function(){
+    //     const $sideNav = $(this).parents("section");
+    //     var linkName = $(this).attr("id");
+    //     clickBtn($sideNav, convertToPageID(linkName));
+    //     console.log("Clicked side navigation");
+    // });
 
     // top navigation menu
     $(".top-nav .nav-menu a").on("click", function(){

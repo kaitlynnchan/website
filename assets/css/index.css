@@ -52,7 +52,7 @@ body {
     top: 0;
     width: 100%;
     position: absolute;
-    display: none;
+    /* display: none; */
     text-align: center;
 }
 
@@ -259,4 +259,51 @@ a.nav-hamburger .fa-bars, a.nav-hamburger .fa-circle.selected{
 
 .rounded-corners{
     border-radius: 50%;
+}
+
+
+#about-page{
+    animation: slideInLeft 1s ease forwards;
+}
+#projects-page{
+    animation: slideInRight 1s ease forwards;
+}
+.slideOutLeft{
+    animation: slideOutLeft 1s ease forwards;
+}
+.slideOutRight{
+    animation: slideOutRight 1s ease forwards;
+}
+/* Transitions */
+@keyframes slideInLeft {
+    0% {
+      transform: translateX(100vw);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+}
+@keyframes slideOutLeft {
+    0% {
+      transform: translateX(0px);
+    }
+    100% {
+      transform: translateX(-100vw);
+    }
+}
+@keyframes slideInRight {
+    0% {
+      transform: translateX(-100vw);
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
+@keyframes slideOutRight {
+    0% {
+      transform: translateX(0px);
+    }
+    100% {
+      transform: translateX(100vw);
+    }
 }
