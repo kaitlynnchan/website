@@ -12,8 +12,8 @@ function checkSize(){
         // change navigation buttons layout
         $(".top-nav .nav-menu").removeClass("horizontal");
     } else{
-        $("#home-page").append($("#home-page .side-nav"));
-        $("#home-page .side-nav").removeClass("center");
+        // $("#home-page").append($("#home-page .side-nav"));
+        // $("#home-page .side-nav").removeClass("center");
         $("#home-page .inner.box h1").css("font-size", "3.75rem");
         $("#home-page .body .inner.top").css("display", "flex");
         

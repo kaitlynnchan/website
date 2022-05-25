@@ -39,28 +39,30 @@ a, a:hover{
 }
 body {
     background-color: var(--orange);
-    /* background-image: url("assets/imgs/orange-background11.png");
+    
+    background-image: url("../imgs/orange_background0_2.png");
     background-size: cover;
-    background-position: center; */
-    min-height: 100vh;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
     /* height: 100%; */
 }
 
 /** Wrapper Class Pages **/
 .wrapper{
     margin: 0;
-    top: 0;
+    /* top: 0; */
     width: 100%;
-    position: absolute;
-    display: none;
+    /* position: absolute; */
+    /* display: none; */
     text-align: center;
 }
 
-.scrollable{
+/* .scrollable{
     overflow-y: auto;
     overflow-x: hidden;
     height: inherit;
-}
+} */
 
 .overlay {
     position: absolute;

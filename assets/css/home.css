@@ -1,18 +1,18 @@
 .home{
-    background-image: url("../imgs/orange_background0_2.png");
+    /* background-image: url("../imgs/orange_background0_2.png");
     background-size: cover;
-    background-position: center;
+    background-position: center; */
     height: 100vh;
 
     position: relative;
     display: flex;
-    overflow: hidden;
+    /* overflow: hidden; */
 
     /* display: none; */
 }
 
 #home-page .box{
-    width: 65%;
+    width: 55%;
 }
 
 #home-page .inner.box h1{
@@ -50,4 +50,20 @@
 
 #home-page .side-nav.center .inner.top{
     display: none;
+}
+
+#home-page .content{
+    display: flex;
+}
+
+.nav-btns{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin: 90px 0;
+}
+
+.nav-btns .side-nav{
+    margin: auto;
+    width: 55%;
 }

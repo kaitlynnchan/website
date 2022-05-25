@@ -36,7 +36,7 @@ $(document).ready(function(){
     $("#home-page").on("animationend", removeAnimations);
     $("#about-page").on("animationend", removeAnimations);
     $("#projects-page").on("animationend", removeAnimations);
-    $(".side-nav").on("animationend", removeAnimations);
+    // $(".side-nav").on("animationend", removeAnimations);
 
 
     /** 
@@ -68,9 +68,13 @@ $(document).ready(function(){
 
     // side navigation
     $(".side-nav a").on("click", function(){
-        const $sideNav = $(this).parents("section");
         var linkName = $(this).attr("id");
-        clickBtn($sideNav, convertToPageID(linkName));
+        let pageName = convertToPageID(linkName);
+            $("body").css("overflow", "hidden");
+                // moving left
+            $(this).parents(".page").addClass("animate__animated animate__fadeOutUp");
+            $(pageName).css("display", "flex");
+            $(pageName).addClass("animate__animated animate__fadeInUp");
         console.log("Clicked side navigation");
     });
 
