@@ -11,6 +11,11 @@
     /* display: none; */
 }
 
+#home-page .body{
+    flex-grow: 1;
+}
+
+
 #home-page .box{
     width: 55%;
 }

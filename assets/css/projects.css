@@ -5,6 +5,7 @@
     height: 100vh;
 
     overflow-y: visible;
+    display: flex;
     flex-direction: column;
     /* padding: 20px; */
 }
@@ -63,4 +64,20 @@
 }
 #projects-page .project-items .link a{
     display: block;
+}
+
+
+.title{
+    width: 80%;
+    margin: 30px 7%;
+    /* box-shadow: -7px 7px 4px rgb(0 0 0 / 25%); */
+}
+
+.title > *{
+    background-color: var(--light-purple);
+    color: var(--dark-purple);
+    text-align: left;
+    padding: 10px 25px;
+    width: 30%;
+    /* width: fit-content; */
 }

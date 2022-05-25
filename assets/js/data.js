@@ -45,7 +45,7 @@ $(document).ready(function(){
     $(".contact-info").each(function(){
         var info = 
             '<div class="row">' +
-                '<div class="icons fa-lg">' +
+                '<div class="icons fa-md">' +
                     '<a class="fa-stack hvr-icon-fade" href="https://github.com/kaitlynnchan" target="_blank">' +
                         '<i class="fa fa-circle fa-stack-2x hvr-icon"></i>' +
                         '<i class="fab fa-github fa-stack-1x hvr-icon icon"></i>' +

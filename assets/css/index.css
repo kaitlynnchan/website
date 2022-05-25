@@ -78,7 +78,8 @@ body {
 .body {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
+    /* flex-grow: 1; */
+    margin: auto;
 }
 .body .inner {
     margin: auto;
@@ -140,7 +141,7 @@ body {
 
 /** Header **/
 .header{
-    margin: 20px;
+    margin: 30px;
 }
 .header .heading h1{
     font-family: 'brandon-bold';
@@ -187,6 +188,8 @@ a.nav-hamburger .fa-bars, a.nav-hamburger .fa-circle.selected{
 }
 .top-nav.fixed.pull-right{
     right: 20px;
+    display: flex;
+    top: 20px
 }
 
 .nav-menu{
@@ -261,4 +264,8 @@ a.nav-hamburger .fa-bars, a.nav-hamburger .fa-circle.selected{
 
 .rounded-corners{
     border-radius: 50%;
+}
+
+.nav-menu .icons a{
+    margin: 0 5px;
 }

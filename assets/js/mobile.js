@@ -30,7 +30,7 @@ function checkSize(){
 
     } else{
         // remove changes
-        $("#about-page .body .inner").first().append($("#about-page .title"));
+        // $("#about-page .body .inner").first().append($("#about-page .title"));
         $("#about-page .title").removeClass("inner center");
         $("#about-page .inner .text").removeClass("center");
     }
