@@ -169,6 +169,8 @@ a.nav-hamburger .fa-bars, a.nav-hamburger .fa-circle.selected{
 /** Top Navigation **/
 .top-nav{
     position: relative;
+    visibility: collapse;
+    opacity: 0;
 }
 .top-nav.pull-right > a{
     float: right;
@@ -268,4 +270,21 @@ a.nav-hamburger .fa-bars, a.nav-hamburger .fa-circle.selected{
 
 .nav-menu .icons a{
     margin: 0 5px;
+}
+
+
+
+.top-nav.visible, .top-nav.fade-out {
+    -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+    -moz-transition: opacity .3s 0s, visibility 0s 0s;
+    transition: opacity .3s 0s, visibility 0s 0s;
+}
+.top-nav.visible {
+    /* the button becomes visible */
+    visibility: visible;
+    opacity: 1;
+}
+.top-nav.fade-out {
+    /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+    opacity: 0;
 }
