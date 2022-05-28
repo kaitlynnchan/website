@@ -66,16 +66,19 @@ $(document).ready(function(){
         return "#" + pageName + "-page";
     }
 
+    var animating = false;
     // side navigation
-    $(".side-nav a").on("click", function(){
+    $(".side-nav a").on("click", function(e){
         var linkName = $(this).attr("id");
         let pageName = convertToPageID(linkName);
-            $("body").css("overflow", "hidden");
-                // moving left
-            $(this).parents(".page").addClass("animate__animated animate__fadeOutUp");
-            $(pageName).css("display", "flex");
-            $(pageName).addClass("animate__animated animate__fadeInUp");
+        let dist = $(pageName).offset().top;
+        console.log(dist);
+        e.preventDefault();
+        $("html, body").stop().animate(
+            {scrollTop: dist}, 800
+        );
         console.log("Clicked side navigation");
+        return false;
     });
 
     // top navigation menu

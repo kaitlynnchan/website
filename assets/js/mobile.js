@@ -43,6 +43,7 @@ $(window).resize(function(){
     checkSize();
 });
 
+var animating = false;
 $(document).ready(function(){
 	// browser window scroll (in pixels) after which the "back to top" link is shown
 	var offset = ($( window ).height() / 3) * 2,
@@ -61,15 +62,47 @@ $(document).ready(function(){
             $nav_bar.addClass('fade-out');
             $nav_bar.removeClass('visible');
         }
-        if($(this).scrollTop() + $(window).height() == $(document).height()){
+
+
+        var contact_info_height = $(".contact-info").height();
+        if($(this).scrollTop() + $(window).height() >= $(document).height() - ($(window).height()/2)){
             console.log("bottom");
             $("#projects-page .body").append($(".top-nav .contact-info"));
-        } 
-        if($(this).scrollTop() == $(document).height() - ($(window).height()/2)){
+        } else {
             console.log("here")
-            $("#projects-page .body .contact-info").insertBefore($(".top-nav"));
+            $(".body .contact-info").insertBefore($(".top-nav .nav-hamburger").first());
         }
+        
+        // $("#home-page .side-nav").insertBefore($("#home-page .body .contact-info"));
+        // $("#home-page").append($("#home-page .side-nav"));
+
 		// if( $(this).scrollTop() > offset_opacity ) { 
 		// }
+
+
+
+        
+        // let dist = $(pageName).offset().top;
+        // console.log(dist);
+        // e.preventDefault();
+        // $("html, body").stop().animate(
+        //     {scrollTop: dist}, 800
+        // );
+
+        // var divTop = $('#about-page').offset().top;
+        // if ($(this).scrollTop() >= 500 ) {
+        //     // animating = true;
+        //     $("html, body").stop().animate({scrollTop: $('#about-page').offset().top}, 1000);
+        //     // return false;
+        // }
+        // else if ($(this).scrollTop() == 0 && !animating && divTop < 480) {
+        //         // On scroll to top hide block 'Welcome'
+        //     console.log('0');
+        //     animating = true;
+        //     $("html, body").animate({scrollTop: 0}, 500,function(){
+        //         animating = false;
+        //     });
+        //     return false;
+        // }
 	});
 });
