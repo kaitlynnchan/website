@@ -288,3 +288,37 @@ a.nav-hamburger .fa-bars, a.nav-hamburger .fa-circle.selected{
     /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
     opacity: 0;
 }
+
+.side-nav-bar{
+    position: fixed;
+    right: 0;
+    top: 50vh;
+    z-index: 1;
+}
+.side-nav-bar ul{
+    list-style: none;
+}
+.side-nav-bar ul li{
+    /* margin: 10px; */
+    height: 30px;
+}
+.side-nav-bar ul li a{
+    display: flex;
+    justify-content: end;
+}
+.side-nav-bar ul li a > *{
+    padding: 0 10px;
+}
+.side-nav-bar ul li a i{
+    margin: auto 0;
+    color: #D9D9D9;
+}
+.side-nav-bar ul li a.selected i{
+    margin: auto 0;
+    color: white;
+}
+.side-nav-bar ul li a div, .side-nav-bar ul li a p{
+    background-color: var(--light-purple);
+    border-radius: 15px;
+    visibility: collapse;
+}
