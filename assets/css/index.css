@@ -167,12 +167,12 @@ a.nav-hamburger .fa-bars, a.nav-hamburger .fa-circle.selected{
 .top-nav{
     position: relative;
 }
-.top-nav.pull-right > a{
+.top-nav > a{
     float: right;
 }
-.top-nav.pull-left > a{
+/* .top-nav.pull-left > a{
     float: left;
-}
+} */
 .top-nav .fa-circle{
     color: var(--light-purple);
 }
@@ -183,7 +183,7 @@ a.nav-hamburger .fa-bars, a.nav-hamburger .fa-circle.selected{
 .top-nav.fixed .nav-menu{
     width: max-content;
 }
-.top-nav.fixed.pull-right{
+.top-nav.fixed{
     right: 20px;
 }
 
@@ -196,13 +196,13 @@ a.nav-hamburger .fa-bars, a.nav-hamburger .fa-circle.selected{
     box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
     z-index: 2;
 }
-.top-nav.pull-right .nav-menu{
+.top-nav .nav-menu{
     right: 0;
     text-align: end;
 }
-.top-nav.pull-left .nav-menu{
+/* .top-nav.pull-left .nav-menu{
     text-align: start;
-}
+} */
 
 .nav-menu.expanded{
     opacity: 1;
@@ -246,10 +246,10 @@ a.nav-hamburger .fa-bars, a.nav-hamburger .fa-circle.selected{
     top: -5px;
     padding: 10px;
 }
-.top-nav.pull-left .nav-menu.horizontal{
+/* .top-nav.pull-left .nav-menu.horizontal{
     left: 55px;
-}
-.top-nav.pull-right .nav-menu.horizontal{
+} */
+.top-nav .nav-menu.horizontal{
     right: 55px;
 }
 
