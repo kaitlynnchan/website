@@ -63,21 +63,15 @@ $(document).ready(function(){
             $nav_bar.removeClass('visible');
         }
 
-
-        var contact_info_height = $(".contact-info").height();
-        if($(this).scrollTop() + $(window).height() >= $(document).height() - ($(window).height()/2)){
-            console.log("bottom");
-            $("#projects-page .body").append($(".top-nav .contact-info"));
-        } else {
-            console.log("here")
-            $(".body .contact-info").insertBefore($(".top-nav .nav-hamburger").first());
+        // fade out contact info in top nav when page is at bottom
+        var contact_info_height = $("#projects-page .body .contact-info").height();
+        if($(this).scrollTop() + $(window).height() >= $(document).height() - contact_info_height){
+            $nav_bar.children(".contact-info").addClass('fade-out');
+            $nav_bar.children(".contact-info").removeClass('visible');
+        } else{
+            $nav_bar.children(".contact-info").addClass('visible');
+            $nav_bar.children(".contact-info").removeClass('fade-out');
         }
-        
-        // $("#home-page .side-nav").insertBefore($("#home-page .body .contact-info"));
-        // $("#home-page").append($("#home-page .side-nav"));
-
-		// if( $(this).scrollTop() > offset_opacity ) { 
-		// }
 
 
 

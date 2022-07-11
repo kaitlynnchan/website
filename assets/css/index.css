@@ -289,6 +289,21 @@ a.nav-hamburger .fa-bars, a.nav-hamburger .fa-circle.selected{
     opacity: 0;
 }
 
+.top-nav .contact-info.visible, .top-nav .contact-info.fade-out {
+    -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+    -moz-transition: opacity .3s 0s, visibility 0s 0s;
+    transition: opacity .3s 0s, visibility 0s 0s;
+}
+.top-nav .contact-info.visible {
+    /* the button becomes visible */
+    visibility: visible;
+    opacity: 1;
+}
+.top-nav .contact-info.fade-out {
+    /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+    opacity: 0;
+}
+
 .side-nav-bar{
     position: fixed;
     right: 0;
