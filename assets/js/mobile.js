@@ -57,21 +57,22 @@ $(document).ready(function(){
 		if( $(this).scrollTop() > offset ){
             $nav_bar.addClass('visible');
             $nav_bar.removeClass('fade-out');
-            // $nav_bar.removeClass('cd-is-visible cd-fade-out');
+            
+            // fade out contact info in top nav when page is at bottom
+            var contact_info_height = $("#projects-page .body .contact-info").height();
+            if($(this).scrollTop() + $(window).height() >= $(document).height() - contact_info_height){
+                $nav_bar.children(".contact-info").addClass('fade-out');
+                $nav_bar.children(".contact-info").removeClass('visible');
+            } else{
+                $nav_bar.children(".contact-info").addClass('visible');
+                $nav_bar.children(".contact-info").removeClass('fade-out');
+            }
         } else{
             $nav_bar.addClass('fade-out');
             $nav_bar.removeClass('visible');
+            $nav_bar.children(".contact-info").removeClass('visible');
         }
 
-        // fade out contact info in top nav when page is at bottom
-        var contact_info_height = $("#projects-page .body .contact-info").height();
-        if($(this).scrollTop() + $(window).height() >= $(document).height() - contact_info_height){
-            $nav_bar.children(".contact-info").addClass('fade-out');
-            $nav_bar.children(".contact-info").removeClass('visible');
-        } else{
-            $nav_bar.children(".contact-info").addClass('visible');
-            $nav_bar.children(".contact-info").removeClass('fade-out');
-        }
 
 
 

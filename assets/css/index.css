@@ -194,6 +194,11 @@ a.nav-hamburger .fa-bars, a.nav-hamburger .fa-circle.selected{
     top: 20px
 }
 
+.top-nav .contact-info{
+    visibility: collapse;
+    opacity: 0;
+}
+
 .nav-menu{
     position: absolute;
     top: 49px;
