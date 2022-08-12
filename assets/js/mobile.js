@@ -74,6 +74,24 @@ $(document).ready(function(){
         }
 
 
+        /**
+         * Side Navigation Bar
+         */
+        if( $("#projects-page").position().top - $(this).scrollTop() < $(window).height() / 2){
+            $(".side-nav-bar ul li a.projects").addClass("selected");
+            $(".side-nav-bar ul li a.about").removeClass("selected");
+            $(".side-nav-bar ul li a.home").removeClass("selected");
+        } else if ( $("#about-page").position().top - $(this).scrollTop() < $(window).height() / 2){
+            $(".side-nav-bar ul li a.about").addClass("selected");
+            $(".side-nav-bar ul li a.home").removeClass("selected");
+            $(".side-nav-bar ul li a.projects").removeClass("selected");
+        } else {
+            $(".side-nav-bar ul li a.home").addClass("selected");
+            $(".side-nav-bar ul li a.about").removeClass("selected");
+            $(".side-nav-bar ul li a.projects").removeClass("selected");
+        }
+
+
 
 
         

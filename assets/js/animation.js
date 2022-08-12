@@ -10,32 +10,32 @@ $(document).ready(function(){
     });
 
     // animation end
-    function removeAnimations(){
-        console.log("Animation end on '" + $(this).attr("class") + "'");
-        if($(this).hasClass("animate__slideOutLeft")){
-            $(this).removeClass("animate__animated animate__slideOutLeft");
-            $(this).css("display", "none");
-            $("body").css("overflow", "");
-        } 
-        else if($(this).hasClass("animate__slideOutRight")){
-            $(this).removeClass("animate__animated animate__slideOutRight");
-            $(this).css("display", "none");
-            $("body").css("overflow", "");
-        } 
-        else if($(this).hasClass("animate__slideInLeft")){
-            $(this).removeClass("animate__animated animate__slideInLeft");
-        } 
-        else if($(this).hasClass("animate__slideInRight")){
-            $(this).removeClass("animate__animated animate__slideInRight");
-        } 
-        else{
-            console.log("No animations removed");
-        }
-        isAnimationDone = true;
-    }
-    $("#home-page").on("animationend", removeAnimations);
-    $("#about-page").on("animationend", removeAnimations);
-    $("#projects-page").on("animationend", removeAnimations);
+    // function removeAnimations(){
+    //     console.log("Animation end on '" + $(this).attr("class") + "'");
+    //     if($(this).hasClass("animate__slideOutLeft")){
+    //         $(this).removeClass("animate__animated animate__slideOutLeft");
+    //         $(this).css("display", "none");
+    //         $("body").css("overflow", "");
+    //     } 
+    //     else if($(this).hasClass("animate__slideOutRight")){
+    //         $(this).removeClass("animate__animated animate__slideOutRight");
+    //         $(this).css("display", "none");
+    //         $("body").css("overflow", "");
+    //     } 
+    //     else if($(this).hasClass("animate__slideInLeft")){
+    //         $(this).removeClass("animate__animated animate__slideInLeft");
+    //     } 
+    //     else if($(this).hasClass("animate__slideInRight")){
+    //         $(this).removeClass("animate__animated animate__slideInRight");
+    //     } 
+    //     else{
+    //         console.log("No animations removed");
+    //     }
+    //     isAnimationDone = true;
+    // }
+    // $("#home-page").on("animationend", removeAnimations);
+    // $("#about-page").on("animationend", removeAnimations);
+    // $("#projects-page").on("animationend", removeAnimations);
     // $(".side-nav").on("animationend", removeAnimations);
 
 
@@ -43,23 +43,23 @@ $(document).ready(function(){
      * Navigation Buttons
      */
     // clicking page buttons animation
-    function clickBtn(btnContainer, pageName){
-        if(isAnimationDone){
-            $("body").css("overflow", "hidden");
-            if(btnContainer.hasClass("pull-left")){
-                // moving right
-                btnContainer.parents(".page").addClass("animate__animated animate__slideOutRight");
-                $(pageName).css("display", "flex");
-                $(pageName).addClass("animate__animated animate__slideInLeft");
-            } else if(btnContainer.hasClass("pull-right")){
-                // moving left
-                btnContainer.parents(".page").addClass("animate__animated animate__slideOutLeft");
-                $(pageName).css("display", "flex");
-                $(pageName).addClass("animate__animated animate__slideInRight");
-            }
-            isAnimationDone = false;
-        }
-    }
+    // function clickBtn(btnContainer, pageName){
+    //     if(isAnimationDone){
+    //         $("body").css("overflow", "hidden");
+    //         if(btnContainer.hasClass("pull-left")){
+    //             // moving right
+    //             btnContainer.parents(".page").addClass("animate__animated animate__slideOutRight");
+    //             $(pageName).css("display", "flex");
+    //             $(pageName).addClass("animate__animated animate__slideInLeft");
+    //         } else if(btnContainer.hasClass("pull-right")){
+    //             // moving left
+    //             btnContainer.parents(".page").addClass("animate__animated animate__slideOutLeft");
+    //             $(pageName).css("display", "flex");
+    //             $(pageName).addClass("animate__animated animate__slideInRight");
+    //         }
+    //         isAnimationDone = false;
+    //     }
+    // }
 
     // returns string to page identifier
     function convertToPageID(pageName){
@@ -85,7 +85,7 @@ $(document).ready(function(){
     $(".top-nav .nav-menu a").on("click", function(){
         const $btn = $(this).parents("section");
         var linkName = $(this).attr("id");        
-        clickBtn($btn, convertToPageID(linkName));
+        // clickBtn($btn, convertToPageID(linkName));
 
         // trigger event handler for navigation hamburger
         $(this).parents("section").find(".nav-hamburger")
@@ -143,17 +143,23 @@ $(document).ready(function(){
 
 
     // top navigation heading
-    $(".heading a").on("click", function(){
-        const $topNavBtn = $(this).parents(".header").find(".top-nav");
-        clickBtn($topNavBtn, convertToPageID("home"));
-    });
+    // $(".heading a").on("click", function(){
+    //     const $topNavBtn = $(this).parents(".header").find(".top-nav");
+    //     clickBtn($topNavBtn, convertToPageID("home"));
+    // });
 
     // top navigation heading hover animation
-    $(".heading a").hover(function(){
-        $(this).children("h1").toggleClass("selected");
-    });
+    // $(".heading a").hover(function(){
+    //     $(this).children("h1").toggleClass("selected");
+    // });
 
     // showNavBar();
+
+    // side navigation bar
+    $(".side-nav-bar").hover(function(){
+        $(".side-nav-bar ul li a div").toggleClass("show");
+    });
+
 });
 
 // function showNavBar(){
