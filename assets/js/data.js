@@ -43,9 +43,13 @@ $(document).ready(function(){
 
     // add contact-info
     $(".contact-info").each(function(){
+        var iconSize = "fa-lg";
+        if($(this).parents(".top-nav").length){
+            iconSize = "fa-md";
+        }
         var info = 
             '<div class="row">' +
-                '<div class="icons fa-md">' +
+                '<div class="icons '+ iconSize +'">' +
                     '<a class="fa-stack hvr-icon-fade" href="https://github.com/kaitlynnchan" target="_blank">' +
                         '<i class="fa fa-circle fa-stack-2x hvr-icon"></i>' +
                         '<i class="fab fa-github fa-stack-1x hvr-icon icon"></i>' +
