@@ -79,7 +79,7 @@ body {
     display: flex;
     flex-direction: column;
     /* flex-grow: 1; */
-    margin: auto;
+    margin: auto 10%;
 }
 .body .inner {
     margin: auto;

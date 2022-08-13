@@ -16,9 +16,9 @@
 }
 
 
-#home-page .box{
+/* #home-page .box{
     width: 55%;
-}
+} */
 
 #home-page .inner.box h1{
     font-family: "brandon";
@@ -70,5 +70,6 @@
 
 .nav-btns .side-nav{
     margin: auto;
-    width: 55%;
+    margin-right: 0;
+    width: 60%;
 }
