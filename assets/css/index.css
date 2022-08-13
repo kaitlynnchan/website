@@ -278,7 +278,7 @@ a.nav-hamburger .fa-bars, a.nav-hamburger .fa-circle.selected{
 }
 
 
-
+/** Top Navigation Menu **/
 .top-nav.visible, .top-nav.fade-out {
     -webkit-transition: opacity .3s 0s, visibility 0s 0s;
     -moz-transition: opacity .3s 0s, visibility 0s 0s;
@@ -309,6 +309,7 @@ a.nav-hamburger .fa-bars, a.nav-hamburger .fa-circle.selected{
     opacity: 0;
 }
 
+/** Side Navigation Bar **/
 .side-nav-bar{
     position: fixed;
     right: 0;
