@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    AOS.init();
     console.log("ready");
     var isAnimationDone = false;
 
