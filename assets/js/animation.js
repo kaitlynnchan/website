@@ -72,7 +72,19 @@ $(document).ready(function(){
         var linkName = $(this).attr("id");
         let pageName = convertToPageID(linkName);
         let dist = $(pageName).offset().top;
-        console.log(dist);
+        e.preventDefault();
+        $("html, body").stop().animate(
+            {scrollTop: dist}, 800
+        );
+        console.log("Clicked side navigation");
+        return false;
+    });
+
+    
+    $(".side-nav-bar a").on("click", function(e){
+        var linkName = $(this).attr("id");
+        let pageName = convertToPageID(linkName);
+        let dist = $(pageName).offset().top;
         e.preventDefault();
         $("html, body").stop().animate(
             {scrollTop: dist}, 800
@@ -158,6 +170,53 @@ $(document).ready(function(){
     // side navigation bar
     $(".side-nav-bar").hover(function(){
         $(".side-nav-bar ul li a div").toggleClass("show");
+        $(".side-nav-bar ul li a div").addClass("animate__fadeIn");
+        
+    });
+
+
+
+    // browser window scroll (in pixels) after which the "back to top" link is shown
+    var offset = ($( window ).height() / 3) * 2,
+        //grab the "back to top" link
+        $nav_bar = $('.top-nav');
+    $(window).scroll(function(){
+        if( $(this).scrollTop() > offset ){
+            $nav_bar.addClass('visible');
+            $nav_bar.removeClass('fade-out');
+            
+            // fade out contact info in top nav when page is at bottom
+            var contact_info_height = $("#projects-page .body .contact-info").height();
+            if($(this).scrollTop() + $(window).height() >= $(document).height() - contact_info_height){
+                $nav_bar.children(".contact-info").addClass('fade-out');
+                $nav_bar.children(".contact-info").removeClass('visible');
+            } else{
+                $nav_bar.children(".contact-info").addClass('visible');
+                $nav_bar.children(".contact-info").removeClass('fade-out');
+            }
+        } else{
+            $nav_bar.addClass('fade-out');
+            $nav_bar.removeClass('visible');
+            $nav_bar.children(".contact-info").removeClass('visible');
+        }
+
+
+        /**
+         * Side Navigation Bar
+         */
+        if( $("#projects-page").position().top - $(this).scrollTop() < $(window).height() / 2){
+            $(".side-nav-bar ul li a.projects").addClass("selected");
+            $(".side-nav-bar ul li a.about").removeClass("selected");
+            $(".side-nav-bar ul li a.home").removeClass("selected");
+        } else if ( $("#about-page").position().top - $(this).scrollTop() < $(window).height() / 2){
+            $(".side-nav-bar ul li a.about").addClass("selected");
+            $(".side-nav-bar ul li a.home").removeClass("selected");
+            $(".side-nav-bar ul li a.projects").removeClass("selected");
+        } else {
+            $(".side-nav-bar ul li a.home").addClass("selected");
+            $(".side-nav-bar ul li a.about").removeClass("selected");
+            $(".side-nav-bar ul li a.projects").removeClass("selected");
+        }
     });
 
 });

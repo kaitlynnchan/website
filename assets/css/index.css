@@ -317,6 +317,8 @@ a.nav-hamburger .fa-bars, a.nav-hamburger .fa-circle.selected{
 }
 .side-nav-bar ul{
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 .side-nav-bar ul li{
     /* margin: 10px; */
@@ -343,7 +345,9 @@ a.nav-hamburger .fa-bars, a.nav-hamburger .fa-circle.selected{
 .side-nav-bar ul li a div{
     background-color: var(--light-purple);
     border-radius: 15px;
+    box-shadow: 0px 0px 4px rgb(0 0 0 / 25%);
     display: none;
+    animation-duration: 0.3s;
 }
 .side-nav-bar ul li a div.show{
     display: initial;
