@@ -42,10 +42,11 @@
 #home-page .side-nav.center{
     display: flex;
     margin: 10px 0;
+    width: 100%;
 }
 
 #home-page .side-nav.center a{
-    width: 65%;
+    width: 100%;
     margin: auto;
 }
 
@@ -67,9 +68,13 @@
     width: 30%;
     margin: 90px 0;
 }
+.nav-btns.center{
+    width: 100%;
+    margin: 30px 0;
+}
 
 .nav-btns .side-nav{
     margin: auto;
     margin-right: 0;
-    width: 60%;
+    width: 80%;
 }

@@ -84,3 +84,9 @@
     font-size: xxx-large;
     /* font-weight: bold; */
 }
+
+
+
+.top-nav .contact-info.hide{
+    display: none;
+}
