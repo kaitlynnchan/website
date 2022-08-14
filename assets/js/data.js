@@ -44,6 +44,7 @@ $(document).ready(function(){
     // add contact-info
     $(".contact-info").each(function(){
         var iconSize = "fa-lg";
+        // contact info icons decreases size
         if($(this).parents(".top-nav").length){
             iconSize = "fa-md";
         }

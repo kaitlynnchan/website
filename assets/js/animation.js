@@ -1,12 +1,12 @@
 $(document).ready(function(){
-    AOS.init();
     console.log("ready");
-    var isAnimationDone = false;
+    
+    // initialize animate on scroll library
+    AOS.init();
 
     /**
      * Icons
      */
-    // icons animation
     $(".icons a").hover(function(){
         $(this).children(".fa-circle").toggleClass("selected");
         $(this).children(".icon").toggleClass("selected");
@@ -55,7 +55,7 @@ $(document).ready(function(){
      */ 
     $(".top-nav .nav-menu a").on("click", clickNavButton);
 
-    // open and close top navigation menu
+    // expand/collapse top navigation menu
     $(".nav-hamburger").on("click", function(){
         var pageName = $(this).parents(".page").attr("id");
         $(this).parents("section").find(".nav-menu").toggleClass("expanded");
@@ -72,7 +72,7 @@ $(document).ready(function(){
         console.log("Icon hover out");
     });
 
-    // navigation hamburger hover animation
+    // hamburger hover animation
     $("a.nav-hamburger").hover(
         function(){
             // hover over
@@ -91,14 +91,11 @@ $(document).ready(function(){
     );
 
     // hide nav-menu when collapsed after/before transitions
-    $(".nav-menu").on("transitionend", function(){
-        if($(this).hasClass("collapsed")){
-            $(this).addClass("hide");
-        }
-    });
-    $(".nav-menu").on("transitionstart", function(){
-        if($(this).hasClass("expanded")){
-            $(this).removeClass("hide");
+    $("html, body").on("animationend", function(){
+        console.log("ended")
+        if($(".nav-menu").hasClass("expanded")){
+            $(".nav-menu").removeClass("expanded");
+            $(".nav-menu").addClass("collapsed");
         }
     });
 
@@ -109,10 +106,11 @@ $(document).ready(function(){
  * Scrolling
  */
 $(window).scroll(function(){
+    var winHeight = $(window).height();
+
     /**
      * Top Navigation Menu
      */
-    var winHeight = $(window).height();
     var offset = (winHeight / 3) * 2;
     var $nav_bar = $('.top-nav');
     if( $(this).scrollTop() > offset ){
@@ -134,16 +132,15 @@ $(window).scroll(function(){
         $nav_bar.children(".contact-info").removeClass('visible');
     }
 
-
     /**
      * Side Navigation Bar
      */
-    var windowMidPos = winHeight / 2;
-    if( $("#projects-page").position().top - $(this).scrollTop() < windowMidPos){
+    var offset = winHeight / 2;
+    if( $("#projects-page").position().top - $(this).scrollTop() < offset){
         $(".side-nav-bar ul li a.projects").addClass("selected");
         $(".side-nav-bar ul li a.about").removeClass("selected");
         $(".side-nav-bar ul li a.home").removeClass("selected");
-    } else if ( $("#about-page").position().top - $(this).scrollTop() < windowMidPos){
+    } else if ( $("#about-page").position().top - $(this).scrollTop() < offset){
         $(".side-nav-bar ul li a.about").addClass("selected");
         $(".side-nav-bar ul li a.home").removeClass("selected");
         $(".side-nav-bar ul li a.projects").removeClass("selected");
