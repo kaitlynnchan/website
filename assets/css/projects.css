@@ -48,6 +48,7 @@
     top: -62px;
     left: -62px;
     position: absolute;
+    border-radius: 0;
 }
 .project-items .link .icon{
     color: var(--light-blue);

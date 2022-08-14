@@ -10,12 +10,11 @@
 
 #home-page .body{
     flex-grow: 1;
-    flex-direction: row;
 }
 
 /* Title Box */
 #home-page .inner.box{
-    padding: 14% 10%;
+    padding: 16% 10%;
 }
 #home-page .inner.box h1{
     font-family: "brandon";

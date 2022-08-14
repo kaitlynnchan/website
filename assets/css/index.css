@@ -60,7 +60,6 @@ body {
     margin: auto 10%;
 }
 .body .inner {
-    margin: auto;
     color: var(--dark-blue);
 }
 .body .box{
