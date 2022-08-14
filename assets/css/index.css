@@ -5,13 +5,9 @@
     --pale-orange: #FEE5AD;
     --brown: #A88245;
     --dark-brown: #47351A;
-    --light-blue: #84CED1;
-    --blue: #2A6366;
-    /* #003638 */
-    --dark-blue: #10292B;
-    --light-purple: #B3AFDC;
-    --purple: #3F3975;
-    --dark-purple: #0F0941;
+    --light-blue: #c6ccd3;
+    --blue: #84CED1;
+    --dark-blue: #1d3d60;
 }
 
 @font-face {
@@ -64,22 +60,21 @@ body {
     margin: auto 10%;
 }
 .body .inner {
-    margin: auto;
     color: var(--dark-blue);
 }
 .body .box{
-    background-color: var(--light-blue);
+    background-color: var(--blue);
     /* width: 60%; */
     padding: 10%;
-    box-shadow: 7px 7px 4px rgb(0 0 0 / 25%);
+    box-shadow: -2px 5px 32px rgb(0 0 0 / 25%);
 }
 
 /* Contact Info */
 .contact-info .fa-circle, .contact-info .icon.selected, .contact-info p{
-    color: var(--dark-brown) !important;
+    color: var(--dark-blue) !important;
 }
 .contact-info .icon, .contact-info .fa-circle.selected{
-    color: var(--pale-orange) !important; 
+    color: var(--light-blue) !important; 
 }
 .contact-info{
     display: flex;
@@ -129,14 +124,11 @@ body {
 }
 
 /* Navigation Menu Icon */
-.top-nav .fa-circle{
-    color: var(--light-purple);
-}
 a.nav-hamburger .fa-circle, a.nav-hamburger .fa-bars.selected{
-    color: var(--light-purple) !important;
+    color: var(--light-blue) !important;
 }
 a.nav-hamburger .fa-bars, a.nav-hamburger .fa-circle.selected{
-    color: var(--dark-purple) !important; 
+    color: var(--dark-blue) !important; 
 }
 
 /* Navigation Menu */
@@ -150,8 +142,8 @@ a.nav-hamburger .fa-bars, a.nav-hamburger .fa-circle.selected{
 .nav-menu{
     position: absolute;
     top: 49px;
-    background-color: var(--light-purple);
-    color: var(--dark-purple);
+    background-color: var(--light-blue);
+    color: var(--dark-blue);
     padding: 10px 20px;
     box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
     z-index: 2;
@@ -280,7 +272,7 @@ a.nav-hamburger .fa-bars, a.nav-hamburger .fa-circle.selected{
 }
 
 .side-nav-bar ul li a div{
-    background-color: var(--light-purple);
+    background-color: var(--light-blue);
     border-radius: 15px;
     box-shadow: 0px 0px 4px rgb(0 0 0 / 25%);
     display: none;

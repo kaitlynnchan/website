@@ -6,7 +6,6 @@ function checkSize(){
     // change when screen size is less than 1000px
     if(window.matchMedia("only screen and (max-width: 1100px)").matches){
         // changed location of side buttons to below
-        $("#home-page .body").css("flex-direction", "column");
         $("#home-page .nav-btns").addClass("center");
 
         // update size of title text
@@ -17,7 +16,6 @@ function checkSize(){
         $(".top-nav .contact-info").addClass("hide");
     } else{
         // changed location of side buttons to the side
-        $("#home-page .body").css("flex-direction", "row");
         $("#home-page .nav-btns").removeClass("center");
 
         // update size of title text
