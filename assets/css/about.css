@@ -29,7 +29,7 @@
 }
 .title > *{
     /* background-color: var(--light-purple); */
-    color: var(--dark-purple);
+    color: var(--dark-blue);
     padding: 10px 0;
     width: fit-content;
     font-family: 'brandon';
@@ -48,7 +48,7 @@
 }
 
 .title .divider{
-    border-bottom: 3px solid var(--dark-purple);
+    border-bottom: 3px solid var(--dark-blue);
     padding: 0;
     width: 100px;
 }

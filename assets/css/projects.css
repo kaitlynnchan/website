@@ -44,13 +44,13 @@
     width: 125px;
     height: 125px;
     transform: rotate(45deg);
-    background-color: var(--dark-brown);
+    background-color: var(--dark-blue);
     top: -62px;
     left: -62px;
     position: absolute;
 }
 .project-items .link .icon{
-    color: var(--pale-orange);
+    color: var(--light-blue);
     margin: 10px;
 }
 .project-items .link a{

@@ -21,28 +21,27 @@
     font-family: "brandon";
     font-size: 3.75rem;
 }
-#home-page .inner.box h4{
-    color: var(--blue);
+#home-page .inner.box > h4{
+    opacity: 70%;
     /* font-family: Georgia, Cambria, "Times New Roman", Times, serif; */
 }
 
 /* Navigation Buttons */
 .nav-btns{
     display: flex;
-    flex-direction: column;
-    width: 30%;
-    margin: 90px 0;
+    margin: auto;
+    margin-top: 50px;
 }
 .nav-btns.center{
     width: 100%;
-    margin: 30px 0;
+    margin: 0;
+    margin-top: 30px;
+    flex-direction: column;
 }
 
 .nav-btns .side-nav{
     margin: auto;
-    margin-right: 0;
-    width: 80%;
-    color: var(--dark-purple);
+    width: 33%;
 }
 .nav-btns.center .side-nav{
     display: flex;
@@ -52,11 +51,7 @@
 
 .nav-btns .side-nav a{
     display: flex;
-    background-color: var(--light-purple);
-    /* height: 60px;
-    width: 130px; */
-    border-radius: 50px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: var(--dark-blue);
     padding: 15px 20px;
 }
 .nav-btns.center .side-nav a{
@@ -66,6 +61,8 @@
 
 .nav-btns .side-nav h4{
     margin: auto;
+    color: white !important;
+    font-weight: normal;
 }
 .nav-btns.center .side-nav .inner.box h1{
     font-size: 2.75rem;
