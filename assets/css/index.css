@@ -115,7 +115,7 @@ body {
     visibility: collapse;
     opacity: 0;
 }
-.top-nav.pull-right > a{
+.top-nav > a{
     float: right;
 }
 .top-nav.fixed{
