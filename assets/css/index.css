@@ -76,10 +76,10 @@ body {
 
 /* Contact Info */
 .contact-info .fa-circle, .contact-info .icon.selected, .contact-info p{
-    color: var(--dark-brown) !important;
+    color: var(--dark-purple) !important;
 }
 .contact-info .icon, .contact-info .fa-circle.selected{
-    color: var(--pale-orange) !important; 
+    color: var(--light-purple) !important; 
 }
 .contact-info{
     display: flex;
