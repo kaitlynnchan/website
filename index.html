@@ -15,6 +15,9 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
         <!-- hover.css -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css"/>
+        <!-- Animate on Scroll -->  
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
         <!-- fonts -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -33,76 +36,101 @@
         <link rel="stylesheet" type="text/css" href="./assets/css/projects.css">
 	</head>
     <body>
-        <section id="home-page" class="home wrapper page">
-            <section class="body" style="order:2;">
-                <div class="inner top"></div>
+        <section class="top-nav pull-right fixed">
+            <div class="inner contact-info">
+                <!-- <div class="row">
+                    <div class="icons fa-lg col-sm-6 col-xs-12">
+                        <a class="fa-stack" href="" target="_blank">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fab fa-github fa-stack-1x icon"></i>
+                        </a>
+                        <a class="fa-stack" href="" target="_blank">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fab fa-linkedin-in fa-stack-1x icon"></i>
+                        </a>
+                        <a class="fa-stack" href="" target="_blank">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="far fa-file fa-stack-1x icon"></i>
+                        </a>
+                    </div>
+                    <div class="text col-sm-6 col-xs-12">
+                        <p>aaaaaaaaaaaaa@aaa.ca</p>
+                        <p>(000) 000-0000</p>
+                    </div>
+                </div> -->
+            </div>
+            <a class="nav-hamburger fa-stack fa-lg hvr-icon-fade">
+                <i class="fa fa-circle fa-stack-2x hvr-icon"></i>
+                <i class="fas fa-bars fa-stack-1x hvr-icon"></i>
+            </a>
+            <div class="nav-menu collapsed hide">
+                <ul>
+                    <li><a id="home"><span>Home</span></a></li>
+                    <li><a id="about"><span>About Me</span></a></li>
+                    <li><a id="projects"><span>Projects</span></a></li>
+                    <li>
+                        <div class="icons fa-lg ">
+                            <a class="" href="https://github.com/kaitlynnchan" target="_blank">
+                                <i class="fab fa-github icon"></i>
+                            </a>
+                            <a class="" href="https://www.linkedin.com/in/kaitlynn-chan-3b2935162/" target="_blank">
+                                <i class="fab fa-linkedin-in icon"></i>
+                            </a>
+                            <a class="" href="https://drive.google.com/file/d/17RjmRSGnLhdQHUXH6xpLUb0Wcsnh-Ek7/view?usp=sharing" target="_blank">
+                                <i class="far fa-file icon"></i>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
 
+        <section class="side-nav-bar">
+            <ul>
+                <li><a id="home" class="home selected">
+                    <div class="animate__animated"><p>home</p></div>
+                    <i class="fas fa-circle fa-sm"></i>
+                </a></li>
+                <li><a id="about" class="about">
+                    <div class="animate__animated"><p>about</p></div>
+                    <i class="fas fa-circle fa-sm"></i>
+                </a></li>
+                <li><a id="projects" class="projects">
+                    <div class="animate__animated"><p>projects</p></div>
+                    <i class="fas fa-circle fa-sm"></i>
+                </a></li>
+            </ul>
+        </section>
+
+        <section id="home-page" class="home wrapper page">
+            <section class="body">
                 <div class="inner box">
                     <h1>Kaitlynn Chan</h1>
                     <h4>Third Year Computer Science Student at Simon Fraser University</h4>
                 </div>
-    
-                <div class="inner contact-info order-last">
-                    <!-- <div class="row">
-                        <div class="icons fa-lg col-sm-6 col-xs-12">
-                            <a class="fa-stack" href="" target="_blank">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-github fa-stack-1x icon"></i>
-                            </a>
-                            <a class="fa-stack" href="" target="_blank">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-linkedin-in fa-stack-1x icon"></i>
-                            </a>
-                            <a class="fa-stack" href="" target="_blank">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="far fa-file fa-stack-1x icon"></i>
-                            </a>
-                        </div>
-                        <div class="text col-sm-6 col-xs-12">
-                            <p>aaaaaaaaaaaaa@aaa.ca</p>
-                            <p>(000) 000-0000</p>
-                        </div>
-                    </div> -->
-                </div>
-            </section>
+                <section class="nav-btns">
+                    <section class="side-nav">
+                        <a id="about" class="hvr-forward">
+                            <h4 class="">About Me</h4>
+                        </a>
+                    </section>
             
-            <section class="side-nav pull-left animate__animated animate__slideInLeft" style="order:1;">
-                <a id="about" class="hvr-forward">
-                    <!-- <div class="overlay rounded-corners"></div> -->
-                    <h4 class="">About Me</h4>
-                </a>
-            </section>
-    
-            <section class="side-nav pull-right animate__animated animate__slideInRight" style="order:3;">
-                <a id="projects" class="hvr-backward">
-                    <!-- <div class="overlay rounded-corners"></div> -->
-                    <h4 class="">Projects</h4>
-                </a>
+                    <section class="side-nav">
+                        <a id="projects" class="hvr-forward">
+                            <h4 class="">Projects</h4>
+                        </a>
+                    </section>
+                </section>
             </section>
         </section>
 
         
         <section id="about-page" class="about wrapper page scrollable">
-            <section class="header">
-                <section class="top-nav pull-right fixed">
-                    <a class="nav-hamburger fa-stack fa-lg hvr-icon-fade">
-                        <i class="fa fa-circle fa-stack-2x hvr-icon"></i>
-                        <i class="fas fa-bars fa-stack-1x hvr-icon"></i>
-                    </a>
-                    <div class="nav-menu collapsed hide">
-                        <ul>
-                            <li><a id="home"><span>Home</span></a></li>
-                            <li><a id="about"><span>About Me</span></a></li>
-                            <li><a id="projects"><span>Projects</span></a></li>
-                        </ul>
-                    </div>
-                </section>
-                <section class="heading hvr-icon-fade">
-                    <a><h1 class="hvr-icon">KAITLYNN</h1></a>
-                </section>
-            </section>
             <section class="body">
-                <div class="inner">
+                <div class="title" data-aos="fade-up" data-aos-duration="1000">
+                    <h1>About Me</h1>
+                </div>
+                <div class="inner" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                     <div class="text box">
                         <h4>I am an undergraduate student at SFU studying computer science 
                             with an interest in business. I have collaborated on building 
@@ -115,36 +143,16 @@
                             volleyball, and hiking. When I can, I like to educate myself 
                             with a new skill.</h4>
                     </div>
-                    <div class="title">
-                        <h1>About Me</h1>
-                    </div>
                 </div>
-                
-                <div class="inner contact-info"></div>
             </section>
         </section>
 
 
         <section id="projects-page" class="projects wrapper page scrollable">
-            <section class="header">
-                <section class="top-nav pull-left fixed">
-                    <a class="nav-hamburger fa-stack fa-lg hvr-icon-fade">
-                        <i class="fa fa-circle fa-stack-2x hvr-icon"></i>
-                        <i class="fas fa-bars fa-stack-1x hvr-icon"></i>
-                    </a>
-                    <div class="nav-menu collapsed hide">
-                        <ul>
-                            <li><a id="home"><span>Home</span></a></li>
-                            <li><a id="about"><span>About Me</span></a></li>
-                            <li><a id="projects"><span>Projects</span></a></li>
-                        </ul>
-                    </div>
-                </section>
-                <section class="heading hvr-icon-fade">
-                    <a><h1 class="hvr-icon">KAITLYNN</h1></a>
-                </section>
-            </section>
             <section class="body">
+                <div class="title" data-aos="fade-up" data-aos-duration="1000">
+                    <h1>Projects</h1>
+                </div>
                 <div class="inner project-items">
                     <div class="row">
                         <!-- <div class="col-sm-6 col-xs-12">
@@ -167,9 +175,9 @@
                         </div> -->
                     </div>
                 </div>
-                <div class="inner contact-info"></div>
+                <div class="inner contact-info">
+                </div>
             </section>
-            
         </section>
     </body>
 </html>

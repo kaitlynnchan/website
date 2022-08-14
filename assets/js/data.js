@@ -27,7 +27,7 @@ $(document).ready(function(){
             }
 
             var projectItem = 
-                "<div class='col-xxl-4 col-md-6 col-sm-12 col-xs-12'>" +
+                "<div class='col-xxl-4 col-md-6 col-sm-12 col-xs-12' data-aos='zoom-in-up' data-aos-duration='1000'>" +
                     "<div class='img-thumbnail box'>" +
                         "<img class='img-fluid' src='" + value.img + "'>" +
                         "<div class='caption'>" +
@@ -43,9 +43,14 @@ $(document).ready(function(){
 
     // add contact-info
     $(".contact-info").each(function(){
+        var iconSize = "fa-lg";
+        // contact info icons decreases size
+        if($(this).parents(".top-nav").length){
+            iconSize = "fa-md";
+        }
         var info = 
             '<div class="row">' +
-                '<div class="icons fa-lg">' +
+                '<div class="icons '+ iconSize +'">' +
                     '<a class="fa-stack hvr-icon-fade" href="https://github.com/kaitlynnchan" target="_blank">' +
                         '<i class="fa fa-circle fa-stack-2x hvr-icon"></i>' +
                         '<i class="fab fa-github fa-stack-1x hvr-icon icon"></i>' +
