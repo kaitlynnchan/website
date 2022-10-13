@@ -2,6 +2,12 @@
     "aboutMe":"I am a undergraduate student at SFU interested in computer science as well as business. I am passionate about learning and passionate about helping others to learn. I work well with others, and I have been successful in influencing my peers to take action and learn more about the technology field. I want to continue to inspire others to pursue a career in computer science.",
     "projects":[
         {
+            "name":"Capture the Flag",
+            "description":"A fun and engaging website game for try/CATCH participants (high school female and non-binary students) to learn about some CS basics and info about SFU Women in Computing Science.",
+            "img":"./assets/imgs/capture-the-flag.jpg",
+            "link":"https://script.google.com/macros/s/AKfycbyMGdf1Crb_aFGOWAuZ4-cmHjji4w_Rpn-1MgYqFhW_GFZuttWDSQ8GG5E_rliyI0_KqQ/exec"
+        },
+        {
             "name":"Filomator",
             "description":"A file management desktop application that monitors folders for incoming files and moves them to their destination. Users input where they want files to go, what files to monitor and when.",
             "img":"./assets/imgs/new-task-page.jpg",
