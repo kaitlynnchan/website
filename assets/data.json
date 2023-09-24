@@ -4,7 +4,7 @@
         {
             "name":"Chroma Scan",
             "description":"This Java application allows a user to select a source image and find the complimenting and dominant color from the source image.",
-            "img":"./assets/imgs/chroma-scan.jpg",
+            "img":"./assets/imgs/chroma-scan.png",
             "link":"https://github.com/kaitlynnchan/chroma-scan"
         },
         {
