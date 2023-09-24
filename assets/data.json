@@ -2,6 +2,12 @@
     "aboutMe":"I am a undergraduate student at SFU interested in computer science as well as business. I am passionate about learning and passionate about helping others to learn. I work well with others, and I have been successful in influencing my peers to take action and learn more about the technology field. I want to continue to inspire others to pursue a career in computer science.",
     "projects":[
         {
+            "name":"Chroma Scan",
+            "description":"This Java application allows a user to select a source image and find the complimenting and dominant color from the source image.",
+            "img":"./assets/imgs/chroma-scan.jpg",
+            "link":"https://github.com/kaitlynnchan/chroma-scan"
+        },
+        {
             "name":"Capture the Flag",
             "description":"A fun and engaging website game for try/CATCH participants (high school female and non-binary students) to learn about some CS basics and info about SFU Women in Computing Science.",
             "img":"./assets/imgs/capture-the-flag.jpg",
