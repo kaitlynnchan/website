@@ -41,6 +41,19 @@ $(document).ready(function(){
         });
     });
 
+    $.getJSON(jsonFile, function(data){
+        console.log(data);
+        var aboutMe = data.aboutMe;
+        var profileImg = data.profileImg;
+
+        var item = 
+            '<img id="profile-pic" class="col-sm-4 col-xs-12" src="' + profileImg + '">' +
+            '<div class="col-sm-8 text">'  +
+                '<h4>' + aboutMe + '</h4>'+
+            '</div>';
+        $("#about-page .inner .box").append(item);
+    });
+
     // add contact-info
     $(".contact-info").each(function(){
         var iconSize = "fa-lg";

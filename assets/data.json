@@ -1,6 +1,13 @@
 {
-    "aboutMe":"I am a undergraduate student at SFU studying computer science and business. I am passionate about learning and passionate about helping others to learn. I work well with others, and I have been successful in influencing my peers to take action and learn more about the technology field. I want to continue to inspire others to pursue a career in computer science.",
+    "aboutMe":"I am an undergraduate student at SFU studying computer science and business. I have collaborated on building outstanding projects that helped build my teamwork and interpersonal skills. I am passionate about learning and about helping others to learn. As a mentor for Women in Computing Science (WiCS) club, I have inspired many young women to pursue a career in computer science. <br><br> Some of my other hobbies include cooking, bread making, volleyball, and running. When I can, I like to educate myself with a new skill.",
+    "profileImg": "./assets/imgs/profile-pic.jpg",
     "projects":[
+        {
+            "name":"Dine Buddy",
+            "description":"This Android app allows a users to login and find places on google maps to save.",
+            "img":"./assets/imgs/dine-buddy.jpg",
+            "link":"https://github.com/kaitlynnchan/food-map"
+        },
         {
             "name":"Chroma Scan",
             "description":"This Java application allows a user to select a source image and find the complimenting and dominant color from the source image.",
