@@ -17,8 +17,16 @@
     margin: auto;
     text-align: start;
 }
+#about-page .body .inner .box{
+    padding: 6% 4%;
+}
 #about-page .body .text h4{
     font-weight: normal;
+}
+#about-page #profile-pic{
+    max-width: 100%;
+    height: 400px;
+    object-fit: contain;
 }
 
 /* Title */
@@ -54,10 +62,4 @@
 }
 .title.center .divider{
     margin: auto;
-}
-
-#about-page #profile-pic{
-    max-width: 100%;
-    height: 400px;
-    object-fit: contain;
 }
