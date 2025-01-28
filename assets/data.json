@@ -3,6 +3,12 @@
     "profileImg": "./assets/imgs/profile-pic.jpg",
     "projects":[
         {
+            "name":"Connect Quest",
+            "description":"This social interaction app prompts users with a daily challenge to get themselves outside and engaging with their community. Completing the challenge awards a user with points so they can compete for high scores with their friends.",
+            "img":"./assets/imgs/connect-quest.png",
+            "link":"https://devpost.com/software/connect-quest"
+        },
+        {
             "name":"Dine Buddy",
             "description":"This Android app allows a users to login and find places on google maps to save.",
             "img":"./assets/imgs/dine-buddy.jpg",
@@ -43,27 +49,12 @@
             "description":"A play on the game spot it, users match images on the cards and compete for a better high score. This Android game algorithmically creates cards and shuffles them where exactly 1 image matches with another card. Users are also able to import images from Flickr using the Flickr API or from their photo gallery.",
             "img":"./assets/imgs/findit-playing.jpg",
             "link":"https://github.com/kaitlynnchan/FindIt"
-        },        
+        },
         {
             "name":"CShell",
             "description":"A command line interpreter that forks processes to allow multiple commands to be run efficiently and independently. Users can run a script of commands.",
             "img":"./assets/imgs/cshell-ex2.jpg",
             "link":"https://replit.com/@kaitlynnchan/cshell"
-        },
-        {
-            "name":"Lets Talk",
-            "description":"This chatbox program allows users to communicate through UPD on different terminals. The program utilizes threading to run efficiently.",
-            "img":"./assets/imgs/letstalk-example_2.jpg"
-        },
-        {
-            "name":"Tokimon Manager",
-            "description":"This server-client program allows users to manage their Tokimons through JavaFX UI. The data is stored on the client side in a JSON file and is communicated through an HTTP request using Spring Boot.",
-            "img":"./assets/imgs/tokimonmanager2.png"
-        },
-        {
-            "name":"Oh the Places You'll Go",
-            "description":"An Android app that gets information about destination spots and displays them to users.",
-            "img":"./assets/imgs/ohtheplaces.jpg"
         }
     ]
 }
