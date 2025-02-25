@@ -10,7 +10,6 @@ const TopNav = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isMenuExpanded, setIsMenuExpanded] = useState(false);
   const [isHamburgerHovered, setIsHamburgerHovered] = useState(false);
-  const [unclickableLinks, setUnclickableLinks] = useState([]);
   const [isMobile, setIsMobile] = useState(window.matchMedia("(max-width: 1100px)").matches);
 
   useEffect(() => {
@@ -39,25 +38,8 @@ const TopNav = () => {
 
   const handleHamburgerClick = () => {
     setIsMenuExpanded(!isMenuExpanded);
-
-    // const pageName = document.querySelector('.page').id; // Assuming the page element has an id attribute
-    // const menuLinks = document.querySelectorAll('.nav-menu ul li a');
-    // const updatedLinks = [];
-
-    // menuLinks.forEach(link => {
-    //   const linkId = link.id;
-    //   if (pageName.includes(linkId)) {
-    //     updatedLinks.push(linkId);
-    //     link.classList.add('unclickable');
-    //   } else {
-    //     link.classList.remove('unclickable');
-    //   }
-    // });
-
-    // setUnclickableLinks(updatedLinks);
   };
 
-  // Handle hamburger hover
   const handleHamburgerHover = (hoverState) => {
     setIsHamburgerHovered(hoverState);
   };
@@ -81,9 +63,7 @@ const TopNav = () => {
           <NavItem id="home" label="Home" />
           <NavItem id="about" label="About Me" />
           <NavItem id="projects" label="Projects" />
-          <li>
-              <SocialIcons iconSize={"fa-md"}/>
-          </li>
+          <li><SocialIcons iconSize={"fa-md"}/></li>
         </ul>
       </div>
     </nav>
@@ -107,16 +87,13 @@ const SocialIcons = ({ iconSize, backIcon }) => {
           target="_blank"
           rel="noopener noreferrer"
           onMouseEnter={() => setHovered(index)}
-          onMouseLeave={() => setHovered(null)}
-        >
-          {backIcon && <FontAwesomeIcon
+          onMouseLeave={() => setHovered(null)} >
+          { backIcon && <FontAwesomeIcon
             icon={faCircle}
-            className={`fa-stack-2x hvr-icon icon-back ${hovered === index ? "selected" : ""}`}
-          />}
+            className={`fa-stack-2x hvr-icon icon-back ${hovered === index ? "selected" : ""}`} />}
           <FontAwesomeIcon
             icon={social.icon}
-            className={`fa-stack-1x hvr-icon icon-front ${hovered === index ? "selected" : ""}`}
-          />
+            className={`fa-stack-1x hvr-icon icon-front ${hovered === index ? "selected" : ""}`} />
         </a>
       ))}
     </div>
@@ -131,7 +108,6 @@ const SideNav = () => {
     const handleScroll = () => {
       const winHeight = window.innerHeight;
       const offset = winHeight / 2;
-      const homeTop = document.getElementById("home-page")?.offsetTop || 0;
       const aboutTop = document.getElementById("about-page")?.offsetTop || 0;
       const projectsTop = document.getElementById("projects-page")?.offsetTop || 0;
       const scrollY = window.scrollY;
@@ -146,6 +122,7 @@ const SideNav = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -163,21 +140,21 @@ const SideNav = () => {
 };
   
 const NavItem = ({ id, label, selected, isHovered, icon }) => {
-    const handleClick = (e) => {
-      e.preventDefault();
-      document.getElementById(`${id}-page`).scrollIntoView({ behavior: "smooth" });
-    };
+  const handleClick = (e) => {
+    e.preventDefault();
+    document.getElementById(`${id}-page`).scrollIntoView({ behavior: "smooth" });
+  };
 
-    return (
-      <li>
-        <a href={`#${id}-page`} onClick={handleClick} className={selected ? "selected" : ""}>
-          <div className={`animate__animated ${isHovered ? "show animate__fadeIn" : ""}`}>
-            <p>{label}</p>
-          </div>
-          {icon && <FontAwesomeIcon icon={faCircle} className="icon fa-sm" />}
-        </a>
-      </li>
-    );
+  return (
+    <li>
+      <a href={`#${id}-page`} onClick={handleClick} className={selected ? "selected" : ""}>
+        <div className={`animate__animated ${isHovered ? "show animate__fadeIn" : ""}`}>
+          <p>{label}</p>
+        </div>
+        {icon && <FontAwesomeIcon icon={faCircle} className="icon fa-sm" />}
+      </a>
+    </li>
+  );
 };
 
 export {

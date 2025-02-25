@@ -26,13 +26,13 @@
 }
 
 p{
-  margin: 0;
+  margin: 0 !important;
 }
 
 a, a:hover{
-  cursor: pointer;
-  color: inherit;
-  text-decoration: none;
+  cursor: pointer !important;
+  color: inherit !important;
+  text-decoration: none !important;
 }
 
 body {
@@ -182,7 +182,7 @@ a.nav-hamburger .icon-front, a.nav-hamburger.selected .icon-back{
   transition: 0.2s all;
   border-radius: 0;
 }
-.nav-menu ul li a.unclickable{
+.nav-menu.collapsed ul li a{
   pointer-events: none;
 }
 .nav-menu .icons a{
