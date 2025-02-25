@@ -63,9 +63,9 @@ const ProjectCard = ({ project }) => {
   )
 };
 
-const TechItem = ({ item, key }) => {
+const TechItem = ({ item }) => {
   return (
-    <div className="item" key={key}>
+    <div className="item">
       <p>{item}</p>
     </div>
   )
