@@ -32,8 +32,7 @@ const AboutPage = () => {
           <div className="row box"> 
             <img id="profile-pic" className="col-sm-4 col-xs-12" src={data.profileImg} />
             <div className="col-sm-8 text">
-              {/* <p>{`${data.aboutMe}`}</p> */}
-              <div dangerouslySetInnerHTML={{ __html: data.aboutMe }} />
+              <p dangerouslySetInnerHTML={{ __html: data.aboutMe }} />
               <h5>Recognitions</h5>
               <Achievements achievements={data.achievements}/>
             </div>
@@ -44,7 +43,6 @@ const AboutPage = () => {
 )};
 
 const Achievements = ({ achievements }) => {
-  console.log(achievements)
   return (
     <p>
       { achievements.map((achievement, index) => (

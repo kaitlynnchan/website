@@ -57,3 +57,11 @@
 .project-items .link a{
     display: block;
 }
+
+.project-items .tech-stack{
+    justify-content: center;
+}
+.project-items .tech-stack .item{
+    width: auto;
+    background: var(--orange);
+}

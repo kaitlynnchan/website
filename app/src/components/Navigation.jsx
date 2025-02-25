@@ -73,7 +73,7 @@ const TopNav = () => {
   
 const SocialIcons = ({ iconSize, backIcon }) => {
   const [hovered, setHovered] = useState(null);
-  const [links, setLinks] = useState([]);
+  const [links, setLinks] = useState({});
 
   useEffect(() => {
     fetch(dataUrl)

@@ -47,6 +47,9 @@ const ProjectCard = ({ project }) => {
         <img className='img-fluid' src={project.img} />
         <div className='caption'>
           <h2>{project.name}</h2>
+          <div className="tech-stack row gap-2">
+            { project.techStack.split(",").map((tech, i) => ( <TechItem item={tech.trim()} key={i} /> )) }
+          </div>
           <p>{project.description}</p>
         </div>
         <div className="link">
@@ -56,6 +59,14 @@ const ProjectCard = ({ project }) => {
           </a>
         </div>
       </div>
+    </div>
+  )
+};
+
+const TechItem = ({ item, key }) => {
+  return (
+    <div className="item" key={key}>
+      <p>{item}</p>
     </div>
   )
 };

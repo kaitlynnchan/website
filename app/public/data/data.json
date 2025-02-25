@@ -22,7 +22,7 @@
             "year": 2023
         },
         {
-            "name": "Ryan Wilk Mastercard Memorial Award",
+            "name": "Ryan Wilk Mastercard Memorial Award in Computing Science",
             "year": 2023
         },
         {
@@ -41,57 +41,66 @@
     "projects":[
         {
             "name":"Connect Quest",
-            "description":"This social interaction app prompts users with a daily challenge to get themselves outside and engaging with their community. Completing the challenge awards a user with points so they can compete for high scores with their friends.",
+            "description":"A gamified social interaction app that sends daily challenges to users to engage with their community. Challenge completion awards users points to compete with friends.",
             "img":"../connect-quest.png",
-            "link":"https://devpost.com/software/connect-quest"
+            "link":"https://devpost.com/software/connect-quest",
+            "techStack": "React, Node.js, MongoDB, Defang.io"
         },
         {
             "name":"Dine Buddy",
-            "description":"This Android app allows a users to login and find places on google maps to save.",
+            "description":"An Android app allows foodies to create an account and create an inventory of favs using the google maps to visualize places.",
             "img":"../dine-buddy.jpg",
-            "link":"https://github.com/kaitlynnchan/food-map"
+            "link":"https://github.com/kaitlynnchan/food-map",
+            "techStack": "Java, Kotlin, Google Maps API, Auth0, NoSQL, Google Firestore"
         },
         {
             "name":"Chroma Scan",
-            "description":"This Java application allows a user to select a source image and find the complimenting and dominant color from the source image.",
+            "description":"This tool allows users to select a source image and creating a color palette, including the complimenting and dominant colors.",
             "img":"../chroma-scan.png",
-            "link":"https://github.com/kaitlynnchan/chroma-scan"
+            "link":"https://github.com/kaitlynnchan/chroma-scan",
+            "techStack": "Java, C++, Flutter, OpenAI, Spring"
         },
         {
             "name":"Capture the Flag",
-            "description":"A fun and engaging website game for try/CATCH participants (high school female and non-binary students) to learn about some CS basics and info about SFU Women in Computing Science.",
+            "description":"A fun and engaging gamified learning experience for try/CATCH participants (high school female and non-binary students) to grasp computer science basics.",
             "img":"../capture-the-flag.jpg",
-            "link":"https://script.google.com/macros/s/AKfycbyMGdf1Crb_aFGOWAuZ4-cmHjji4w_Rpn-1MgYqFhW_GFZuttWDSQ8GG5E_rliyI0_KqQ/exec"
+            "link":"https://script.google.com/macros/s/AKfycbyMGdf1Crb_aFGOWAuZ4-cmHjji4w_Rpn-1MgYqFhW_GFZuttWDSQ8GG5E_rliyI0_KqQ/exec",
+            "techStack": "JavaScript, HTML, CSS, Google Apps Script"
         },
         {
             "name":"Filomator",
             "description":"A file management desktop application that monitors folders for incoming files and moves them to their destination. Users input where they want files to go, what files to monitor and when.",
             "img":"../new-task-page.jpg",
-            "link":"https://github.com/kaitlynnchan/Filomator"
+            "link":"https://github.com/kaitlynnchan/Filomator",
+            "techStack": "Python, Watchdog, Node.js"
         },
         {
             "name":"Recipe Extractor",
-            "description":"This Chome extension pulls recipe information from a site and displays it to users.",
+            "description":"This Chome extension extracts a recipe from a blog and easily displays it to users.",
             "img":"../recipe-extractor.jpg",
-            "link":"https://github.com/kaitlynnchan/recipe-extractor"
+            "link":"https://github.com/kaitlynnchan/recipe-extractor",
+            "techStack": "JavaScript, jQuery, Java"
         },
         {
             "name":"Reel Deal",
             "description":"An immersive Android game where users search for the fishes implemented in Java. Users can choose how difficult they want to play and compete to improve their high scores.",
             "img":"../reeldeal-playing.jpg",
-            "link":"https://github.com/kaitlynnchan/ReelDeal"
+            "link":"https://github.com/kaitlynnchan/ReelDeal",
+            "techStack": "Java, Android, OOP"
         },
         {
             "name":"Find It",
-            "description":"A play on the game spot it, users match images on the cards and compete for a better high score. This Android game algorithmically creates cards and shuffles them where exactly 1 image matches with another card. Users are also able to import images from Flickr using the Flickr API or from their photo gallery.",
+            "description":"Users match images on the cards and compete for high scores. There is exactly 1 match for each pair of cards. Users can customize card images with Flickr or from their photo gallery.",
             "img":"../findit-playing.jpg",
-            "link":"https://github.com/kaitlynnchan/FindIt"
+            "link":"https://github.com/kaitlynnchan/FindIt",
+            "techStack": "Java, Android, Flickr API, Agile"
         },
         {
             "name":"CShell",
             "description":"A command line interpreter that forks processes to allow multiple commands to be run efficiently and independently. Users can run a script of commands.",
             "img":"../cshell-ex2.jpg",
-            "link":"https://replit.com/@kaitlynnchan/cshell"
+            "link":"https://replit.com/@kaitlynnchan/cshell",
+            "techStack": "C, Unix"
         }
     ]
 }

@@ -34,7 +34,6 @@ const HomePage = () => {
     <section id="home-page" className="home wrapper page">
       <section className="body">
         <div className="inner box">
-        {/* $("#home-page .inner.box h1").css("font-size", "2.75rem"); */}
           <h1 className={`${isMobile ? "mobile" : ""}`}>{details.title}</h1>
           <h4>{details.profile}</h4>
           <section className={`nav-btns gap-3 d-md-flex ${isMobile ? "center" : ""}`}>
