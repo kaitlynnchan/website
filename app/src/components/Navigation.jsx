@@ -11,6 +11,7 @@ const TopNav = () => {
   const [isMenuExpanded, setIsMenuExpanded] = useState(false);
   const [isHamburgerHovered, setIsHamburgerHovered] = useState(false);
   const [unclickableLinks, setUnclickableLinks] = useState([]);
+  const [isMobile, setIsMobile] = useState(window.matchMedia("(max-width: 1100px)").matches);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,9 +24,17 @@ const TopNav = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    const handleResize = () => {
+      setIsMobile(window.matchMedia("(max-width: 1100px)").matches);
+    };
 
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   const handleHamburgerClick = () => {
@@ -67,7 +76,7 @@ const TopNav = () => {
           <FontAwesomeIcon icon={faCircle} className="fa-stack-2x hvr-icon icon-back"/>
           <FontAwesomeIcon icon={faBars} className="fa-stack-1x hvr-icon icon-front" />
       </a>
-      <div className={`nav-menu ${isMenuExpanded ? 'expanded' : 'collapsed'}`}>
+      <div className={`nav-menu ${isMenuExpanded ? 'expanded' : 'collapsed'} ${isMobile ? "" : "horizontal"}`}>
         <ul>
           <NavItem id="home" label="Home" />
           <NavItem id="about" label="About Me" />
