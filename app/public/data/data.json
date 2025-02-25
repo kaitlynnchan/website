@@ -1,0 +1,60 @@
+{
+    "aboutMe":"I am an undergraduate student at SFU studying computer science and business. I have collaborated on building outstanding projects that helped build my teamwork and interpersonal skills. I am passionate about learning and about helping others to learn. As a mentor for Women in Computing Science (WiCS) club, I have inspired many young women to pursue a career in computer science. <br><br> Some of my other hobbies include cooking, bread making, volleyball, and running. When I can, I like to educate myself with a new skill.",
+    "profileImg": "../profile-pic.jpg",
+    "projects":[
+        {
+            "name":"Connect Quest",
+            "description":"This social interaction app prompts users with a daily challenge to get themselves outside and engaging with their community. Completing the challenge awards a user with points so they can compete for high scores with their friends.",
+            "img":"../connect-quest.png",
+            "link":"https://devpost.com/software/connect-quest"
+        },
+        {
+            "name":"Dine Buddy",
+            "description":"This Android app allows a users to login and find places on google maps to save.",
+            "img":"../dine-buddy.jpg",
+            "link":"https://github.com/kaitlynnchan/food-map"
+        },
+        {
+            "name":"Chroma Scan",
+            "description":"This Java application allows a user to select a source image and find the complimenting and dominant color from the source image.",
+            "img":"../chroma-scan.png",
+            "link":"https://github.com/kaitlynnchan/chroma-scan"
+        },
+        {
+            "name":"Capture the Flag",
+            "description":"A fun and engaging website game for try/CATCH participants (high school female and non-binary students) to learn about some CS basics and info about SFU Women in Computing Science.",
+            "img":"../capture-the-flag.jpg",
+            "link":"https://script.google.com/macros/s/AKfycbyMGdf1Crb_aFGOWAuZ4-cmHjji4w_Rpn-1MgYqFhW_GFZuttWDSQ8GG5E_rliyI0_KqQ/exec"
+        },
+        {
+            "name":"Filomator",
+            "description":"A file management desktop application that monitors folders for incoming files and moves them to their destination. Users input where they want files to go, what files to monitor and when.",
+            "img":"../new-task-page.jpg",
+            "link":"https://github.com/kaitlynnchan/Filomator"
+        },
+        {
+            "name":"Recipe Extractor",
+            "description":"This Chome extension pulls recipe information from a site and displays it to users.",
+            "img":"../recipe-extractor.jpg",
+            "link":"https://github.com/kaitlynnchan/recipe-extractor"
+        },
+        {
+            "name":"Reel Deal",
+            "description":"An immersive Android game where users search for the fishes implemented in Java. Users can choose how difficult they want to play and compete to improve their high scores.",
+            "img":"../reeldeal-playing.jpg",
+            "link":"https://github.com/kaitlynnchan/ReelDeal"
+        },
+        {
+            "name":"Find It",
+            "description":"A play on the game spot it, users match images on the cards and compete for a better high score. This Android game algorithmically creates cards and shuffles them where exactly 1 image matches with another card. Users are also able to import images from Flickr using the Flickr API or from their photo gallery.",
+            "img":"../findit-playing.jpg",
+            "link":"https://github.com/kaitlynnchan/FindIt"
+        },
+        {
+            "name":"CShell",
+            "description":"A command line interpreter that forks processes to allow multiple commands to be run efficiently and independently. Users can run a script of commands.",
+            "img":"../cshell-ex2.jpg",
+            "link":"https://replit.com/@kaitlynnchan/cshell"
+        }
+    ]
+}

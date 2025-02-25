@@ -1,0 +1,286 @@
+:root{
+  --pale: #FFEAD0;
+  /* FFE7C2 */
+  --orange: #ffc27f;
+  --pale-orange: #FEE5AD;
+  --brown: #A88245;
+  --dark-brown: #47351A;
+  --light-blue: #c6ccd3;
+  --blue: #84CED1;
+  --dark-blue: #1d3d60;
+}
+
+@font-face {
+  font-family: 'brandon';
+  src: url('./font/brandon-med.otf');
+}
+@font-face {
+  font-family: 'brandon-bold';
+  src: url('./font/brandon-bold.otf');
+}
+
+*{
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-weight: normal;
+  border-radius: 7px;
+}
+
+p{
+  margin: 0;
+}
+
+a, a:hover{
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  background-color: var(--orange);
+  
+  background-image: url("../public/orange_background0_2.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  /* height: 100%; */
+}
+
+/* Wrapper and Body Class Pages */
+.wrapper{
+  margin: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  /* flex-grow: 1; */
+  margin: auto 10%;
+}
+.body .inner {
+  color: var(--dark-blue);
+}
+.body .box{
+  background-color: var(--blue);
+  /* width: 60%; */
+  padding: 10%;
+  box-shadow: -2px 5px 32px rgb(0 0 0 / 25%);
+}
+
+/* Contact Info */
+.contact-info .icon-back, .contact-info .icon-front.selected{
+  color: var(--dark-blue) !important; 
+}
+.contact-info .icon-front, .contact-info .icon-back.selected{
+  color: var(--light-blue) !important;
+}
+.contact-info{
+  display: flex;
+}
+.contact-info .icons{
+  margin: auto;
+}
+
+/* Header */
+.header{
+  margin: 30px;
+}
+.header .heading h1{
+  font-family: 'brandon-bold';
+  color: var(--dark-brown);
+}
+.header .heading.absolute h1{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+.header .heading h1.selected{
+  color: var(--brown) !important;
+}
+.header .hvr-icon-fade.absolute{
+  display: block;
+}
+
+
+/* Top Navigation */
+.top-nav{
+  position: relative;
+  visibility: collapse;
+  opacity: 0;
+}
+.top-nav > a{
+  float: right;
+}
+.top-nav.fixed{
+  position: fixed;
+  z-index: 2;
+}
+.top-nav.fixed.pull-right{
+  right: 20px;
+  display: flex;
+  top: 20px
+}
+
+/* Navigation Menu Icon */
+a.nav-hamburger .icon-back, a.nav-hamburger.selected .icon-front{
+  color: var(--light-blue) !important;
+}
+a.nav-hamburger .icon-front, a.nav-hamburger.selected .icon-back{
+  color: var(--dark-blue) !important; 
+}
+
+/* Navigation Menu */
+.top-nav.fixed .nav-menu{
+  width: max-content;
+}
+.top-nav.pull-right .nav-menu{
+  right: 0;
+  text-align: end;
+}
+.nav-menu{
+  position: absolute;
+  top: 49px;
+  background-color: var(--light-blue);
+  color: var(--dark-blue);
+  padding: 10px 20px;
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+  z-index: 2;
+}
+
+.nav-menu.expanded{
+  opacity: 1;
+  transform: none;
+  transition: opacity 251ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, transform 167ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transform-origin: 0px 0px;
+}
+.nav-menu.collapsed{
+  opacity: 0;
+  transform: none;
+  transition: opacity 251ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, transform 167ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transform-origin: 0px 0px;
+}
+.nav-menu.collapsed.hide{
+  visibility: collapse;
+}
+
+.nav-menu ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.nav-menu ul li{
+  padding: 3px 0;
+}
+.nav-menu ul li span{
+  font-size: large;
+  font-weight: 500;
+}
+.nav-menu ul li a:hover{
+  border-bottom: 2px solid #000;
+  transition: 0.2s all;
+  border-radius: 0;
+}
+.nav-menu ul li a.unclickable{
+  pointer-events: none;
+}
+.nav-menu .icons a{
+  margin: 0 2px;
+}
+.nav-menu .icon-front{
+  color: var(--dark-blue) !important; 
+}
+
+.nav-menu.horizontal ul li{
+  display: inline-block;
+  padding: 3px 10px;
+}
+.nav-menu.horizontal{
+  top: -5px;
+  padding: 10px;
+}
+.top-nav.pull-right .nav-menu.horizontal{
+  right: 55px;
+}
+
+.top-nav .contact-info{
+  visibility: collapse;
+  opacity: 0;
+}
+.top-nav .contact-info.hide{
+  display: none;
+}
+
+/* Top Navigation Fade in */
+.top-nav.visible, .top-nav.fade-out {
+  -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+  -moz-transition: opacity .3s 0s, visibility 0s 0s;
+  transition: opacity .3s 0s, visibility 0s 0s;
+}
+.top-nav.visible {
+  visibility: visible;
+  opacity: 1;
+}
+.top-nav.fade-out {
+  opacity: 0;
+}
+
+.top-nav .contact-info.visible, .top-nav .contact-info.fade-out {
+  -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+  -moz-transition: opacity .3s 0s, visibility 0s 0s;
+  transition: opacity .3s 0s, visibility 0s 0s;
+}
+.top-nav .contact-info.visible {
+  visibility: visible;
+  opacity: 1;
+}
+.top-nav .contact-info.fade-out {
+  opacity: 0;
+}
+
+/* Side Navigation Bar */
+.side-nav-bar{
+  position: fixed;
+  right: 0;
+  top: 50vh;
+  z-index: 1;
+}
+.side-nav-bar ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.side-nav-bar ul li{
+  height: 30px;
+}
+.side-nav-bar ul li a{
+  display: flex;
+  justify-content: end;
+  height: 25px !important;
+}
+.side-nav-bar ul li a > *{
+  padding: 0 10px;
+}
+
+.side-nav-bar ul li a .icon{
+  margin: auto 0;
+  transition: color 0.5s ease-in;
+  color: #D9D9D9;
+}
+.side-nav-bar ul li a.selected .icon{
+  margin: auto 0;
+  transition: color 0.5s ease-out;
+  color: white;
+}
+
+.side-nav-bar ul li a div{
+  background-color: var(--light-blue);
+  border-radius: 15px;
+  box-shadow: 0px 0px 4px rgb(0 0 0 / 25%);
+  display: none;
+  animation-duration: 0.3s;
+}
+.side-nav-bar ul li a div.show{
+  display: initial;
+}
