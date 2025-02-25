@@ -8,6 +8,8 @@ import AboutPage from "./components/AboutPage.jsx"
 import ProjectsPage from "./components/ProjectsPage.jsx";
 import "./index.css";
 
+const dataUrl = "/data/data.json";
+
 const App = () => {
   useEffect(() => {
     AOS.init();
@@ -24,4 +26,7 @@ const App = () => {
   );
 };
 
-export default App;
+export {
+  App,
+  dataUrl
+};

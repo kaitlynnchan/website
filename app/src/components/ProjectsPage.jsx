@@ -8,8 +8,7 @@ import { faLink } from "@fortawesome/free-solid-svg-icons";
 
 import { SocialIcons } from "./Navigation";
 import "./ProjectsPage.css";
-
-const dataUrl = "/data/data.json";
+import { dataUrl } from "../App";
 
 const ProjectsPage = () => {
   const [projects, setProjects] = useState([]);

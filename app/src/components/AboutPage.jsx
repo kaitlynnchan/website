@@ -4,13 +4,13 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import "animate.css";
 
 import "./AboutPage.css";
-
-const dataUrl = "/data/data.json";
+import { dataUrl } from "../App";
 
 const AboutPage = () => {
   const aboutDataDefault = {
     aboutMe: "",
-    profileImg: ""
+    profileImg: "",
+    achievements: []
   }
   const [data, setData] = useState(aboutDataDefault);
 
@@ -32,12 +32,29 @@ const AboutPage = () => {
           <div className="row box"> 
             <img id="profile-pic" className="col-sm-4 col-xs-12" src={data.profileImg} />
             <div className="col-sm-8 text">
-              <h4>{data.aboutMe}</h4>
+              {/* <p>{`${data.aboutMe}`}</p> */}
+              <div dangerouslySetInnerHTML={{ __html: data.aboutMe }} />
+              <h5>Recognitions</h5>
+              <Achievements achievements={data.achievements}/>
             </div>
           </div>
         </div>
       </section>
     </section>
 )};
+
+const Achievements = ({ achievements }) => {
+  console.log(achievements)
+  return (
+    <p>
+      { achievements.map((achievement, index) => (
+        <span key={index}>
+          <strong>{achievement.name}</strong> {achievement.year}
+          {index < achievements.length - 1 && " \u2022 "}
+        </span>
+      )) }
+    </p>
+  )
+};
 
 export default AboutPage;

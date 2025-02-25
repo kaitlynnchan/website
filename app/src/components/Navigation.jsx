@@ -5,6 +5,7 @@ import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import { faCircle, faFile, faBars } from "@fortawesome/free-solid-svg-icons";
 
 import "../index.css";
+import { dataUrl } from "../App";
 
 const TopNav = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -72,13 +73,21 @@ const TopNav = () => {
   
 const SocialIcons = ({ iconSize, backIcon }) => {
   const [hovered, setHovered] = useState(null);
+  const [links, setLinks] = useState([]);
+
+  useEffect(() => {
+    fetch(dataUrl)
+      .then((res) => res.json())
+      .then((data) => setLinks(data.links))
+      .catch((err) => console.error("Failed to load projects", err));
+  }, []);
 
   return (
     <div className={`icons ${iconSize}`}>
       {[
-        { link: "https://github.com/kaitlynnchan", icon: faGithub },
-        { link: "https://www.linkedin.com/in/kaitlynn-chan-3b2935162/", icon: faLinkedinIn },
-        { link: "https://drive.google.com/file/d/17RjmRSGnLhdQHUXH6xpLUb0Wcsnh-Ek7/view?usp=sharing", icon: faFile },
+        { link: links.github, icon: faGithub },
+        { link: links.linkedin, icon: faLinkedinIn },
+        { link: links.resume, icon: faFile },
       ].map((social, index) => (
         <a
           key={index}

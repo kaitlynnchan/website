@@ -28,6 +28,9 @@
     height: 400px;
     object-fit: contain;
 }
+#about-page strong{
+    font-weight: 600;
+}
 
 /* Title */
 .title{
@@ -40,7 +43,7 @@
     color: var(--dark-blue);
     padding: 10px 0;
     width: fit-content;
-    font-family: 'brandon';
+    font-family: 'Roboto Serif';
     font-size: xxx-large;
     /* font-weight: bold; */
 }

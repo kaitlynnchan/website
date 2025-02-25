@@ -5,11 +5,22 @@ import "animate.css";
 import "hover.css/css/hover-min.css";
 
 import "./HomePage.css";
+import { dataUrl } from "../App";
 
 const HomePage = () => {
+  const detailsDefault = {
+    title: "",
+    profile: ""
+  }
+  const [details, setDetails] = useState(detailsDefault);
   const [isMobile, setIsMobile] = useState(window.matchMedia("(max-width: 1100px)").matches);
 
   useEffect(() => {
+    fetch(dataUrl)
+      .then((res) => res.json())
+      .then((data) => setDetails(data))
+      .catch((err) => console.error("Failed to load projects", err));
+
     const handleResize = () => {
       setIsMobile(window.matchMedia("(max-width: 1100px)").matches);
     };
@@ -23,9 +34,10 @@ const HomePage = () => {
     <section id="home-page" className="home wrapper page">
       <section className="body">
         <div className="inner box">
-          <h1>Kaitlynn Chan</h1>
-          <h4>Computer Science and Business Student at Simon Fraser University</h4>
-          <section className={`nav-btns ${isMobile ? "center" : ""}`}>
+        {/* $("#home-page .inner.box h1").css("font-size", "2.75rem"); */}
+          <h1 className={`${isMobile ? "mobile" : ""}`}>{details.title}</h1>
+          <h4>{details.profile}</h4>
+          <section className={`nav-btns gap-3 d-md-flex ${isMobile ? "center" : ""}`}>
             <NavBtn id="about" label="About Me" />
             <NavBtn id="projects" label="Projects" />
           </section>

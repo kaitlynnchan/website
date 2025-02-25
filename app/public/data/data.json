@@ -1,6 +1,43 @@
 {
-    "aboutMe":"I am an undergraduate student at SFU studying computer science and business. I have collaborated on building outstanding projects that helped build my teamwork and interpersonal skills. I am passionate about learning and about helping others to learn. As a mentor for Women in Computing Science (WiCS) club, I have inspired many young women to pursue a career in computer science.",
+    "title": "Hi! I'm Kaitlynn Chan",
+    "profile": "Aspiring software engineer new grad and advocate for women in STEM, interested in securing businesses through cybersecurity.",
+    "aboutMe":"I am an undergraduate student at Simon Fraser University, pursuing a degree in Computer Science with a minor in Business. Passionate about technology and community, I thrive on connecting with others, learning from their journeys, and seeking challenges that push me to grow. I have represented SFU in a global cybersecurity competition and played a key role as an early contributor in enhancing a startup.<br />Beyond academics, I am committed to fostering inclusivity in STEM, earning multiple grants and awards for impactful contributions.<br />Highlights:<ul><li>Leading a team of 10 over five months to organize a free outreach event for high school female and non-binary students, securing over $6,000 in sponsorships and empowering over 80 student to pursue a career in STEM.</li><li>Coordinating a networking event with the Women in Engineering club, connecting 70 students with industry mentors.</li><li>Establishing SFU’s first cross-institutional collaboration with a neighboring university — UBC — to strengthen intercollegiate relations.</li><li>Representing SFU at multiple conferences to advocate for diversity in STEM.</li></ul>",
     "profileImg": "../profile-pic.jpg",
+    "links": {
+        "github": "https://github.com/kaitlynnchan",
+        "linkedin": "https://www.linkedin.com/in/kaitlynn-chan-3b2935162/",
+        "resume": "https://drive.google.com/file/d/17RjmRSGnLhdQHUXH6xpLUb0Wcsnh-Ek7/view?usp=sharing"
+    },
+    "achievements":[
+        {
+            "name": "nwHacks Defang.io Prize Runner Up",
+            "year": 2025
+        },
+        {
+            "name": "CAN-CWIC Grant Recipient",
+            "year": 2024
+        },
+        {
+            "name": "Grace Hopper Celebration Grant Recipient",
+            "year": 2023
+        },
+        {
+            "name": "Ryan Wilk Mastercard Memorial Award",
+            "year": 2023
+        },
+        {
+            "name": "Visier Computer Science Award",
+            "year": 2019
+        },
+        {
+            "name": "West Point Grey Scholarship",
+            "year": 2019
+        },
+        {
+            "name": "BC Achievement Scholarship",
+            "year": 2019
+        }
+    ],
     "projects":[
         {
             "name":"Connect Quest",
