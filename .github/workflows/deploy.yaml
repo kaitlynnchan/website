@@ -10,6 +10,9 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./app
 
     strategy:
       matrix:
@@ -25,23 +28,12 @@ jobs:
         node-version: ${{ matrix.node-version }}
 
     - name: Install dependencies
-      working-directory: ./app
       run: npm install
-
-    # - name: Run the tests and generate coverage report
-    #   run: npm test -- 
 
     - name: Build
       run: npm run build
 
-    # - name: Deploy
-    #   run: |
-    #     git config --global user.name $user_name
-    #     git config --global user.email $user_email
-    #     git remote set-url origin https://${github_token}@github.com/${repository}
-    #     npm run deploy
-    #   env:
-    #     user_name: 'github-actions[bot]'
-    #     user_email: 'github-actions[bot]@users.noreply.github.com'
-    #     github_token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
-    #     repository: ${{ github.repository }}
+    - name: Deploy
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        folder: build
