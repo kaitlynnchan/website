@@ -1,0 +1,106 @@
+{
+    "title": "Hi! I'm Kaitlynn Chan",
+    "profile": "Aspiring software engineer new grad and advocate for women in STEM, interested in securing businesses through cybersecurity.",
+    "aboutMe":"I am an undergraduate student at Simon Fraser University, pursuing a degree in Computer Science with a minor in Business. Passionate about technology and community, I thrive on connecting with others, learning from their journeys, and seeking challenges that push me to grow. I have represented SFU in a global cybersecurity competition and played a key role as an early contributor in enhancing a startup.<br />Beyond academics, I am committed to fostering inclusivity in STEM, earning multiple grants and awards for impactful contributions.<br />Highlights:<ul><li>Leading a team over several months to organize a free in-person outreach event for high school female and non-binary students, securing over $6,000 in sponsorships and empowering over 80 student to pursue a career in STEM.</li><li>Coordinating a large-scale networking event, connecting 70 students with industry professionals.</li><li>Establishing SFU’s first cross-institutional collaboration with a neighboring university — UBC — to strengthen intercollegiate relations.</li><li>Representing SFU at multiple conferences to advocate for diversity in STEM.</li></ul>",
+    "profileImg": "/images/profile-pic.jpg",
+    "links": {
+        "github": "https://github.com/kaitlynnchan",
+        "linkedin": "https://www.linkedin.com/in/kaitlynn-chan-3b2935162/",
+        "resume": "https://drive.google.com/file/d/17RjmRSGnLhdQHUXH6xpLUb0Wcsnh-Ek7/view?usp=sharing"
+    },
+    "achievements":[
+        {
+            "name": "nwHacks Defang.io Prize Runner Up",
+            "year": 2025
+        },
+        {
+            "name": "CAN-CWIC Grant Recipient",
+            "year": 2024
+        },
+        {
+            "name": "Grace Hopper Celebration Grant Recipient",
+            "year": 2023
+        },
+        {
+            "name": "Ryan Wilk Mastercard Memorial Award in Computing Science",
+            "year": 2023
+        },
+        {
+            "name": "Visier Computer Science Award",
+            "year": 2019
+        },
+        {
+            "name": "West Point Grey Scholarship",
+            "year": 2019
+        },
+        {
+            "name": "BC Achievement Scholarship",
+            "year": 2019
+        }
+    ],
+    "projects":[
+        {
+            "name":"Connect Quest",
+            "description":"A gamified social interaction app that sends daily challenges to users to engage with their community. Challenge completion awards users points to compete with friends.",
+            "img":"/images/connect-quest.png",
+            "link":"https://devpost.com/software/connect-quest",
+            "techStack": "React, Node.js, MongoDB, Defang.io"
+        },
+        {
+            "name":"Dine Buddy",
+            "description":"An Android app allows foodies to create an account and create an inventory of favs using the google maps to visualize places.",
+            "img":"/images/dine-buddy.jpg",
+            "link":"https://github.com/kaitlynnchan/food-map",
+            "techStack": "Java, Kotlin, Google Maps API, Auth0, NoSQL, Google Firestore"
+        },
+        {
+            "name":"Chroma Scan",
+            "description":"This tool allows users to select a source image and creating a color palette, including the complimenting and dominant colors.",
+            "img":"/images/chroma-scan.png",
+            "link":"https://github.com/kaitlynnchan/chroma-scan",
+            "techStack": "Java, C++, Flutter, OpenAI, Spring"
+        },
+        {
+            "name":"Capture the Flag",
+            "description":"A fun and engaging gamified learning experience for try/CATCH participants (high school female and non-binary students) to grasp computer science basics.",
+            "img":"/images/capture-the-flag.jpg",
+            "link":"https://script.google.com/macros/s/AKfycbyMGdf1Crb_aFGOWAuZ4-cmHjji4w_Rpn-1MgYqFhW_GFZuttWDSQ8GG5E_rliyI0_KqQ/exec",
+            "techStack": "JavaScript, HTML, CSS, Google Apps Script"
+        },
+        {
+            "name":"Filomator",
+            "description":"A file management desktop application that monitors folders for incoming files and moves them to their destination. Users input where they want files to go, what files to monitor and when.",
+            "img":"/images/new-task-page.jpg",
+            "link":"https://github.com/kaitlynnchan/Filomator",
+            "techStack": "Python, Watchdog, Node.js"
+        },
+        {
+            "name":"Recipe Extractor",
+            "description":"This Chome extension extracts a recipe from a blog and easily displays it to users.",
+            "img":"/images/recipe-extractor.jpg",
+            "link":"https://github.com/kaitlynnchan/recipe-extractor",
+            "techStack": "JavaScript, jQuery, Java"
+        },
+        {
+            "name":"Reel Deal",
+            "description":"An immersive Android game where users search for the fishes implemented in Java. Users can choose how difficult they want to play and compete to improve their high scores.",
+            "img":"/images/reeldeal-playing.jpg",
+            "link":"https://github.com/kaitlynnchan/ReelDeal",
+            "techStack": "Java, Android, OOP"
+        },
+        {
+            "name":"Find It",
+            "description":"Users match images on the cards and compete for high scores. There is exactly 1 match for each pair of cards. Users can customize card images with Flickr or from their photo gallery.",
+            "img":"/images/findit-playing.jpg",
+            "link":"https://github.com/kaitlynnchan/FindIt",
+            "techStack": "Java, Android, Flickr API, Agile"
+        },
+        {
+            "name":"CShell",
+            "description":"A command line interpreter that forks processes to allow multiple commands to be run efficiently and independently. Users can run a script of commands.",
+            "img":"/images/cshell-ex2.jpg",
+            "link":"https://replit.com/@kaitlynnchan/cshell",
+            "techStack": "C, Unix"
+        }
+    ]
+}

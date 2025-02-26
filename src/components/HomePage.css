@@ -15,10 +15,14 @@
 /* Title Box */
 #home-page .inner.box{
     padding: 16% 10%;
+    text-align: left;
 }
 #home-page .inner.box h1{
-    font-family: "brandon";
+    font-family: 'Roboto Serif';
     font-size: 3.75rem;
+}
+#home-page .inner.box h1.mobile{
+    font-size: 2.75rem;
 }
 #home-page .inner.box > h4{
     opacity: 70%;
@@ -39,8 +43,7 @@
 }
 
 .nav-btns .side-nav{
-    margin: auto;
-    width: 33%;
+    width: 25%;
 }
 .nav-btns.center .side-nav{
     display: flex;

@@ -27,6 +27,10 @@
     max-width: 100%;
     height: 400px;
     object-fit: contain;
+    align-self: center;
+}
+#about-page strong{
+    font-weight: 600;
 }
 
 /* Title */
@@ -40,7 +44,7 @@
     color: var(--dark-blue);
     padding: 10px 0;
     width: fit-content;
-    font-family: 'brandon';
+    font-family: 'Roboto Serif';
     font-size: xxx-large;
     /* font-weight: bold; */
 }
