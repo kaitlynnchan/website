@@ -1,0 +1,71 @@
+.home{
+    /* background-image: url("../imgs/orange_background0_2.png");
+    background-size: cover;
+    background-position: center; */
+    height: 100vh;
+
+    position: relative;
+    display: flex;
+}
+
+#home-page .body{
+    flex-grow: 1;
+}
+
+/* Title Box */
+#home-page .inner.box{
+    padding: 16% 10%;
+    text-align: left;
+}
+#home-page .inner.box h1{
+    font-family: 'Roboto Serif';
+    font-size: 3.75rem;
+}
+#home-page .inner.box h1.mobile{
+    font-size: 2.75rem;
+}
+#home-page .inner.box > h4{
+    opacity: 70%;
+    /* font-family: Georgia, Cambria, "Times New Roman", Times, serif; */
+}
+
+/* Navigation Buttons */
+.nav-btns{
+    display: flex;
+    margin: auto;
+    margin-top: 50px;
+}
+.nav-btns.center{
+    width: 100%;
+    margin: 0;
+    margin-top: 30px;
+    flex-direction: column;
+}
+
+.nav-btns .side-nav{
+    width: 25%;
+}
+.nav-btns.center .side-nav{
+    display: flex;
+    margin: 10px 0;
+    width: 100%;
+}
+
+.nav-btns .side-nav a{
+    display: flex;
+    background-color: var(--dark-blue);
+    padding: 15px 20px;
+}
+.nav-btns.center .side-nav a{
+    width: 100%;
+    margin: auto;
+}
+
+.nav-btns .side-nav h4{
+    margin: auto;
+    color: white !important;
+    font-weight: normal;
+}
+.nav-btns.center .side-nav .inner.box h1{
+    font-size: 2.75rem;
+}
