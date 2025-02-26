@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import "hover.css/css/hover-min.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import { faCircle, faFile, faBars } from "@fortawesome/free-solid-svg-icons";
@@ -11,7 +10,7 @@ const TopNav = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isMenuExpanded, setIsMenuExpanded] = useState(false);
   const [isHamburgerHovered, setIsHamburgerHovered] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.matchMedia("(max-width: 1100px)").matches);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -53,6 +52,7 @@ const TopNav = () => {
         </div>
       </div> */}
       <a className={`nav-hamburger fa-stack fa-lg hvr-icon-fade ${isHamburgerHovered || isMenuExpanded ? 'selected' : ''}`}
+        href="#!"
         onClick={handleHamburgerClick}
         onMouseEnter={() => handleHamburgerHover(true)}
         onMouseLeave={() => handleHamburgerHover(false)} >

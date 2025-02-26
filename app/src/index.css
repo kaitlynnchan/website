@@ -22,11 +22,11 @@
 }
 @font-face {
   font-family: 'brandon';
-  src: url('./font/brandon-med.otf');
+  src: url('./assets/font/brandon-med.otf');
 }
 @font-face {
   font-family: 'brandon-bold';
-  src: url('./font/brandon-bold.otf');
+  src: url('./assets/font/brandon-bold.otf');
 }
 
 *{
@@ -48,7 +48,7 @@ a, a:hover{
 body {
   background-color: var(--orange);
   
-  background-image: url("../public/orange_background0_2.png");
+  background-image: url("./assets/images/orange_background0_2.png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

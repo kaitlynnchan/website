@@ -1,6 +1,9 @@
 import { useEffect } from "react";
-import AOS from "aos";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "animate.css";
+import "hover.css/css/hover-min.css";
 import "aos/dist/aos.css";
+import AOS from "aos";
 
 import { TopNav, SideNav } from "./components/Navigation.jsx";
 import HomePage from "./components/HomePage.jsx";

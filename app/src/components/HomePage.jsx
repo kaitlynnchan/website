@@ -1,8 +1,4 @@
 import { useEffect, useState } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap-icons/font/bootstrap-icons.css";
-import "animate.css";
-import "hover.css/css/hover-min.css";
 
 import "./HomePage.css";
 import { dataUrl } from "../App";
@@ -13,7 +9,7 @@ const HomePage = () => {
     profile: ""
   }
   const [details, setDetails] = useState(detailsDefault);
-  const [isMobile, setIsMobile] = useState(window.matchMedia("(max-width: 1100px)").matches);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     fetch(dataUrl)
