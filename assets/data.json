@@ -5,55 +5,55 @@
         {
             "name":"Connect Quest",
             "description":"This social interaction app prompts users with a daily challenge to get themselves outside and engaging with their community. Completing the challenge awards a user with points so they can compete for high scores with their friends.",
-            "img":"./app/public/connect-quest.png",
+            "img":"./assets/imgs/connect-quest.png",
             "link":"https://devpost.com/software/connect-quest"
         },
         {
             "name":"Dine Buddy",
             "description":"This Android app allows a users to login and find places on google maps to save.",
-            "img":"./app/public/dine-buddy.jpg",
+            "img":"./assets/imgs/dine-buddy.jpg",
             "link":"https://github.com/kaitlynnchan/food-map"
         },
         {
             "name":"Chroma Scan",
             "description":"This Java application allows a user to select a source image and find the complimenting and dominant color from the source image.",
-            "img":"./app/public/chroma-scan.png",
+            "img":"./assets/imgs/chroma-scan.png",
             "link":"https://github.com/kaitlynnchan/chroma-scan"
         },
         {
             "name":"Capture the Flag",
             "description":"A fun and engaging website game for try/CATCH participants (high school female and non-binary students) to learn about some CS basics and info about SFU Women in Computing Science.",
-            "img":"./app/public/capture-the-flag.jpg",
+            "img":"./assets/imgs/capture-the-flag.jpg",
             "link":"https://script.google.com/macros/s/AKfycbyMGdf1Crb_aFGOWAuZ4-cmHjji4w_Rpn-1MgYqFhW_GFZuttWDSQ8GG5E_rliyI0_KqQ/exec"
         },
         {
             "name":"Filomator",
             "description":"A file management desktop application that monitors folders for incoming files and moves them to their destination. Users input where they want files to go, what files to monitor and when.",
-            "img":"./app/public/new-task-page.jpg",
+            "img":"./assets/imgs/new-task-page.jpg",
             "link":"https://github.com/kaitlynnchan/Filomator"
         },
         {
             "name":"Recipe Extractor",
             "description":"This Chome extension pulls recipe information from a site and displays it to users.",
-            "img":"./app/public/recipe-extractor.jpg",
+            "img":"./assets/imgs/recipe-extractor.jpg",
             "link":"https://github.com/kaitlynnchan/recipe-extractor"
         },
         {
             "name":"Reel Deal",
             "description":"An immersive Android game where users search for the fishes implemented in Java. Users can choose how difficult they want to play and compete to improve their high scores.",
-            "img":"./app/public/reeldeal-playing.jpg",
+            "img":"./assets/imgs/reeldeal-playing.jpg",
             "link":"https://github.com/kaitlynnchan/ReelDeal"
         },
         {
             "name":"Find It",
             "description":"A play on the game spot it, users match images on the cards and compete for a better high score. This Android game algorithmically creates cards and shuffles them where exactly 1 image matches with another card. Users are also able to import images from Flickr using the Flickr API or from their photo gallery.",
-            "img":"./app/public/findit-playing.jpg",
+            "img":"./assets/imgs/findit-playing.jpg",
             "link":"https://github.com/kaitlynnchan/FindIt"
         },
         {
             "name":"CShell",
             "description":"A command line interpreter that forks processes to allow multiple commands to be run efficiently and independently. Users can run a script of commands.",
-            "img":"./app/public/cshell-ex2.jpg",
+            "img":"./assets/imgs/cshell-ex2.jpg",
             "link":"https://replit.com/@kaitlynnchan/cshell"
         }
     ]

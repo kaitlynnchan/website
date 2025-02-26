@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import { faCircle, faFile, faBars } from "@fortawesome/free-solid-svg-icons";
 
-import "../index.css";
+import "./Navigation.css";
 import { dataUrl } from "../App";
 
 const TopNav = () => {
@@ -64,7 +64,7 @@ const TopNav = () => {
           <NavItem id="home" label="Home" />
           <NavItem id="about" label="About Me" />
           <NavItem id="projects" label="Projects" />
-          <li><SocialIcons iconSize={"fa-md"}/></li>
+          <li><SocialIcons iconSize={"fa-lg"}/></li>
         </ul>
       </div>
     </nav>
@@ -91,7 +91,7 @@ const SocialIcons = ({ iconSize, backIcon }) => {
       ].map((social, index) => (
         <a
           key={index}
-          className="fa-stack hvr-icon-fade"
+          className={`${backIcon ? "fa-stack" : ""} hvr-icon-fade`}
           href={social.link}
           target="_blank"
           rel="noopener noreferrer"

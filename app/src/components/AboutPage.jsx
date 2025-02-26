@@ -37,7 +37,7 @@ const AboutPage = () => {
         <div className="inner" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
           <div className="row box"> 
             <img id="profile-pic" className="col-md-4 col-sm-12" src={data.profileImg} alt="Kaitlynn Chan Profile" />
-            <div className="col-sm-8 text">
+            <div className="col-md-8 col-sm-12 text">
               <p dangerouslySetInnerHTML={{ __html: data.aboutMe }} />
               <h5>Recognitions</h5>
               <Achievements achievements={data.achievements}/>
