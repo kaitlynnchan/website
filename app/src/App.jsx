@@ -11,7 +11,7 @@ import AboutPage from "./components/AboutPage.jsx"
 import ProjectsPage from "./components/ProjectsPage.jsx";
 import "./index.css";
 
-const dataUrl = "/data/data.json";
+const dataUrl = "/website/data/data.json";
 
 const App = () => {
   useEffect(() => {
