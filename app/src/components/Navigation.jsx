@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
-import { faCircle, faFile, faBars } from "@fortawesome/free-solid-svg-icons";
+import { faCircle, faFile, faBars, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 import "./Navigation.css";
 import { dataUrl } from "../App";
@@ -87,7 +87,8 @@ const SocialIcons = ({ iconSize, backIcon }) => {
       {[
         { link: links.github, icon: faGithub },
         { link: links.linkedin, icon: faLinkedinIn },
-        { link: links.resume, icon: faFile },
+        { link: "mailto:" + links.email, icon: faEnvelope },
+        // { link: links.resume, icon: faFile },
       ].map((social, index) => (
         <a
           key={index}
