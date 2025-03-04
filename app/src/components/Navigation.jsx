@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
-import { faCircle, faFile, faBars, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faCircle, faBars, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 import "./Navigation.css";
 import { dataUrl } from "../App";
