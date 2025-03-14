@@ -1,7 +1,7 @@
 {
     "title": "Hi! I'm Kaitlynn Chan",
-    "profile": "Aspiring software engineer new grad and advocate for women in STEM, interested in securing businesses through cybersecurity.",
-    "aboutMe":"I am an undergraduate student at Simon Fraser University, pursuing a degree in Computer Science with a minor in Business. Passionate about technology and community, I thrive on connecting with others, learning from their journeys, and seeking challenges that push me to grow. I have represented SFU in a global cybersecurity competition and played a key role as an early contributor in enhancing a startup.<br />Beyond academics, I am committed to fostering inclusivity in STEM, earning multiple grants and awards for impactful contributions.<br />Highlights:<ul><li>Leading a team over several months to organize a free in-person outreach event for high school female and non-binary students, securing over $6,000 in sponsorships and empowering over 80 student to pursue a career in STEM.</li><li>Coordinating a large-scale networking event, connecting 70 students with industry professionals.</li><li>Establishing SFU’s first cross-institutional collaboration with a neighboring university — UBC — to strengthen intercollegiate relations.</li><li>Representing SFU at multiple conferences to advocate for diversity in STEM.</li></ul>",
+    "profile": "Aspiring software engineer new grad and advocate for women in STEM, interested in building large-scale software to secure consumers globally.",
+    "aboutMe": "I am an undergraduate student at Simon Fraser University, pursuing a degree in Computer Science with a minor in Business. Passionate about technology and community, I thrive on connecting with others, learning from their journeys, and seeking challenges that push me to grow. I played a key role as an early contributor in enhancing a startup, quickly learning to pick up responsibilities and growing my technical skills. Previously, I have interned as a DevOps Engineer at Planview and Web Developer at UBC IT. Additionally, I have represented SFU in a global cybersecurity competition.<br />Beyond academics, I am committed to fostering inclusivity in STEM, earning multiple grants and awards for impactful contributions.<br />Highlights:<ul><li>Leading a team over several months to organize a free in-person outreach event for high school female and non-binary students, empowering over 80 student to pursue a career in STEM.</li><li>Coordinating a large-scale networking event, connecting 70 students with industry professionals.</li><li>Establishing SFU’s first cross-institutional collaboration with a neighboring university, UBC, to strengthen intercollegiate relations.</li><li>Representing SFU at multiple conferences to advocate for diversity in STEM.</li></ul>",
     "profileImg": "/website/images/profile-pic.jpg",
     "links": {
         "github": "https://github.com/kaitlynnchan",
@@ -9,6 +9,10 @@
         "email": "kaitlynnchan@outlook.com"
     },
     "achievements":[
+        {
+            "name": "cmd-f 2025 Redbrick Best Sustainable Hack",
+            "year": 2025
+        },
         {
             "name": "nwHacks Defang.io Prize Runner Up",
             "year": 2025
@@ -39,6 +43,13 @@
         }
     ],
     "projects":[
+        {
+            "name":"EcoGPT",
+            "description":"A chrome extension designed to remind users of their digital carbon footprint and recommending low-emission alternatives. cmd-f Redbrick Best Sustainble Hack Winner.",
+            "img":"/website/images/ecogpt.png",
+            "link":"https://devpost.com/software/ecogpt",
+            "techStack": "JavaScript, Python, GraphQL, Flask, Gemini AI, Chrome Extension"
+        },
         {
             "name":"Connect Quest",
             "description":"A gamified social interaction app that sends daily challenges to users to engage with their community. Challenge completion awards users points to compete with friends.",
