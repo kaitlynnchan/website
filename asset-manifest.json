@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/website/static/css/main.126f1f79.css",
+    "main.js": "/website/static/js/main.b58ce9dc.js",
+    "static/media/brandon-bold.otf": "/website/static/media/brandon-bold.645d96f9d734d763912c.otf",
+    "static/media/brandon-med.otf": "/website/static/media/brandon-med.6c7d60fafc9995fffa5d.otf",
+    "static/media/orange_background0_2.png": "/website/static/media/orange_background0_2.a16c157af158e3f8cb12.png",
+    "index.html": "/website/index.html",
+    "main.126f1f79.css.map": "/website/static/css/main.126f1f79.css.map",
+    "main.b58ce9dc.js.map": "/website/static/js/main.b58ce9dc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.126f1f79.css",
+    "static/js/main.b58ce9dc.js"
+  ]
+}
